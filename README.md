@@ -1063,8 +1063,6 @@ Uniquely identify resources within any AWS accounts.
 - This allows you to refer to a single or group of resources. 
 - AS well as prevents individual resources from the same account or in different regions with similar characteristic from being confusing.
 
-![Stacks](../main/attachments/Screenshot_from_2023-03-23_10-35-51.png?raw=true "Optional Title")
-
 ARN generally follows the same format:
 
 ```bash
@@ -1087,6 +1085,8 @@ An example that leads to confusion:
   - This references an actual bucket
 - arn:aws:s3:::catgifs/*
   - This refers to objects in that bucket, but not the bucket itself.
+
+![Stacks](../main/attachments/Screenshot_from_2023-03-23_10-35-51.png?raw=true "Optional Title")
 
 These two ARNs do not overlap
 
