@@ -1063,6 +1063,8 @@ Uniquely identify resources within any AWS accounts.
 - This allows you to refer to a single or group of resources. 
 - AS well as prevents individual resources from the same account or in different regions with similar characteristic from being confusing.
 
+![Stacks](../main/attachments/Screenshot from 2023-03-23 10-35-51.png?raw=true "Optional Title")
+
 ARN generally follows the same format:
 
 ```bash
