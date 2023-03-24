@@ -40,7 +40,7 @@
   - [1.4.3. IAM Groups](#143-iam-groups)
   - [1.4.4. IAM Roles](#144-iam-roles)
   - [1.4.5. When to use IAM Roles](#145-when-to-use-iam-roles)
-  - [1.4.6. Service-linked Roles & PassRole](#146-service-linked-roles-&-passrole)
+  - [1.4.6. Service-linked Roles & PassRole](#146-service-linked-roles--passrole)
   - [1.4.7. AWS Organizations](#147-aws-organizations)
   - [1.4.8. Service Control Policies](#148-service-control-policies)
   - [1.4.9. CloudWatch Logs](#149-cloudwatch-logs)
