@@ -40,11 +40,12 @@
   - [1.4.3. IAM Groups](#143-iam-groups)
   - [1.4.4. IAM Roles](#144-iam-roles)
   - [1.4.5. When to use IAM Roles](#145-when-to-use-iam-roles)
-  - [1.4.6. AWS Organizations](#146-aws-organizations)
-  - [1.4.7. Service Control Policies](#147-service-control-policies)
-  - [1.4.8. CloudWatch Logs](#148-cloudwatch-logs)
-  - [1.4.9. CloudTrail Essentials](#149-cloudtrail-essentials)
-  - [1.4.10. AWS Control Tower](#1410-aws-control-tower)
+  - [1.4.6. Service-linked Roles & PassRole](#146-service-linked-roles-&-passrole)
+  - [1.4.7. AWS Organizations](#147-aws-organizations)
+  - [1.4.8. Service Control Policies](#148-service-control-policies)
+  - [1.4.9. CloudWatch Logs](#149-cloudwatch-logs)
+  - [1.4.10. CloudTrail Essentials](#1410-cloudtrail-essentials)
+  - [1.4.11. AWS Control Tower](#1411-aws-control-tower)
 - [1.5. Simple-Storage-Service-(S3)](#15-simple-storage-service-s3)
   - [1.5.1. S3 Security](#151-s3-security)
   - [1.5.2. S3 Static Hosting](#152-s3-static-hosting)
@@ -1198,15 +1199,16 @@ Can scale quickly and beyond.
 ![Stacks](../main/attachments/Clipboard_2022-08-28-19-50-25.png?raw=true "Optional Title")
 You can use a role in the partner account and use that to upload objects to AWS resources.
 
+### 1.4.6. Service-linked Roles & PassRole
 Service-linked roles 
 * IAM role linked to a specific AWS service
 * Predefined by a service
-* prodviding permissions that a service needs to interact with other AWS services on your behalf
+* Prodviding permissions that a service needs to interact with other AWS services on your behalf
 * Service might create/delete the role...
 * or allow you to during the setup or within IAM
 * Can't delete the role until it's no longer required
 
-### 1.4.6. AWS Organizations
+### 1.4.7. AWS Organizations
 
 Without an organization, each AWS account needs it's own set of IAM users as well as individual payment methods.
 If you have more than 5 to 10 accounts, you would want to use an org.
@@ -1218,18 +1220,18 @@ The master account can invite other existing standard AWS accounts. They will ne
 When standard AWS accounts become part of the org, they become **member accounts**.
 Organizations can only have one **master accounts** and zero or more **member accounts**
 
-#### 1.4.6.1. Organization Root
+#### 1.4.7.1. Organization Root
 ![Stacks](../main/attachments/Clipboard_2022-08-29-23-47-42.png?raw=true "Optional Title")
 This is a container that can hold AWS member accounts or the master account.
 It could also contain **organizational units** which can contain other units or member accounts.
 
-#### 1.4.6.2. Consolidated billing
+#### 1.4.7.2. Consolidated billing
 ![Stacks](../main/attachments/Clipboard_2022-08-29-23-51-30.png?raw=true "Optional Title")
 The individual billing for the member accounts is removed and they pass their billing to the master account.
 Inside an AWS organization, you get a single monthly bill for the master account which covers all the billing for each users.
 Can offer a discount with consolidation of reservations and volume discounts
 
-#### 1.4.6.3. Create new accounts in an org
+#### 1.4.7.3. Create new accounts in an org
 ![Stacks](../main/attachments/Clipboard_2022-08-29-23-57-25.png?raw=true "Optional Title")
 Adding accounts in an organization is easy with only an email needed.
 
@@ -1239,11 +1241,11 @@ Login to other account can be done with IAM Roles using ID Federation (external)
 It is **BEST** to have a single AWS account only used for login.
 Some enterprises may use a separated AWS account, 1 master and 1 login, while smaller ones may use the master account.
 
-#### 1.4.6.4. Role Switching
+#### 1.4.7.4. Role Switching
 
 Allows you to switch between accounts from the command line
 
-### 1.4.7. Service Control Policies
+### 1.4.8. Service Control Policies
 
 Can be used to restrict what member accounts in an org can do.
 
@@ -1258,7 +1260,7 @@ The master account cannot be restricted by SCPs which means this should not be u
 SCPs limit what the account, **including root** can do inside that account.
 They don't grant permissions themselves, just act as a barrier.
 
-#### 1.4.7.1. Allow List vs Deny List
+#### 1.4.8.1. Allow List vs Deny List
 
 Deny list is the default.
 
@@ -1314,7 +1316,7 @@ You must then add any services you want to Deny such as `DenyS3`
 }
 ```
 
-### 1.4.8. CloudWatch Logs
+### 1.4.9. CloudWatch Logs
 
 This is a public service, this can be used from AWS VPC or on premise environment.
 
@@ -1327,7 +1329,7 @@ Comes with some AWS Integrations.
 Security is provided with IAM roles or Service roles.
 Can generate metrics based on logs **metric filter**
 
-#### 1.4.8.1. Architecture of CloudWatch Logs
+#### 1.4.9.1. Architecture of CloudWatch Logs
 ![Stacks](../main/attachments/Clipboard_2022-09-01-12-15-58.png?raw=true "Optional Title")
 * It is a regional service `us-east-1`
 * Need logging sources such as external APIs or databases. 
@@ -1340,7 +1342,7 @@ retention settings and permissions.
 * Once the settings are defined on a log group, they apply to all log streams in that log group. 
 * Metric filters are also applied on the log groups.
 
-### 1.4.9. CloudTrail Essentials
+### 1.4.10. CloudTrail Essentials
 
 Concerned with who did what.
 
@@ -1358,7 +1360,7 @@ in the AWS account. Create an EC2 instance or terminating one.
 - Data Events:
 Objects being uploaded to S3 or a Lambda function being invoked. This is not enabled by default and must be enabled for that trail.
 
-#### 1.4.9.1. CloudTrail Trail
+#### 1.4.10.1. CloudTrail Trail
 
 Logs events for the AWS region it is created in. It is a regional service.
 
@@ -1383,7 +1385,7 @@ A trail can store events in an S3 bucket as a compressed JSON file. It can also 
 
 CloudTrail products can create an organizational trail. This allows a single management point for all the APIs and management events for that org.
 
-#### 1.4.9.2. CloudTrail Exam PowerUp
+#### 1.4.10.2. CloudTrail Exam PowerUp
 
 - It is enabled by default for 90 days without S3
 - Trails are how you configure S3 and CWLogs
@@ -1392,11 +1394,11 @@ CloudTrail products can create an organizational trail. This allows a single man
   - Trail must be enabled to do this
 - NOT REALTIME - There is a delay. Approximately 15 minute delay
 
-#### 1.4.9.3. CloudTrail Pricing
+#### 1.4.10.3. CloudTrail Pricing
 
 <https://aws.amazon.com/cloudtrail/pricing/>
 
-### 1.4.10. AWS Control Tower
+### 1.4.11. AWS Control Tower
 
 * Quick & Easy setup of multi-account environment
 * Orchestrates other AWS services to provide this functionality
@@ -1407,7 +1409,7 @@ CloudTrail products can create an organizational trail. This allows a single man
 * Account Factory - Automates & Standardises new account creation
 * Dashboard - single page oversight of the entire environment
 
-#### 1.4.10.1. Control Tower Structure
+#### 1.4.11.1. Control Tower Structure
 ![Stacks](../main/attachments/Clipboard_2022-09-02-17-30-31.png?raw=true "Optional Title")
 * Management account contain:
   * Control Tower
@@ -1424,7 +1426,7 @@ CloudTrail products can create an organizational trail. This allows a single man
 * Use CloudFormation to do this
 * Use AWS Congif + Custom OU (Service control policy) to implement account guardrails => Prevent mishave
 
-#### 1.4.10.2. Landing Zone
+#### 1.4.11.2. Landing Zone
 * Well Architected multi-account env - Home Region
   * Built with AWS Organizations, AWS Config, CloudFormation
 * Security OU - Log Archive & Audit Account (CloudTrail & Config Logs)
@@ -1434,7 +1436,7 @@ CloudTrail products can create an organizational trail. This allows a single man
 * Monitoring and Notifications - CloudWatch and SNS
 * End User account provisioning via Service Catalog
 
-#### 1.4.10.3. Guard Rails
+#### 1.4.11.3. Guard Rails
 * Guardrails are rules - multi-account governance
 * Mandatory, Strongly Recommended or Elective
 * Preventive - Stop you doing things (AWS ORG SCP)
@@ -1444,7 +1446,7 @@ CloudTrail products can create an organizational trail. This allows a single man
   * clear, in violation or not enabled
   * detect Cloud Trail enabled or EC2 Public IPv4 
 
-#### 1.4.10.4. Guard Rails
+#### 1.4.11.4. Guard Rails
 * Automated Account Provisioning
 * cloud admins or end users (with appropriate permissions)
 * Guardrails - automatically added
