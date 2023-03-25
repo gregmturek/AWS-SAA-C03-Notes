@@ -1200,13 +1200,19 @@ Can scale quickly and beyond.
 You can use a role in the partner account and use that to upload objects to AWS resources.
 
 ### 1.4.6. Service-linked Roles & PassRole
-Service-linked roles 
+
+Service-linked roles:
 * IAM role linked to a specific AWS service
 * Predefined by a service
 * Prodviding permissions that a service needs to interact with other AWS services on your behalf
 * Service might create/delete the role...
 * or allow you to during the setup or within IAM
 * Can't delete the role until it's no longer required
+
+Role separation is where you might give one group of people the ability to create roles, and another group of people the ability to use them.
+
+PassRole is a method inside AWS which gives you the ability to implement role separation, and it's something which you can also use with service-linked roles.
+
 
 ### 1.4.7. AWS Organizations
 
