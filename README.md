@@ -1213,6 +1213,7 @@ Role separation is where you might give one group of people the ability to creat
 
 PassRole is a method inside AWS which gives you the ability to implement role separation, and it's something which you can also use with service-linked roles.
 
+![Stacks](../main/attachments/Service-linked-Roles-&-PassRole_learn.cantrill.io-et-3-pages-de-plus-Personnel–Microsoft​-Edge-25_03_2023-10_42_48.png?raw=true "Optional Title")
 
 ### 1.4.7. AWS Organizations
 
