@@ -1266,7 +1266,7 @@ JSON policy document that can be attached:
 
 The master account cannot be restricted by SCPs which means this should not be used because it is a security risk.
 
-SCPs limit what the account, **including root** can do inside that account.
+SCPs are **account permissions boundaries** and they limit what the account, **including root** can do inside that account.
 They don't grant permissions themselves, just act as a barrier.
 
 #### 1.4.8.1. Allow List vs Deny List
