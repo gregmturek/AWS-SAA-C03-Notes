@@ -1548,6 +1548,8 @@ Instead of using EC2 to host an entire website, the compute service can generate
 This may be an error page to display maintenance if the server goes offline.
 We could then change our DNS and move customers to a backup website on S3.
 
+![Stacks](../main/attachments/Screenshot-from-2023-03-27-15-08-56.png?raw=true "Optional Title")
+
 #### 1.5.2.3. S3 Pricing
 
 - Cost to store data, per GB / month fee
