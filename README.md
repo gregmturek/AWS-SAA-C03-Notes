@@ -1605,7 +1605,7 @@ Multipart Upload
 - The minimum data size is 100 MB.
 - Upload can be split into maximum of 10,000 parts.
   - Each part can range between 5MB and 5GB.
-  - Last leftover part can be smaller than 5MB as needed.
+  - Last leftover part can be smaller than 5MB if needed.
 - Parts can fail in isolation and restart in isolation.
 - The risk of uploading large amounts of data is reduced.
 - Improves transfer rate to be the speed of all parts.
