@@ -1596,6 +1596,7 @@ Single PUT Upload
 
 - Objects uploaded to S3 are sent as a single stream by default.
 - If the stream fails, the upload fails and requires a restart of the transfer.
+- Speed and reliability = limit of 1 stream
 - Single PUT upload up to 5GB
 
 Multipart Upload
