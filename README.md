@@ -1684,7 +1684,7 @@ Architecture
   - Created automatically by AWS when using a service such as S3 which uses KMS for encryption.
 - Customer managed KMS Key
   - Created explicitly by the customer.
-  - Much more more configurable, for example the key policy can be edited.
+  - Much more configurable, for example the key policy can be edited.
   - Can allow other AWS accounts access to KMS Key
 
 All KMS Keys support key rotation.
