@@ -1612,10 +1612,13 @@ Multipart Upload
 
 S3 Accelerated Transfer
 ![Stacks](../main/attachments/Clipboard_2022-09-11-16-10-03.png?raw=true "Optional Title")
-- Off by default.
+
+- The S3 bucket needs to be enabled for transfer acceleration.
+- S3 AT is switched off by default.
 - Uses the network of AWS edge locations to speed up transfer.
-- Bucket name cannot contain periods.
-- Name must be DNS compatible.
+- Restrictions for enable the S3 AT:
+  - The bucket name can not contain periods.
+  - the bucket needs to be DNS compatible in its naming.
 - Benefits improve the larger the location and distance.
   - The worse the start (distance), the better the performance benefits.
 
