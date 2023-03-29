@@ -1819,6 +1819,7 @@ When uploading an object, you can create and use a customer managed key (KMS key
 The best benefit is the role separation. To decrypt any object, you need access to the CMK that was used to generate the unique key that encrypted them. The CMK is used to decrypt the data encryption key for that object. That decrypted data encryption key is used to decrypt the object itself. If you don't have access to KMS, you don't have access to the object.
 
 #### Summary
+
 With client side encryption, you handle both the key management and the encryption processes. So use this method. If you absolutely need to control both of these or you don't trust AWS and their regular audits. It uses more resources to manage keys and actually perform the encryption processes at scale but it's definitely the method that gives you the most control.
 
 With SSE-C you manage the keys. You can use the same key for everything which is insecure or you could use individual keys. The choice is yours, but you manage the Keys and S3 handles the overhead for encryption and decryption.
@@ -1828,6 +1829,19 @@ With SSE-S3, this uses AES256. I mention this because it's often the way exam qu
 SSE-KMS uses KMS and KMS keys. You can control key rotation. You can control key permissions. It's otherwise similar to SSE-S3 but it allows role separation. So use this if your business has fairly rigid groups of people and compartmentalized sets of security. You can have S3 for administrators who don't have any access to decrypt and access data.
 
 ![Stacks](../main/attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_01_15.png?raw=true "Optional Title")
+
+#### Default bucket encryption.
+
+When you're uploading objects to S3 you're actually utilizing the put object operation. As part of this operation, you can specify a specific Header which is x-amz-server-side-encryption.
+
+If you do specify this header if you use AES256, then this utilizes SSE-S3. If you specify AWS:KMS, then SSE-KMS is utilized.
+
+So let's say that we set the Default to be AES256 then SSE-S3 would be used when you don't set something at an object level.
+
+This is the key thing. The bucket Default is just that, a default. It applies only when you don't specify anything explicitly on an object. If you do, that takes priority.
+
+![Stacks](../main/attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_10_54.png?raw=true "Optional Title")
+
 ### 1.5.8. S3 Object Storage Classes
 
 Picking a storage class can be done while uploading a specific object.
