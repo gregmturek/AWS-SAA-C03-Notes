@@ -1820,8 +1820,11 @@ The best benefit is the role separation. To decrypt any object, you need access 
 
 #### Summary
 With client side encryption, you handle both the key management and the encryption processes. So use this method. If you absolutely need to control both of these or you don't trust AWS and their regular audits. It uses more resources to manage keys and actually perform the encryption processes at scale but it's definitely the method that gives you the most control.
+
 With SSE-C you manage the keys. You can use the same key for everything which is insecure or you could use individual keys. The choice is yours, but you manage the Keys and S3 handles the overhead for encryption and decryption.
+
 With SSE-S3, this uses AES256. I mention this because it's often the way exam questions test your knowledge. So AES256 is the encryption algorithm and S3 handles the Keys and the encryption processes when you utilize SSE-S3. It probably should be your default if you want encryption but you don't have any real control over keys, their Permissions or their rotation.
+
 SSE-KMS uses KMS and KMS keys. You can control key rotation. You can control key permissions. It's otherwise similar to SSE-S3 but it allows role separation. So use this if your business has fairly rigid groups of people and compartmentalized sets of security. You can have S3 for administrators who don't have any access to decrypt and access data.
 
 ![Stacks](../main/attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_01_15.png?raw=true "Optional Title")
