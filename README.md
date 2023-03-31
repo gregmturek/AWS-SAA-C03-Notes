@@ -2035,7 +2035,7 @@ S3 will create a presigned URL and return it. This URL will have encoded insidei
 
 #### 1.5.11.1. S3 Presigned URL Exam PowerUp
 
-- You can create a presigned URL for an object you have do not have access to.
+- You can create a presigned URL for an object you have no access to.
 The object will not allow access because your user does not have access.
 - When using the URL the permission that you have access to, match the identity that generated it at the moment the item is being accessed.
 - If you get an access deny it means the ID never had access, or lost it.
