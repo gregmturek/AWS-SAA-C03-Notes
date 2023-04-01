@@ -62,6 +62,7 @@
   - [1.5.13. S3 Event Notifications](#1513-s3-event-notifications)
   - [1.5.14. S3 Access Logs](#1514-s3-access-logs)
   - [1.5.15. S3 Object Lock](#1515-s3-object-lock)
+  - [1.5.16. S3 Access Points](#1516-s3-access-points)
 - [1.6. Virtual-Private-Cloud-VPC](#16-virtual-private-cloud-vpc)
   - [1.6.1. Networking Refresher](#161-networking-refresher)
   - [1.6.2. VPC Sizing and Structure](#162-vpc-sizing-and-structure)
@@ -2100,6 +2101,16 @@ EventBridge is a **better alternative**.
 - **NO Deletes** or **Changes** until removed
 - s3:PutObjectLegalHold is required to add or remove feature.
 - Prevent accidental deletion of critical object versions
+
+### 1.5.15. S3 Access Points
+
+- S3 Access Points simplify the process of managing access to S3 Buckets and Objects.
+- Rather than 1 bucket w/ 1 Bucket Policy; Create many access points; Each with different policies; Each with different network access controls for example vpc and the internet.
+- Each access point has it own endpoint address for access an object within a bucket or the whole bucket but with certain restrictions.
+- Create an access point via console or cli using **aws s3control create-access-point --name secretcats --accountid 1234567890 --bucket catpics**
+
+![Stacks](../main/attachments/S3-Access-Points_learn.cantrill.io-5 pages de plus-01_04_2023-20_25_28.png?raw=true "Optional Title")
+
 ---
 
 ## 1.6. Virtual-Private-Cloud-VPC
