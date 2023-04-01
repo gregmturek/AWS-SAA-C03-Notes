@@ -2109,7 +2109,7 @@ EventBridge is a **better alternative**.
 - Each access point has it own endpoint address for access an object within a bucket or the whole bucket but with certain restrictions.
 - Create an access point via console or cli using **aws s3control create-access-point --name secretcats --accountid 1234567890 --bucket catpics**
 
-![Stacks](../main/attachments/S3-Access-Points_learn.cantrill.io-5 pages de plus-01_04_2023-20_25_28.png?raw=true "Optional Title")
+![Stacks](../main/attachments/S3-Access-Points_learn.cantrill.io-01_04_2023-20_25_28.png?raw=true "Optional Title")
 
 ---
 
