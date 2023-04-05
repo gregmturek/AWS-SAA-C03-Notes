@@ -2414,6 +2414,9 @@ Used as a management point or as an entry point for a private only VPC.
 This is an inbound management point. Can be configured to only allow specific IP addresses or to authenticate with SSH. It can also integrate with your on premise identification service.
 
 ### 1.6.6. Network Access Control List (NACL)
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-04-15-28-03.png?raw=true "Optional Title")
+![Stacks](../main/attachments/Screenshot-from-2023-04-04-15-27-25.png?raw=true "Optional Title")
 ![Stacks](../main/attachments/Clipboard_2022-09-27-20-42-32.png?raw=true "Optional Title")
 ![Stacks](../main/attachments/Clipboard_2022-09-27-20-43-07.png?raw=true "Optional Title")
 Network Access Control Lists (NACLs) are a type of security filter
