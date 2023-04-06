@@ -2789,11 +2789,16 @@ Volumes are isolated to one AZ.
 - The data is highly available and resilient for that AZ.
 - All the data is replicated within that AZ. The entire AZ must have
 a major fault to go down.
+- Attached to one EC2 instance (or other service) over a storage network.
+- Detached and reattached, not lifecycle linked to on instance.
+- Snapshot (backup) into S3. Create volume from snapshot (migrate between AZs).
 - Different physical storage types available (SSD/HDD)
 - Varying level of performance (IOPS, T-put)
 - Billed as GB/month.
   - If you provision a 1TB for an entire month, you're billed as such.
   - If you have half of the data, you are billed for half of the month.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-14-56-10.png?raw=true "Optional Title")
 
 Four types of Volumes:
 
