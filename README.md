@@ -2628,6 +2628,8 @@ handles their own process internally. In EC2 this feature is called
 
 ### 1.7.2. EC2 Architecture and Resilience
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-10-32-14.png?raw=true "Optional Title")
+
 - EC2 instances are virtual machines (OS+Resources)
 - Run on EC2 hosts
 - Shared hosts or dedicated hosts
@@ -2681,7 +2683,7 @@ The only difference will generally be their size.
 Traditional OS+Application compute need. A specific OS with a specific hardware
 setup.
 
-Long running compute needs. Many other AWS services have run time limits.
+Long-running compute needs. Many other AWS services have run time limits.
 
 Server style applications
 
@@ -2701,7 +2703,7 @@ Storage and Data network Bandwidth
 Influences the architecture and vendor.
 AMD CPU vs Intel CPU
 
-Influcences features and capabilities with that instance
+Influences features and capabilities with that instance
 
 #### 1.7.2.1. EC2 Categories
 
@@ -2713,6 +2715,8 @@ Storage Optimized - Large amounts of super fast local storage. Massive amounts
 of IO per second. Elastic search and analytic workloads.
 
 #### 1.7.2.1. Naming Scheme
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-11-47-44.png?raw=true "Optional Title")
 
 R5dn.8xlarge - whole thing is the instance type. When in doubt give the
 full instance type
@@ -2726,6 +2730,8 @@ full instance type
   - d: nvme storage
   - n: network optimized
   - e: extra capacity for ram or storage
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-12-03-58.png?raw=true "Optional Title")
 
 ### 1.7.3. Storage Refresher
 
