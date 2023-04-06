@@ -2746,11 +2746,13 @@ of the instance. EBS is persistent storage.
 
 #### 1.7.3.1. Three types of storage
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-13-57-05.png?raw=true "Optional Title")
+
 Block Storage - volume presented to the OS as a collection of blocks. No
 structure beyond that. These are mountable and bootable. The OS will
-create a file system on top of this, NTFS or EXT3 and then it mounts
+create a file system on top of this, NTFS or EXT3, and then it mounts
 it as a drive or a root volume on Linux. Spinning hard disks or SSD. This
-could also be delivered by a physical volume. Has no built in structure.
+could also be delivered by a physical volume. Has no built-in structure.
 You can mount an EBS volume or boot off an EBS volume.
 
 File Storage - Presented as a file share with a structure. You access the
@@ -2763,6 +2765,8 @@ the key and then the value will be returned. This is not mountable or
 bootable. It scales very well and can have simultaneous access.
 
 #### 1.7.3.2. Storage Performance
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-14-03-52.png?raw=true "Optional Title")
 
 IO Block Size - size of the wheels. This determines how to split up the data.
 IOPS - speed of an engine rev (RPM). How many reads or writes a storage
@@ -2783,7 +2787,7 @@ Allocate block storage **volumes** to instances.
 Volumes are isolated to one AZ.
 
 - The data is highly available and resilient for that AZ.
-- All of the data is replicated within that AZ. The entire AZ must have
+- All the data is replicated within that AZ. The entire AZ must have
 a major fault to go down.
 - Different physical storage types available (SSD/HDD)
 - Varying level of performance (IOPS, T-put)
