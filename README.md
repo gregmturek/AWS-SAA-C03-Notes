@@ -2800,13 +2800,6 @@ a major fault to go down.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-04-06-14-56-10.png?raw=true "Optional Title")
 
-Four types of Volumes:
-
-- General purpose SSD (gp2)
-- Provisioned IOPS SSD (io1)
-- T-put optimized HDD (st1)
-- Cold HDD (sc1)
-
 Each volume has a dominant performance attribute
 
 SSD based focus on maximum IOPS such as a database
@@ -2831,22 +2824,39 @@ This should be the default for boot volumes and some data volumes.
 
 Can only be attached to one volume at a time.
 
-#### 1.7.4.2. Provisioned IOPS SSD (io1)
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-15-25-36.png?raw=true "Optional Title")
 
-50:1 IOPS to GiB Ratio
+#### 1.7.4.2. General Purpose SSD (gp3)
 
-You pay for capacity and the IOPs set on the volume. This is good if your
-volume size is small but need a lot of IOPS.
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-15-28-51.png?raw=true "Optional Title")
 
-64,000 is the max IOPS per volume assuming 16 KiB I/O.
+GP3 is also SSD based, but it removes the credit bucket architecture of GP2 for something much simpler.
+Every GP3 volume regardless of size starts with the standard 3,000 IOPS.
+So 3,016 KB operations per second and it can transfer 125 MB per second.
+That's standard regardless of volume size, and just like GP2, volumes can range from one GB through to 16 TB.
+Now the base price for GP3 at the time of creating this lesson is 20% cheaper than GP2.
+So if you only intend to use up to 3,000 IOPS then it's a no-brainer.
+You should pick GP3, rather than GP2. If you need more performance then you can pay for up to 16,000 IOPS and up to 1,000 MB per second of throughput.
+And even with those extras, generally it works out to be more economical than GP2.
+GP3 offers a higher max throughput as well so you can get up to 1,000 MB per second versus the 250 MB per second maximum of GP2. 
+So GP3 is just simpler to understand for most people versus GP2.
+And I think over time, it's going to be the default.
+For now though, at the time of creating this lesson GP2 is still the default. 
+In summary, GP3 is like GP2 and IO1 which I'll cover soon had a baby.
+You get some of the benefits of both in a new type of general purpose SSD storage.
+Now the usage scenarios for GP3 are also much the same as GP2.
+So virtual desktops, medium-sized databases, low-latency applications,dev and testing environments and boot volumes.
+You can safely swap GP2 to GP3 at any point, but just be aware that for anything above 3,000 IOPS, the performance doesn't get added automatically like with GP2, which scales on size.
+With GP3 you would need to add these extra IOPS which come at an extra cost. And that's the same with any additional throughput.
+Beyond the 125 MB per second standard, it's an additional extra, but still even including those extras for most things this storage type is more economical than GP2.
 
-Good for latency sensitive workloads such as mongoDB.
+#### 1.7.4.3. Provisioned IOPS SSD (io1)
 
-Multi-attach allows them to attach to multiple EC2 instances at once.
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-20-45-45.png?raw=true "Optional Title")
 
-If it mentions high IOPS, or mentioning latency. Small volume sizes.
+When dealing with these types of volumes, it is important to keep in mind the per-instance performance, which is the maximum performance that can be achieved between the EBS service and a single EC2 instance. These maximums are influenced by the type of volumes, type of instance, and size of the instance. The most modern and largest instances support the highest levels of performance, and multiple volumes are needed to saturate the per-instance performance level.
 
-#### 1.7.4.3. HDD Volume Types
+#### 1.7.4.4. HDD Volume Types
 
 st1 - throughput
 sc1 - cold
@@ -2871,7 +2881,7 @@ Frequently accessed high throughput intensive workload
 
 The access patterns should be sequential
 
-##### 1.7.4.4. st1
+##### 1.7.4.5. st1
 
 Starts at 1 TiB of credit per TiB of volume size.
 
@@ -2879,7 +2889,7 @@ Starts at 1 TiB of credit per TiB of volume size.
 Burst of 250 MB/s per TiB
 Max t-put of 500 MB/s
 
-##### 1.7.4.5. sc1
+##### 1.7.4.6. sc1
 
 Designed for less frequently accessed data
 
@@ -2892,7 +2902,7 @@ Max t-put of 250 MB/s
 There is a massive inefficiency for small reads and writes. These are based on
 large block sizes of data in a sequential way
 
-#### 1.7.4.6. Exam Power Up
+#### 1.7.4.7. Exam Power Up
 
 Volumes are created in an AZ, isolated in that AZ
 If an AZ fails, the volume is impacted.
