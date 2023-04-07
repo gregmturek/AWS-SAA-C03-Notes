@@ -2919,6 +2919,8 @@ And if you have a requirement for anything IOPS based, then avoid both of these 
 
 ### 1.7.5. EC2 Instance Store
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-07-10-29-56.png?raw=true "Optional Title")
+
 Local physical storage that instances can utilize attached to an instance.
 
 **block storage** devices. They're just like EBS but they're local.
@@ -2954,6 +2956,8 @@ at all.
 This is much higher than EBS can provide. These volumes
 perform at much higher volumes than EBS.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-07-10-29-43.png?raw=true "Optional Title")
+
 #### 1.7.5.2. Exam Powerup
 
 - Instance store volumes are local to EC2 host.
@@ -2964,6 +2968,10 @@ perform at much higher volumes than EBS.
 - TEMPORARY
 
 ### 1.7.6. EBS vs Instance Store
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-07-11-07-54.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-07-11-12-35.png?raw=true "Optional Title")
 
 If the read/write can be handled by EBS, that should be default.
 
