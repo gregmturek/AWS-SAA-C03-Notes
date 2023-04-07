@@ -2858,60 +2858,64 @@ When dealing with these types of volumes, it is important to keep in mind the pe
 
 #### 1.7.4.4. HDD Volume Types
 
-st1 - throughput
-sc1 - cold
+st1 - Throughput Optimized HDD
+sc1 - Cold HDD
 
-Both have 4 shared characteristics
-
-- great value
-- great throughput
-- 500 GiB - 16 TiB
-- Neither can be used for instance boot volumes. Cannot boot from them.
-
-Good for price conscious.
-Great for high throughput vs IOPs.
-
-Good for streaming data on a hard disk. Media conversion with large amounts of
-storage.
-
-Frequently accessed high throughput intensive workload
-
-- log processing
-- data warehouses
-
-The access patterns should be sequential
+![Stacks](../main/attachments/Screenshot-from-2023-04-06-23-53-38.png?raw=true "Optional Title")
 
 ##### 1.7.4.5. st1
 
-Starts at 1 TiB of credit per TiB of volume size.
+So think about st1 as the fast hard drive, not very agile, but pretty fast, and think about sc1 as cold.
 
-40 MB/s baseline per TiB
-Burst of 250 MB/s per TiB
-Max t-put of 500 MB/s
+st1 is cheap. It's less expensive than the SSD volumes, which makes it ideal for any larger volumes of data.
+
+sc1 is even cheaper, but it comes with some significant trade-offs.
+
+Now st1 is designed for data, which is sequentially accessed.
+
+Because it's HDD based, it's not great at random access.
+
+It's more designed for data which needs to be written or read in a fairly sequential way.
+
+Applications with throughput and economy is more important than IOPS or extreme levels of performance.
+
+st1 volumes range from 125 GB to 16 TB in size, and you have a maximum of 500 IOPS, but, and this is important, IO on HDD-based volumes is measured as 1MB blocks.
+
+So 500 IOPS means 500 MB per second. Now their maximums. 
+
+HDD-based storage works in a similar way to how gp2 volumes work with a credit bucket, only with HDD based volumes, it's done around MB per second rather than IOPS.
+
+So with st1, you have a baseline performance of 40 MB per second for every 1TB of volume size, and you can burst to a maximum of 250 MB per second for every TB of volume size.
+
+Obviously, up to the maximum of 500 IOPS and 500 MB per second. st1 one is designed for when cost is a concern, but you need frequent access storage for throughput intensive sequential workloads.
+
+So things like big data, data warehouses and log processing.
 
 ##### 1.7.4.6. sc1
 
-Designed for less frequently accessed data
+sc1 on the other hand is designed for in frequent workloads.
 
-Fills slower:
+It's geared towards a maximum economy when you just want to store lots of data and don't care about performance.
 
-12 MB/s baseline per TiB
-Burst of 80 MB/s per TiB
-Max t-put of 250 MB/s
+So it offers a maximum of 250 IOPS. Again, this is with a 1MB IO size, so this means a maximum of 250 MB per second of throughput, and just like with st1, this is based on the same credit pool architecture, so it has a baseline of 12 MB per TB of volume size and a burst of 80 MB per second per TB of volume size.
 
-There is a massive inefficiency for small reads and writes. These are based on
-large block sizes of data in a sequential way
+So you can see that this offers significantly less performance than st1, but it's also significantly cheaper. 
 
-#### 1.7.4.7. Exam Power Up
+And just like with st1, volumes can range from 125 GB to 16 TB in size.
 
-Volumes are created in an AZ, isolated in that AZ
-If an AZ fails, the volume is impacted.
-Highly available and resilient in that AZ. The only reason for failure is
-if the whole AZ fails.
-Generally one volume to one instance, but multi-attach occurs.
-Has a GB/m fee regardless of instance state.
-EBS maxes at 80k IOPS per instance and 64k vol (io1)
-Max 2375 MB/s per instance, 1000 MiB/s (vol) (io1)
+This storage type is the lowest cost EBS storage available.
+
+It's designed for less frequently accessed workloads.
+
+So if you have colder data, archives, or anything which requires less than a few loads or scans per day, then this is the type of storage volume to pick.
+
+And that's it for HDD-based storage. Both of these are lower costs and lower performance versus SSD designed for when you need a economy of data storage.
+
+Picking between them is simple. If you can tolerate the trade-offs of sc1, then use that.
+
+It's super cheap and for anything which isn't day-to-day accessed, it's perfect, otherwise, choose st1.
+
+And if you have a requirement for anything IOPS based, then avoid both of these and look at SSD based storage.
 
 ### 1.7.5. EC2 Instance Store
 
