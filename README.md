@@ -3336,6 +3336,8 @@ Cheapest option with no tolerance for distribution.
 
 ### 1.7.11. Instance Status Checks and Auto-recovery
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-15-51-52.png?raw=true "Optional Title")
+
 Every instance has two high level status checks
 
 #### 1.7.11.1. System Status Checks
