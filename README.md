@@ -2998,6 +2998,8 @@ When to use Instance Store
 
 ### 1.7.7. Snapshots, restore, and fast snapshot restore
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-08-11-24-32.png?raw=true "Optional Title")
+
 EBS Snapshots
 
 Efficient way to back up EBS volumes to S3. Protect data against AZ issues.
@@ -3047,6 +3049,8 @@ another tool in the OS.
 
 #### 1.7.7.2. Snapshot Consumption and Billing
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-08-11-32-16.png?raw=true "Optional Title")
+
 They are billed using a GB/month metric.
 
 20 GB stored for half a month, represents 10 GB-month.
@@ -3059,6 +3063,10 @@ The data is incrementally stored which means doing a snapshot every 5 minutes
 will not necessarily increase the charge as opposed to doing one every hour.
 
 #### 1.7.7.3. EBS Encryption
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-08-14-46-13.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-08-14-46-24.png?raw=true "Optional Title")
 
 Provides at rest encryption for block volumes and snapshots.
 
@@ -3113,6 +3121,8 @@ volume.
 
 ### 1.7.8. EC2 Network Interfaces, Instance IPs and DNS
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-08-20-18-16.png?raw=true "Optional Title")
+
 An EC2 instance starts with at least one ENI - elastic network interface.
 
 An instance may have ENIs in separate subnets, but everything must be
@@ -3122,6 +3132,8 @@ When you launch an instance with Security Groups, they are on the
 network interface and not the instance.
 
 #### 1.7.8.1. Elastic Network Interface
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-08-20-42-39.png?raw=true "Optional Title")
 
 Has these properties
 
@@ -3215,6 +3227,8 @@ AMI's can be used to launch EC2 instance.
 - Can create an AMI from an existing EC2 instance to capture the current config
 
 #### 1.7.9.1. AMI Lifecycle
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-08-22-38-42.png?raw=true "Optional Title")
 
 Launch
 
