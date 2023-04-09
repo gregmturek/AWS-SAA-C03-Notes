@@ -3270,6 +3270,8 @@ Billing is for the storage capacity for the EBS snapshots the AMI references
 
 #### 1.7.10.1. On-Demand Instances
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-07-39.png?raw=true "Optional Title")
+
 - Hourly rate based on OS, size, options, etc
 - Billed in seconds (60s min) or hourly
   - Depends on the OS
@@ -3281,6 +3283,8 @@ any disruption.
 
 #### 1.7.10.2. Spot Instances
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-14-09.png?raw=true "Optional Title")
+
 Up to 90% off on-demand
 Depends on the spare capacity
 You can set a maximum hourly rate in a certain AZ in a certain region.
@@ -3290,6 +3294,8 @@ Once this price increases too much, it will terminate the instance.
 Great for data analytics when the process can occur later.
 
 #### 1.7.10.3. Reserved Instance
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-26-13.png?raw=true "Optional Title")
 
 Up to 75% off on-demand
 The trade-off is commitment.
@@ -3307,6 +3313,26 @@ Can perform scheduled reservation when you can commit to specific time windows.
 
 If you have a known stead state usage, email usage, domain server.
 Cheapest option with no tolerance for distribution.
+
+#### 1.7.10.4. Dedicated Hosts
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-33-18.png?raw=true "Optional Title")
+
+#### 1.7.10.5. Dedicated Instances
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-35-51.png?raw=true "Optional Title")
+
+#### 1.7.10.6. Scheduled Reserved Instances
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-14-39-09.png?raw=true "Optional Title")
+
+#### 1.7.10.7. Capacity Reservations
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-14-52-13.png?raw=true "Optional Title")
+
+#### 1.7.10.8. EC2 Savings Plan
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-14-55-25.png?raw=true "Optional Title")
 
 ### 1.7.11. Instance Status Checks and Auto-recovery
 
