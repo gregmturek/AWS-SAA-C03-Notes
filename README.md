@@ -3533,6 +3533,8 @@ ECS Cluster manages
 
 #### 1.8.3.1. EC2 mode
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-23-31-51.png?raw=true "Optional Title")
+
 ECS cluster is created within a VPC. It benefits from the multiple AZs that
 are within that VPC.
 
@@ -3547,6 +3549,8 @@ are managed as normal EC2 instances.
 This is good because you can use spot pricing or prepaid EC2 servers.
 
 #### 1.8.3.2. Fargate mode
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-09-23-35-26.png?raw=true "Optional Title")
 
 Removes more of the management overhead from ECS, no need to manage EC2.
 
@@ -3573,3 +3577,23 @@ Large workload but overhead conscious **Fargate**
 Small or burst style workloads **Fargate** makes sense
 
 Batch or periodic workloads **Fargate**
+
+#### 1.8.3.4. Elastic Container Registry (ECR)
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-08-20.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-10-01.png?raw=true "Optional Title")
+
+#### 1.8.3.5. Kubernetes 101
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-13-40.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-18-23.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-22-04.png?raw=true "Optional Title")
+
+#### 1.8.3.6. Elastic Kubernetes Service 101 (EKS)
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-28-48.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-30-11.png?raw=true "Optional Title")
