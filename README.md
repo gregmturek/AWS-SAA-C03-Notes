@@ -3625,6 +3625,8 @@ and the data will be passed. The OS needs to understand the user data.
 
 #### 1.9.1.1. Bootstrapping Architecture
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-11-22-58-47.png?raw=true "Optional Title")
+
 An AMI is used to launch an EC2 instance in the usual way to create
 an EBS volume that is attached to the EC2 instance. This is based on the
 block mapping inside the AMI.
@@ -3658,6 +3660,8 @@ data, then restart the instance.
 The contents are only excecuted once at launch.
 
 #### 1.9.1.3. Boot-Time-To-Service-Time
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-11-23-02-42.png?raw=true "Optional Title")
 
 How quickly after you launch an instance is it ready for service. This
 includes the time for EC2 to configure the instance and any software
