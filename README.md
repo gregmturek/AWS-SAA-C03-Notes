@@ -3691,6 +3691,8 @@ a CFN resource
 
 #### 1.9.2.1. cfn-init explained
 
+![Stacks](../main/attachments/photo_5888707064455347918_w.jpg?raw=true "Optional Title")
+
 Starts off with a **cloud formation template**
 This has a logical resource within it which is to create an EC2 instance.
 
@@ -3707,6 +3709,8 @@ This can monitor the userdata and change things as the EC2 data changes.
 
 #### 1.9.2.2. CreationPolicy and Signals
 
+![Stacks](../main/attachments/photo_5888707064455347919_w.jpg?raw=true "Optional Title")
+
 The template has a specific part designated signals
 
 A creation policy is added to a logical resource. It is provided a
@@ -3714,6 +3718,8 @@ timeout value. The resource itself will trigger a signal that cloud formation
 can continue
 
 ### 1.9.3. EC2 Instance Roles
+
+![Stacks](../main/attachments/photo_5888707064455347934_w.jpg?raw=true "Optional Title")
 
 IAM roles are the best practice ways for services to be granted permissions.
 
@@ -3742,6 +3748,8 @@ Key facts
 - CLI tools use role credentials automatically
 
 ### 1.9.4. AWS System Manager Parameter Store
+
+![Stacks](../main/attachments/photo_5888707064455347935_w.jpg?raw=true "Optional Title")
 
 Passing secrets into an EC2 instance is bad practice because anyone
 who has access to the meta-data has access to the secrets.
@@ -3774,6 +3782,8 @@ as access keys, or short term use of IAM roles.
 Allows for simple or complex sets of parameters.
 
 ### 1.9.5. System and Application Logging on EC2
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-12-23-02-38.png?raw=true "Optional Title")
 
 Cloudwatch monitors the outside metrics of an instance
 Cloudwatch logs is for logging
