@@ -3997,8 +3997,11 @@ for a domain and visible to the public internet.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-04-14-21-01-52.png?raw=true "Optional Title")
 
+### 1.10.4. CNAME vs R53 Alias
 
-### 1.10.2. Route 53 Health Checks
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-21-04.png?raw=true "Optional Title")
+
+### 1.10.5. Route 53 Health Checks
 
 Route checks will allow for periodic health checks on the servers.
 If one of the servers has a bug, this will be removed from the list.
@@ -4031,6 +4034,12 @@ There are three types of checks.
 - Endpoint checks
 - Cloudwatch alarms
 - Checks of checks
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-14-21-01-52.png?raw=true "Optional Title")
+
+### 1.10.6. Route 53 Health Checks
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-33-59.png?raw=true "Optional Title")
 
 ### 1.10.3. Route 53 Routing Policies
 
