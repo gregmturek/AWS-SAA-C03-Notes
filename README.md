@@ -3997,9 +3997,9 @@ for a domain and visible to the public internet.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-04-14-21-01-52.png?raw=true "Optional Title")
 
-### 1.10.4. CNAME vs R53 Alias
+### 1.10.4. Simple routing
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-21-04.png?raw=true "Optional Title")
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-03-13.png?raw=true "Optional Title")
 
 ### 1.10.5. Route 53 Health Checks
 
@@ -4035,13 +4035,13 @@ There are three types of checks.
 - Cloudwatch alarms
 - Checks of checks
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-21-01-52.png?raw=true "Optional Title")
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-21-04.png?raw=true "Optional Title")
 
-### 1.10.6. Route 53 Health Checks
+### 1.10.6. Failover Routing
 
 ![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-33-59.png?raw=true "Optional Title")
 
-### 1.10.3. Route 53 Routing Policies
+### 1.10.3. Routing Policies
 
 6 types
 
