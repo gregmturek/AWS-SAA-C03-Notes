@@ -3999,6 +3999,11 @@ for a domain and visible to the public internet.
 
 ### 1.10.4. Simple routing
 
+- Simple : Route traffic to a single resource. Client queries the resolver
+which has one record. It will respond with 3 values and these get forwarded
+back to the client. The client then picks one of the three at random.
+This is a single record only. No health checks.
+
 ![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-03-13.png?raw=true "Optional Title")
 
 ### 1.10.5. Route 53 Health Checks
@@ -4039,23 +4044,24 @@ There are three types of checks.
 
 ### 1.10.6. Failover Routing
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-33-59.png?raw=true "Optional Title")
-
-### 1.10.3. Routing Policies
-
-6 types
-
-- Simple : Route traffic to a single resource. Client queries the resolver
-which has one record. It will respond with 3 values and these get forwarded
-back to the client. The client then picks one of the three at random.
-This is a single record only. No health checks.
-
 - Failover : Create two records of the same name and the same type. One
 is set to be the primary and the other is the secondary. This is the same
 as the simple policy except for the response. Route 53 knows the health of
 both instances. As long as the primary is healthy, it will respond with
 this one. If the health check with the primary fails, the backup will be
 returned instead. This is set to impliment active - passive failover.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-33-59.png?raw=true "Optional Title")
+
+### 1.10.7. Multi Value Routing
+
+- Multi-value : One record with one name and multiple values in this record.
+These will be health checked and the unhealthy responses will automatically
+be removed.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-20-48-00.png?raw=true "Optional Title")
+
+### 1.10.8. Weighted Routing
 
 - Weighted : Create multiple records of the same name within the hosted zone.
 For each of those records, you provide a weighted value. The total weight
@@ -4065,10 +4071,24 @@ on the weight. If one of them fails its health check, it will be skipped over
 and over again until a good one gets hit. This can be used for migration
 to seperate servers.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-20-59-13.png?raw=true "Optional Title")
+
+### 1.10.9. Latency Routing
+
 - Latency-based : Multiple records in a hosted zone can be created with
 the same name and same type. When a client request arrives, it knows which
 region the request comes from. It knows the lowest latency and will respond
 with the lowest latency.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-21-11-00.png?raw=true "Optional Title")
+
+### 1.10.3. Routing Policies
+
+6 types
+
+
+
+
 
 - Geolocation : Focused to delivering results matching the query of your
 customers. The record will first be matched based on the country if possible.
@@ -4078,6 +4098,3 @@ This can be used for licensing rights. If overlapping regions,
 the priority will always go to the most specific or smallest region. The US
 will be chosen over the North America record.
 
-- Multi-value : One record with one name and multiple values in this record.
-These will be health checked and the unhealthy responses will automatically
-be removed.
