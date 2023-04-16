@@ -4082,13 +4082,7 @@ with the lowest latency.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-04-15-21-11-00.png?raw=true "Optional Title")
 
-### 1.10.3. Routing Policies
-
-6 types
-
-
-
-
+### 1.10.10. Geolocation Routing
 
 - Geolocation : Focused to delivering results matching the query of your
 customers. The record will first be matched based on the country if possible.
@@ -4098,3 +4092,23 @@ This can be used for licensing rights. If overlapping regions,
 the priority will always go to the most specific or smallest region. The US
 will be chosen over the North America record.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-22-41-26.png?raw=true "Optional Title")
+
+### 1.10.11. Geoproximity
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-22-50-35.png?raw=true "Optional Title")
+
+### 1.10.12. R53 Interoperability
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-22-57-29.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-23-00-44.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-23-02-16.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-23-46-44.png?raw=true "Optional Title")
+
+
+### 1.10.13. DNSSEC using Route53
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-15-23-54-04.png?raw=true "Optional Title")
