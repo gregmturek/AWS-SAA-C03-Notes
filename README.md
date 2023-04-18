@@ -4295,6 +4295,10 @@ magnetic - compatibility
 Billing is per instance and hourly rate for that compute. You are billed
 for storage allocated.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-18-21-21-32.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-18-21-23-56.png?raw=true "Optional Title")
+
 ### 1.11.4. RDS Multi AZ (High-Availability)
 
 RDS Access ONLY via database CNAME. The CNAME will point at the primary
