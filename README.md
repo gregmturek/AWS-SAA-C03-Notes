@@ -4217,6 +4217,12 @@ Relationships are fast because interactions can be queried.
 
 ##### 1.11.1.2.6. Acid vs Base
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-18-13-31-45.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-18-14-00-30.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-18-14-03-59.png?raw=true "Optional Title")
+
 ### 1.11.2. Databases on EC2
 
 It is always a bad idea to do this. Splitting an instance over different
