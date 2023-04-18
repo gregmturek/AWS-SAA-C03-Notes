@@ -4141,10 +4141,14 @@ Table relationships use keys
 
 The Table Scehmas and relationships must be defined in advance.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-16-21-01-16.png?raw=true "Optional Title")
+
 #### 1.11.1.2. Non-Relational (NoSQL)
 
 Not a single thing, and is a catch all for everything else. There is generally
 a weak or no schema.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-16-21-01-16.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.1. Key-Value databases
 
@@ -4154,6 +4158,8 @@ So long as every key is unique, there is no real schema or structure.
 These are really fast and highly scalable.
 
 This is also used for **in memory caching**
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-38-56.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.2. Wide Column Store
 
@@ -4169,6 +4175,8 @@ the same between values. The only requirements is the key needs to be unique.
 
 It can be **single key** or **composite key**. Either case, it must be unique.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-42-46.png?raw=true "Optional Title")
+
 ##### 1.11.1.2.3. Document
 
 Documents are generally formated using JSON or XML.
@@ -4178,6 +4186,8 @@ This is an extension of a key-value store.
 Good for orders or contacts. This is good for whole documents or deep attribute
 interations.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-44-45.png?raw=true "Optional Title")
+
 ##### 1.11.1.2.4. Column
 
 Row Store (MySQL) - If you needed to read the price of one item you need that
@@ -4186,6 +4196,8 @@ need to check for each row. Often called Online Transactional Processing (OLTP).
 
 Column Store (Redshift) - Columns are stored together. Bad for sales style
 but good for reporting or when all values for a specific size are required.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-48-12.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.5. Graph
 
@@ -4200,6 +4212,10 @@ Relationships can also have values associated with them and they are also
 stored inside the database.
 
 Relationships are fast because interactions can be queried.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-50-42.png?raw=true "Optional Title")
+
+##### 1.11.1.2.6. Acid vs Base
 
 ### 1.11.2. Databases on EC2
 
