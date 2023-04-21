@@ -4329,6 +4329,20 @@ two times the price.
 - AZ outage, primary failure, manual failover, instance type change, and
 software patching
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-20-46-15.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-20-56-58.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-00-48.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-03-36.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-17-28.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-18-33.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-20-06.png?raw=true "Optional Title")
+
 ### 1.11.5. RDS Backup and Restores
 
 RPO - Recovery Point Objective
