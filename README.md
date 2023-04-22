@@ -4337,12 +4337,6 @@ software patching
 
 ![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-03-36.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-17-28.png?raw=true "Optional Title")
-
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-18-33.png?raw=true "Optional Title")
-
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-20-06.png?raw=true "Optional Title")
-
 ### 1.11.5. RDS Backup and Restores
 
 RPO - Recovery Point Objective
@@ -4375,6 +4369,12 @@ both the snapshots and the translation logs.
 When you delete the database, they can be retained but they will expire
 based on their retention period.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-17-28.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-21-20-56-49.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-21-20-59-17.png?raw=true "Optional Title")
+
 #### 1.11.5.1. RDS Exam Powerups
 
 When performing a restore, RDS creates a new RDS with a new endpoint address.
@@ -4390,6 +4390,12 @@ desired point in time.
 Restores aren't fast, think about RTO.
 
 ### 1.11.6. RDS Read-Replicas
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-21-20-54-57.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-18-33.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-20-06.png?raw=true "Optional Title")
 
 Kept in sync using **asyncronous replication**
 
