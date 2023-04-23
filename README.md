@@ -4426,7 +4426,23 @@ to snapshots and backups
 - Promotion cannot be reversed
 - Global availability improvements provides global resilience
 
-### 1.11.7. Amazon Aurora
+### 1.11.7. RDS Data Security
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-12-24-45.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-12-26-04.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-12-28-01.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-12-30-51.png?raw=true "Optional Title")
+
+### 1.11.8. RDS Custom
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-09-28.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-11-34.png?raw=true "Optional Title")
+
+### 1.11.9. Amazon Aurora
 
 Aurora architecture is VERY different from RDS. At it's heart it uses a
 **cluster**
@@ -4470,7 +4486,13 @@ be re-used.
 
 Replicas can be added and removed without requiring storage provisioning.
 
-#### 1.11.7.1. Endpoints
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-29-56.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-36-47.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-39-04.png?raw=true "Optional Title")
+
+#### 1.11.9.1. Endpoints
 
 Cluster endpoint - points at the primary instance
 
@@ -4479,7 +4501,9 @@ Reader endpoint - will load balance over the available replicas
 As additional replicas are used for reads, this is load balanced over
 replicas.
 
-#### 1.11.7.2. Costs
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-40-27.png?raw=true "Optional Title")
+
+#### 1.11.9.2. Costs
 
 - No free-tier option
 - Aurora doesn't support micro instances
@@ -4487,7 +4511,9 @@ replicas.
 - Storage - GB-Month consumed, IO cost per request
 - 100% DB size in backups are included
 
-#### 1.11.7.3. Aurora Restore, Clone and Backtrack
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-42-09.png?raw=true "Optional Title")
+
+#### 1.11.9.3. Aurora Restore, Clone and Backtrack
 
 Backups in Aurora work in the same way as RDS
 
@@ -4503,7 +4529,7 @@ references the original storage and only write the differences between
 those two. It only copies the difference and only store changes
 between the source data and the clone.
 
-### 1.11.7. Aurora Serverless
+### 1.11.10. Aurora Serverless
 
 Provides a version of Aurora without worrying about the resources. 
 It uses ACU - Aurora Capacity Units
@@ -4526,7 +4552,7 @@ they are actually communicating with the proxy fleet. The proxy fleet
 brokers an application with the ACU and ensures you can scale in and out
 without worrying about usage.
 
-#### 1.11.7.1. Aurora Serverless - Use Cases
+#### 1.11.10.1. Aurora Serverless - Use Cases
 
 Infrequently used applications. You only pay for resources as you consume
 them on a per second basis.
@@ -4543,7 +4569,7 @@ when not needed.
 Great for multi-tenant applications. If your incoming load is directly
 tied to more people, that's fine.
 
-### 1.11.8. Aurora Global Database
+### 1.11.11. Aurora Global Database
 
 Replication from primary cluster volume to secondary replicas for read
 operations.
@@ -4565,7 +4591,7 @@ All can be promoted to Read or Write with diasters.
 
 There is currently max of 5 secondary regions.
 
-### 1.11.9.  Aurora Multi-Master Writes
+### 1.11.12.  Aurora Multi-Master Writes
 
 Allows an aurora cluster to have multiple instances with multiple writers.
 
@@ -4593,7 +4619,9 @@ This ensures storage is updated on in-memory cache's
 If a writer goes down in a multi-master cluster, the application will shift
 all future load over to the new writter with little to no downtime.
 
-### 1.11.10. Database Migration Service (DMS)
+### 1.11.13. RDS Proxy
+
+### 1.11.14. Database Migration Service (DMS)
 
 A managed database migration service. This runs using a replication instance.
 
