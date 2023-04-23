@@ -4529,6 +4529,9 @@ references the original storage and only write the differences between
 those two. It only copies the difference and only store changes
 between the source data and the clone.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-14-02-24.png?raw=true "Optional Title")
+
+
 ### 1.11.10. Aurora Serverless
 
 Provides a version of Aurora without worrying about the resources. 
@@ -4552,6 +4555,10 @@ they are actually communicating with the proxy fleet. The proxy fleet
 brokers an application with the ACU and ensures you can scale in and out
 without worrying about usage.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-21-31.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-25-33.png?raw=true "Optional Title")
+
 #### 1.11.10.1. Aurora Serverless - Use Cases
 
 Infrequently used applications. You only pay for resources as you consume
@@ -4568,6 +4575,8 @@ when not needed.
 
 Great for multi-tenant applications. If your incoming load is directly
 tied to more people, that's fine.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-30-10.png?raw=true "Optional Title")
 
 ### 1.11.11. Aurora Global Database
 
@@ -4590,6 +4599,10 @@ Secondary regions can have 16 replicas.
 All can be promoted to Read or Write with diasters.
 
 There is currently max of 5 secondary regions.
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-42-42.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-45-31.png?raw=true "Optional Title")
 
 ### 1.11.12.  Aurora Multi-Master Writes
 
@@ -4619,7 +4632,21 @@ This ensures storage is updated on in-memory cache's
 If a writer goes down in a multi-master cluster, the application will shift
 all future load over to the new writter with little to no downtime.
 
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-10-39.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-13-26.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-16-45.png?raw=true "Optional Title")
+
 ### 1.11.13. RDS Proxy
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-29-10.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-32-28.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-34-29.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-36-35.png?raw=true "Optional Title")
 
 ### 1.11.14. Database Migration Service (DMS)
 
@@ -4629,3 +4656,12 @@ Need to define the source and destination endpoints. These point at the
 physical source and target databases.
 
 One endpoint MUST be on AWS.
+
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-55-10.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-58-54.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-23-02-24.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-22-23-04-15.png?raw=true "Optional Title")
