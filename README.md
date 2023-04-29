@@ -1819,7 +1819,7 @@ When uploading an object, you can create and use a customer managed key (KMS key
 
 The best benefit is the role separation. To decrypt any object, you need access to the CMK that was used to generate the unique key that encrypted them. The CMK is used to decrypt the data encryption key for that object. That decrypted data encryption key is used to decrypt the object itself. If you don't have access to KMS, you don't have access to the object.
 
-#### Summary
+#### 1.5.8.4. Summary
 
 With client side encryption, you handle both the key management and the encryption processes. So use this method. If you absolutely need to control both of these or you don't trust AWS and their regular audits. It uses more resources to manage keys and actually perform the encryption processes at scale but it's definitely the method that gives you the most control.
 
@@ -1831,7 +1831,7 @@ SSE-KMS uses KMS and KMS keys. You can control key rotation. You can control key
 
 ![Stacks](../main/attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_01_15.png?raw=true "Optional Title")
 
-#### Default bucket encryption.
+#### 1.5.8.5. Default bucket encryption
 
 When you're uploading objects to S3 you're actually utilizing the put object operation. As part of this operation, you can specify a specific Header which is x-amz-server-side-encryption.
 
@@ -1842,6 +1842,14 @@ So let's say that we set the Default to be AES256 then SSE-S3 would be used when
 This is the key thing. The bucket Default is just that, a default. It applies only when you don't specify anything explicitly on an object. If you do, that takes priority.
 
 ![Stacks](../main/attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_10_54.png?raw=true "Optional Title")
+
+#### 1.5.8.6. S3 Bucket Keys
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-29-22-28-40.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-29-22-29-40.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-29-22-31-50.png?raw=true "Optional Title")
 
 ### 1.5.8. S3 Object Storage Classes
 
