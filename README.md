@@ -4665,7 +4665,6 @@ physical source and target databases.
 
 One endpoint MUST be on AWS.
 
-
 ![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-55-10.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-58-54.png?raw=true "Optional Title")
@@ -4718,3 +4717,10 @@ Two storage classes available, standard and infrequent access.
 Lifecycle policies can move data between EFS
 
 ### 1.12.1. AWS Backup
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-29-22-50-43.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-29-23-16-42.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-29-23-34-44.png?raw=true "Optional Title")
+
