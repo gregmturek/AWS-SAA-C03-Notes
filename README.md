@@ -4726,7 +4726,15 @@ Lifecycle policies can move data between EFS
 
 ## 1.13. HA and Scaling
 
-### 1.13.1. Load Balancing Fundamentals
+### 1.13.1. Regional and Global AWS Architecture
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-11-56-35.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-11-59-16.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-12-07-30.png?raw=true "Optional Title")
+
+### 1.13.2. Load Balancing Fundamentals
 
 Without load balancing, it is difficult to scale.
 
@@ -4744,7 +4752,17 @@ servers on the application server.
 As long as 1+ servers are available, the LB is operational. Clients
 shouldn't see errors.
 
-#### 1.13.1.1. LB Exam Powerup
+#### 1.13.2.1. ELB Architecture
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-12-19-09.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-16-31-33.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-17-11-06.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-17-58-44.png?raw=true "Optional Title")
+
+#### 1.13.2.2. LB Exam Powerup
 
 Clients connect to the **listener** of the load balancer
 
@@ -4757,22 +4775,21 @@ Client is abstracted away from individual servers
 
 Used for high availability, fault tolerance, and scaling
 
-### 1.13.2. Application Load Balancer (ALB)
+### 1.13.3.Application Load balancing (ALB) vs Network Load Balancing (NLB)
 
-ALB is a layer 7 - it is capable of inspecting data that passes through
-it and can understand the application layer
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-05-40.png?raw=true "Optional Title")
 
-It can take action based on things from that protocol
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-09-54.png?raw=true "Optional Title")
 
-These are scalable and highly available.
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-17-24.png?raw=true "Optional Title")
 
-Internet facing or Internal
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-20-45.png?raw=true "Optional Title")
 
-Internal load balancer is used for inside a VPC only
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-24-15.png?raw=true "Optional Title")
 
-Listens on the outside and sends to target groups
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-25-38.png?raw=true "Optional Title")
 
-#### 1.13.2.1. Cross zone load balancing
+#### 1.13.3.1. Cross zone load balancing
 
 Each node that is part of the load balancer is able to distribute load
 even if its not in the same AZ. It is the reason we can achieve a balanced
@@ -4785,7 +4802,9 @@ If all instances are shown as healthy, it can distribute evenly.
 ALB can support a wide array of targets. An individual target can be a
 member of multiple groups.
 
-#### 1.13.2.2. ALB Exam Powerup
+![Stacks](../main/attachments/Screenshot-from-2023-04-30-17-21-28.png?raw=true "Optional Title")
+
+#### 1.13.3.2. ALB Exam Powerup
 
 **Targets** are lambda functions or EC2 instances that are directed towards.
 
@@ -4797,7 +4816,7 @@ ALB can use SNI for multiple SSL certs - host based rules
 
 AWS does not suggest using Classic Load Balancer (CLB), these are legacy.
 
-### 1.13.3. Launch Configuration and Templates
+### 1.13.4. Launch Configuration and Templates
 
 LC and LT key concepts. They are documents which allow you to config an EC2
 instance in advance. You can configure userdata and IAM role along with
@@ -4811,7 +4830,7 @@ Launch templates
 
 If you need to adjust a configuration, you must make a new one and launch it.
 
-### 1.13.4. Auto Scaling Groups
+### 1.13.5. Auto Scaling Groups
 
 Automatic scaling and self-healing for EC2
 
@@ -4828,7 +4847,7 @@ Scaling Policies automate based on metrics or a schedule
 Auto Scaling Groups will try to keep the AZs equal with the number of EC2
 instances.
 
-#### 1.13.4.1. Scaling Policies
+#### 1.13.5.1. Scaling Policies
 
 Manual Scaling - manually adjust the desired capacity
 
@@ -4854,7 +4873,7 @@ You should use ALB with autoscaling groups.
 
 ASG defines when and where, Launch Template defines what.
 
-### 1.13.5. Network Load Balancer (NLB)
+### 1.13.6. Network Load Balancer (NLB)
 
 Part of AWS Version 2 series of load balances.
 
@@ -4876,9 +4895,9 @@ NLB can load balance non HTTP/S applications, doesn't care about anything
 above TCP/UDP. This means it can handle load balancing for FTP or things
 that aren't HTTP or HTTPS.
 
-### 1.13.6. SSL Offload and Session Stickiness
+### 1.13.7. SSL Offload and Session Stickiness
 
-#### 1.13.6.1. Bridging - Default mode
+#### 1.13.7.1. Bridging - Default mode
 
 One or more clients makes one or more connections to a load balancer.
 The load balancer is configured so the **listener** uses HTTPS, SSL connections
@@ -4900,7 +4919,7 @@ The EC2 will need matching SSL certificates.
 Needs the compute for the cryptographic operations. Every EC2 instance must
 peform these cryptographic operations.
 
-#### 1.13.6.2. Pass-through
+#### 1.13.7.2. Pass-through
 
 The client connects, but the load balancer passes the connection along without
 decrypting the data at all. The instances still need the SSL certificates,
@@ -4913,7 +4932,7 @@ needs to be seen by AWS.
 Negative is you don't get any load balancing based on the HTTP part
 because that is never exposed to the load balancer.
 
-#### 1.13.6.3. Offload
+#### 1.13.7.3. Offload
 
 Clients connect to the load balancer using HTTPS and are terminated on the
 load balancer. The LB needs an SSL certificate to decrypt the data, but
@@ -4922,7 +4941,7 @@ required on the load balancer, this is not needed on the LB.
 
 Data is in plaintext form across AWS's network. Not a problem for most.
 
-#### 1.13.6.4. Connection Stickiness
+#### 1.13.7.4. Connection Stickiness
 
 If there is no stickiness, each time the customer logs on they will have
 a stateless experience. If the state is stored on a particular server,
