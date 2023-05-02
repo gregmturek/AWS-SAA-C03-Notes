@@ -4830,6 +4830,10 @@ Launch templates
 
 If you need to adjust a configuration, you must make a new one and launch it.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-10-25-11.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-10-26-18.png?raw=true "Optional Title")
+
 ### 1.13.5. Auto Scaling Groups
 
 Automatic scaling and self-healing for EC2
@@ -4846,6 +4850,12 @@ Scaling Policies automate based on metrics or a schedule
 
 Auto Scaling Groups will try to keep the AZs equal with the number of EC2
 instances.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-11-42-45.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-11-44-16.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-11-45-11.png?raw=true "Optional Title")
 
 #### 1.13.5.1. Scaling Policies
 
@@ -4873,27 +4883,13 @@ You should use ALB with autoscaling groups.
 
 ASG defines when and where, Launch Template defines what.
 
-### 1.13.6. Network Load Balancer (NLB)
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-11-53-33.png?raw=true "Optional Title")
 
-Part of AWS Version 2 series of load balances.
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-13-50-49.png?raw=true "Optional Title")
 
-NLB's are Layer 4, only understand TCP and UDP.
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-13-52-37.png?raw=true "Optional Title")
 
-Can't understand or interpret HTTP or HTTPs, for these reason they are much
-faster in latency. You should default to NLB if http is not used.
-
-There is nothing stopping NLB from load balancing on HTTP just by data.
-
-Rapid scaling - **millions of requests per second**
-
-Only member of the load balancing family that can be provided a static IP.
-There is 1 interface per AZ. Can also use Elastic IPs (whitelisting)
-
-Can do SSL pass through.
-
-NLB can load balance non HTTP/S applications, doesn't care about anything
-above TCP/UDP. This means it can handle load balancing for FTP or things
-that aren't HTTP or HTTPS.
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-14-10-45.png?raw=true "Optional Title")
 
 ### 1.13.7. SSL Offload and Session Stickiness
 
