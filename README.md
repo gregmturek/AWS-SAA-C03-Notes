@@ -4900,6 +4900,10 @@ ASG defines when and where, Launch Template defines what.
 
 #### 1.13.5.2.  ASG Scaling Hooks
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-21-59-31.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-02-22-05-55.png?raw=true "Optional Title")
+
 ### 1.13.6. SSL Offload and Session Stickiness
 
 #### 1.13.6.1. Bridging - Default mode
