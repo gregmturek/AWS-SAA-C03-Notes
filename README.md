@@ -4904,9 +4904,13 @@ ASG defines when and where, Launch Template defines what.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-02-22-05-55.png?raw=true "Optional Title")
 
-### 1.13.6. SSL Offload and Session Stickiness
+### 1.13.6. ASG HealthCheck Comparison - EC2 vs ELB
 
-#### 1.13.6.1. Bridging - Default mode
+![Stacks](../main/attachments/Screenshot-from-2023-05-03-21-23-48.png?raw=true "Optional Title")
+
+### 1.13.7. SSL Offload and Session Stickiness
+
+#### 1.13.7.1. Bridging - Default mode
 
 One or more clients makes one or more connections to a load balancer.
 The load balancer is configured so the **listener** uses HTTPS, SSL connections
@@ -4928,7 +4932,7 @@ The EC2 will need matching SSL certificates.
 Needs the compute for the cryptographic operations. Every EC2 instance must
 peform these cryptographic operations.
 
-#### 1.13.6.2. Pass-through
+#### 1.13.7.2. Pass-through
 
 The client connects, but the load balancer passes the connection along without
 decrypting the data at all. The instances still need the SSL certificates,
@@ -4941,7 +4945,7 @@ needs to be seen by AWS.
 Negative is you don't get any load balancing based on the HTTP part
 because that is never exposed to the load balancer.
 
-#### 1.13.6.3. Offload
+#### 1.13.7.3. Offload
 
 Clients connect to the load balancer using HTTPS and are terminated on the
 load balancer. The LB needs an SSL certificate to decrypt the data, but
@@ -4950,7 +4954,7 @@ required on the load balancer, this is not needed on the LB.
 
 Data is in plaintext form across AWS's network. Not a problem for most.
 
-#### 1.13.6.4. Connection Stickiness
+#### 1.13.7.4. Connection Stickiness
 
 If there is no stickiness, each time the customer logs on they will have
 a stateless experience. If the state is stored on a particular server,
@@ -4967,3 +4971,6 @@ server.
 new cookie and the process will start again.
 
 This could cause backend unevenness
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-03-22-00-11.png?raw=true "Optional Title")
+![Stacks](../main/attachments/Screenshot-from-2023-05-03-22-10-22.png?raw=true "Optional Title")
