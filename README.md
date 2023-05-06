@@ -4973,6 +4973,18 @@ new cookie and the process will start again.
 This could cause backend unevenness
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-03-22-00-11.png?raw=true "Optional Title")
+
 ![Stacks](../main/attachments/Screenshot-from-2023-05-03-22-10-22.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-03-22-46-28.png?raw=true "Optional Title")
+
+
+### 1.13.8. Gateway Load Balancer
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-06-22-35-54.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-06-22-55-15.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-06-23-15-53.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-06-23-24-36.png?raw=true "Optional Title")
