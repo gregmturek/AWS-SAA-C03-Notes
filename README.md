@@ -4989,9 +4989,9 @@ This could cause backend unevenness
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-06-23-24-36.png?raw=true "Optional Title")
 
-## 1.14. Serverless and AppServices
+## 1.14. Serverless and Application services
 
-### 1.14.1. Architecture Evolution
+### 1.14.1. Architecture Deep Dive
 
 Youtube
 
@@ -5006,6 +5006,8 @@ was a monolithic architecture.
 - Bill together. All components are always running and always incurring charges.
 
 This is the least cost effective way to architect systems.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-07-14-49-40.png?raw=true "Optional Title")
 
 #### 1.14.1.2. Tiered
 
@@ -5026,6 +5028,8 @@ customer experience.
 
 Even if there is no job to be processed, the middle tier will need to be
 running because otherwise it would fail.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-07-14-55-05.png?raw=true "Optional Title")
 
 #### 1.14.1.3. Evolving with Queues
 
@@ -5049,6 +5053,8 @@ of the information.
 
 The autoscaling group will only bring up servers as their needed.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-07-16-15-02.png?raw=true "Optional Title")
+
 #### 1.14.1.4. Event Driven Architecture
 
 Event producers - interact with customers or systems monitoring components.
@@ -5063,6 +5069,10 @@ In either case, there are no resources waiting around to be used.
 Event router is needed for event driven architecture that also manages
 an event bus.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-07-16-29-47.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-07-16-32-04.png?raw=true "Optional Title")
+
 #### 1.14.1.5. Highlights
 
 - No constant running or waiting for things
@@ -5073,6 +5083,10 @@ an event bus.
 
 Mature event driven architecture only consumes resources while handling
 events.
+
+#### 1.14.1.6. Microservices
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-07-16-17-14.png?raw=true "Optional Title")
 
 ### 1.14.2. AWS Lambda
 
