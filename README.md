@@ -5183,6 +5183,10 @@ Architecturally at the heart of event bridge is the default event bus.
 
 The default event bus is moving packets of JSON data.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-08-23-44-32.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-08-23-46-47.png?raw=true "Optional Title")
+
 ### 1.14.4. API Gateway
 
 Application Programming Interface (API)
