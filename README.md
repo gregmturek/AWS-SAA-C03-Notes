@@ -5114,6 +5114,18 @@ for having lambda functions waiting and ready to go.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-07-22-16-11.png?raw=true "Optional Title")
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-08-21-35-55.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-08-22-29-36.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-08-22-36-33.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-08-22-48-22.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-08-22-53-55.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-08-23-00-19.png?raw=true "Optional Title")
+
 #### 1.14.2.1. Lambda Architecture
 
 Best practice is to make it very small and very specialized.
@@ -5135,9 +5147,6 @@ Once they are configured, they can only access resources within a VPC.
 Should always use AWS services for input and output.
 
 Lambda functions can run up to 15 minutes. That is the max limit.
-
-
-
 
 #### 1.14.2.2. Key Considerations
 
