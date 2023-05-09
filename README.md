@@ -5187,46 +5187,7 @@ The default event bus is moving packets of JSON data.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-08-23-46-47.png?raw=true "Optional Title")
 
-### 1.14.4. API Gateway
-
-Application Programming Interface (API)
-
-This is a way that applications or services can communicate with each other.
-
-Endpoints are used to access services. Each service has its own endpoint
-in its own region.
-
-When you request AWS stops an EC2 instance, the message is set to the API
-in that region for that resource.
-
-APIs also perform authentication using passwords or keys. API authorizes
-each service and needs your permissions verified each time.
-
-#### 1.14.4.1. Authentication
-
-#### 1.14.4.2. Authorization
-
-API gateway is an AWS managed service that provides managed API endpoints.
-Allows you to create, publish, monitor, and secure APIs as a service.
-
-Billed based on the number of API calls as well as data transfered.
-
-This can be used for serverless architecture to provide an entry point
-for that design.
-
-This is great during an architecture evolution.
-
-Step 1:
-Create a managed API and point at the existing monolithic application.
-
-Step 2:
-Using API gateway allows the buisness to evolve along the way slowly.
-This might move some of the data to fargate and aurora architecture.
-
-Step 3:
-Move to a full serverless architecture with DynamoDB
-
-### 1.14.5. Serverless
+### 1.14.4. Serverless
 
 This is not one single thing, you manage few if any servers.
 Applications are a collection of small and specialized functions.
@@ -5239,7 +5200,9 @@ be little to no cost due to compute not being used.
 
 Should use managed services when possible.
 
-#### 1.14.5.1. Example of Serverless
+![Stacks](../main/attachments/Screenshot-from-2023-05-09-21-25-42.png?raw=true "Optional Title")
+
+#### 1.14.4.1. Example of Serverless
 
 She browses to a static website that is running the uploader. The JS runs
 directly from the web browser.
@@ -5264,6 +5227,47 @@ DynamoDB.
 
 The user can then interact with another Lambda which will allow her to
 pull the media from the transcode bucket using the dynamoDB entry.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-09-21-37-24.png?raw=true "Optional Title")
+
+### 1.14.5. API Gateway
+
+Application Programming Interface (API)
+
+This is a way that applications or services can communicate with each other.
+
+Endpoints are used to access services. Each service has its own endpoint
+in its own region.
+
+When you request AWS stops an EC2 instance, the message is set to the API
+in that region for that resource.
+
+APIs also perform authentication using passwords or keys. API authorizes
+each service and needs your permissions verified each time.
+
+#### 1.14.5.1. Authentication
+
+#### 1.14.5.2. Authorization
+
+API gateway is an AWS managed service that provides managed API endpoints.
+Allows you to create, publish, monitor, and secure APIs as a service.
+
+Billed based on the number of API calls as well as data transfered.
+
+This can be used for serverless architecture to provide an entry point
+for that design.
+
+This is great during an architecture evolution.
+
+Step 1:
+Create a managed API and point at the existing monolithic application.
+
+Step 2:
+Using API gateway allows the buisness to evolve along the way slowly.
+This might move some of the data to fargate and aurora architecture.
+
+Step 3:
+Move to a full serverless architecture with DynamoDB
 
 ### 1.14.6. Simple Notification Service (SNS)
 
