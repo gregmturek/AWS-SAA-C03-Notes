@@ -5230,46 +5230,7 @@ pull the media from the transcode bucket using the dynamoDB entry.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-09-21-37-24.png?raw=true "Optional Title")
 
-### 1.14.5. API Gateway
-
-Application Programming Interface (API)
-
-This is a way that applications or services can communicate with each other.
-
-Endpoints are used to access services. Each service has its own endpoint
-in its own region.
-
-When you request AWS stops an EC2 instance, the message is set to the API
-in that region for that resource.
-
-APIs also perform authentication using passwords or keys. API authorizes
-each service and needs your permissions verified each time.
-
-#### 1.14.5.1. Authentication
-
-#### 1.14.5.2. Authorization
-
-API gateway is an AWS managed service that provides managed API endpoints.
-Allows you to create, publish, monitor, and secure APIs as a service.
-
-Billed based on the number of API calls as well as data transfered.
-
-This can be used for serverless architecture to provide an entry point
-for that design.
-
-This is great during an architecture evolution.
-
-Step 1:
-Create a managed API and point at the existing monolithic application.
-
-Step 2:
-Using API gateway allows the buisness to evolve along the way slowly.
-This might move some of the data to fargate and aurora architecture.
-
-Step 3:
-Move to a full serverless architecture with DynamoDB
-
-### 1.14.6. Simple Notification Service (SNS)
+### 1.14.5. Simple Notification Service (SNS)
 
 HA, Durable, and Secure service.
 
@@ -5298,7 +5259,13 @@ Offers:
 - SSE (server side encryption)
 - Topics can be used cross-account via Topic Policy
 
-### 1.14.7. AWS Step Functions
+![Stacks](../main/attachments/Screenshot-from-2023-05-09-22-28-15.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-09-22-30-34.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-09-22-32-54.png?raw=true "Optional Title")
+
+### 1.14.6. AWS Step Functions
 
 There are many problems with lambdas limitations that can be solved with
 a state machine.
@@ -5323,7 +5290,11 @@ Amazon States Languate (ASL) - JSON template
 
 These use IAM Roles for permissions.
 
-#### 1.14.7.1. States
+![Stacks](../main/attachments/Screenshot-from-2023-05-10-22-38-48.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-10-22-42-44.png?raw=true "Optional Title")
+
+#### 1.14.6.1. States
 
 - Succeed & Fail : Will wait until either is achieved
 - Wait : will wait until specific date and time or period of time
@@ -5331,6 +5302,51 @@ These use IAM Roles for permissions.
 - Parallel : will create parallel branches based on a choice
 - Map : accepts a list of things
 - Task : Single unit of work (lambda, batch, dynamoDB)
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-10-22-51-15.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-10-22-57-24.png?raw=true "Optional Title")
+
+### 1.14.7. API Gateway
+
+Application Programming Interface (API)
+
+This is a way that applications or services can communicate with each other.
+
+Endpoints are used to access services. Each service has its own endpoint
+in its own region.
+
+When you request AWS stops an EC2 instance, the message is set to the API
+in that region for that resource.
+
+APIs also perform authentication using passwords or keys. API authorizes
+each service and needs your permissions verified each time.
+
+#### 1.14.6.1. Authentication
+
+#### 1.14.6.2. Authorization
+
+API gateway is an AWS managed service that provides managed API endpoints.
+Allows you to create, publish, monitor, and secure APIs as a service.
+
+Billed based on the number of API calls as well as data transfered.
+
+This can be used for serverless architecture to provide an entry point
+for that design.
+
+This is great during an architecture evolution.
+
+Step 1:
+Create a managed API and point at the existing monolithic application.
+
+Step 2:
+Using API gateway allows the buisness to evolve along the way slowly.
+This might move some of the data to fargate and aurora architecture.
+
+Step 3:
+Move to a full serverless architecture with DynamoDB
+
+
 
 ### 1.14.8. Simple Queue Service (SQS)
 
