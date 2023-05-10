@@ -5322,30 +5322,25 @@ in that region for that resource.
 APIs also perform authentication using passwords or keys. API authorizes
 each service and needs your permissions verified each time.
 
-#### 1.14.6.1. Authentication
+![Stacks](../main/attachments/Screenshot-from-2023-05-10-23-42-30.png?raw=true "Optional Title")
 
-#### 1.14.6.2. Authorization
+![Stacks](../main/attachments/Screenshot-from-2023-05-10-23-45-02.png?raw=true "Optional Title")
 
-API gateway is an AWS managed service that provides managed API endpoints.
-Allows you to create, publish, monitor, and secure APIs as a service.
+#### 1.14.7.1. Authentication
 
-Billed based on the number of API calls as well as data transfered.
+![Stacks](../main/attachments/Screenshot-from-2023-05-10-23-52-14.png?raw=true "Optional Title")
 
-This can be used for serverless architecture to provide an entry point
-for that design.
+#### 1.14.7.2. Endpoint types
 
-This is great during an architecture evolution.
+![Stacks](../main/attachments/Screenshot-from-2023-05-10-23-54-37.png?raw=true "Optional Title")
 
-Step 1:
-Create a managed API and point at the existing monolithic application.
+#### 1.14.7.3. Errors
 
-Step 2:
-Using API gateway allows the buisness to evolve along the way slowly.
-This might move some of the data to fargate and aurora architecture.
+![Stacks](../main/attachments/Screenshot-from-2023-05-11-00-12-31.png?raw=true "Optional Title")
 
-Step 3:
-Move to a full serverless architecture with DynamoDB
+#### 1.14.7.3. Caching
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-11-00-19-29.png?raw=true "Optional Title")
 
 
 ### 1.14.8. Simple Queue Service (SQS)
