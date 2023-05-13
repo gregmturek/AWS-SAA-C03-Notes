@@ -5342,7 +5342,6 @@ each service and needs your permissions verified each time.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-11-00-19-29.png?raw=true "Optional Title")
 
-
 ### 1.14.8. Simple Queue Service (SQS)
 
 Provides managed message queues, fully managed, highly available.
@@ -5369,6 +5368,12 @@ to be finished, this puts it into a different workload to try and fix
 the corruption.
 
 ASG can scale and lambdas can be invoked based on queue length.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-11-21-58-29.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-11-21-58-50.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-11-22-09-33.png?raw=true "Optional Title")
 
 #### 1.14.8.1. Highlights
 
@@ -5400,6 +5405,10 @@ Messages can live on SQS Queue for up to 15 days. They offer KMS encryption
 at rest.
 
 Access is based on identity policies or a queue policy.
+
+#### 1.14.8.2. SQS Standard vs FIFO Queues
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-11-00-19-29.png?raw=true "Optional Title")
 
 ### 1.14.9. Kinesis
 
