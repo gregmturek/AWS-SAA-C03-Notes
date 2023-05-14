@@ -5408,7 +5408,11 @@ Access is based on identity policies or a queue policy.
 
 #### 1.14.8.2. SQS Standard vs FIFO Queues
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-11-00-19-29.png?raw=true "Optional Title")
+![Stacks](../main/attachments/Screenshot-from-2023-05-13-21-07-10.png?raw=true "Optional Title")
+
+#### 1.14.8.3. SQS Delay Queues
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-13-22-38-47.png?raw=true "Optional Title")
 
 ### 1.14.9. Kinesis
 
