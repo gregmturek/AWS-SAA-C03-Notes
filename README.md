@@ -5483,3 +5483,7 @@ Designed for data ingestion, analytics, monitoring, app clicks.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-14-19-41-11.png?raw=true "Optional Title")
 
 ### 1.14.13. Kinesis Video Streams
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-12-17.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-15-33.png?raw=true "Optional Title")
