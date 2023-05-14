@@ -5487,3 +5487,13 @@ Designed for data ingestion, analytics, monitoring, app clicks.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-12-17.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-15-33.png?raw=true "Optional Title")
+
+### 1.14.14. Amazon Cognito - User and Identity Pools
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-30-29.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-34-00.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-37-23.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-41-24.png?raw=true "Optional Title")
