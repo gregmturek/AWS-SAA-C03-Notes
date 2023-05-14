@@ -5414,6 +5414,10 @@ Access is based on identity policies or a queue policy.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-13-22-38-47.png?raw=true "Optional Title")
 
+#### 1.14.8.4. SQS Dead-Letter Queues
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-10-53-45.png?raw=true "Optional Title")
+
 ### 1.14.9. Kinesis
 
 This is a scalable streaming service. It is designed to inject data from
