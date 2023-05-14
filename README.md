@@ -5418,7 +5418,7 @@ Access is based on identity policies or a queue policy.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-14-10-53-45.png?raw=true "Optional Title")
 
-### 1.14.9. Kinesis
+### 1.14.9. Kinesis Data Streams
 
 This is a scalable streaming service. It is designed to inject data from
 lots of devices or lots of applications.
@@ -5449,6 +5449,8 @@ of data for a stream.
 **Kinesis Firehose** connects to a Kinesis stream. It can move the data
 from a stream onto S3 or another service.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-11-10-24.png?raw=true "Optional Title")
+
 ### 1.14.10. SQS vs Kinesis
 
 Is this about the ingestion of data or is it about the worker pools.
@@ -5465,3 +5467,19 @@ Kinesis is desiged for huge scale ingestion with multiple consumers. Rolling
 window for multiple consumers.
 
 Designed for data ingestion, analytics, monitoring, app clicks.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-11-13-21.png?raw=true "Optional Title")
+
+### 1.14.11. Kinesis Data Firehose
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-11-28-50.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-19-03-18.png?raw=true "Optional Title")
+
+### 1.14.12. Kinesis Data Analytics
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-19-19-42.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-19-41-11.png?raw=true "Optional Title")
+
+### 1.14.13. Kinesis Video Streams
