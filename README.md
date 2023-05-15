@@ -5497,3 +5497,27 @@ Designed for data ingestion, analytics, monitoring, app clicks.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-37-23.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-41-24.png?raw=true "Optional Title")
+
+### 1.14.15. AWS Glue 101
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-36-49.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-38-26.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-48-34.png?raw=true "Optional Title")
+
+### 1.14.16. Amazon MQ 101
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-52-44.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-34-00.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-57-49.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-59-34.png?raw=true "Optional Title")
+
+### 1.14.17. Amazon AppFlow
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-23-04-26.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-14-23-05-56.png?raw=true "Optional Title")
