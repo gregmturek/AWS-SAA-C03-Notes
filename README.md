@@ -5524,7 +5524,7 @@ Designed for data ingestion, analytics, monitoring, app clicks.
 
 ## 1.15. CloudFront
 
-### 1.15.1. Architecture Basics
+### 1.15.1. Cloudfront Architecture
 
 Cloudfront is a global object cache, also known as a content delivery network (CDN)
 
@@ -5544,6 +5544,12 @@ third party server system.
 
 Regional Edge Cache - larger version of an edge location. Provides
 another layer of caching.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-15-21-24-58.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-15-21-31-39.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-15-21-35-17.png?raw=true "Optional Title")
 
 #### 1.15.1.1. Caching Optimisation
 
