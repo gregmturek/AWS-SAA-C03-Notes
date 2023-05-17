@@ -5551,7 +5551,18 @@ another layer of caching.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-15-21-35-17.png?raw=true "Optional Title")
 
-#### 1.15.1.1. Caching Optimisation
+
+#### 1.15.1.1. CF TTL and Invalidations
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-17-21-44-26.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-17-21-44-33.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-17-22-02-38.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-17-22-08-46.png?raw=true "Optional Title")
+
+#### 1.15.1.2. Caching Optimisation
 
 Parameters can be passed on the url such as query string parameter.
 An example is `?language=en` and `?language=es`
