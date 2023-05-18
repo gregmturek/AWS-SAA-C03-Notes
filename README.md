@@ -5596,6 +5596,14 @@ Cloudfront must have a trusted and signed certificate. It can't be self signed.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-26-02.png?raw=true "Optional Title")
 
+### 1.15.3. Cloudfront and SSL/TLS
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-36-44.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-18-22-30-47.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-18-22-42-28.png?raw=true "Optional Title")
+
 ### 1.15.3. Origin Access Identity (OAI)
 
 This identity can be associated with a cloud front distribution.
