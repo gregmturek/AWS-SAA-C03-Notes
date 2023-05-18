@@ -5588,6 +5588,14 @@ If it's not a managed service, ACM doesn't support it.
 
 Cloudfront must have a trusted and signed certificate. It can't be self signed.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-16-35.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-20-31.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-22-32.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-26-02.png?raw=true "Optional Title")
+
 ### 1.15.3. Origin Access Identity (OAI)
 
 This identity can be associated with a cloud front distribution.
