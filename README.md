@@ -5604,7 +5604,7 @@ Cloudfront must have a trusted and signed certificate. It can't be self signed.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-18-22-42-28.png?raw=true "Optional Title")
 
-### 1.15.3. Origin Access Identity (OAI)
+### 1.15.3. Securing CF and S3 using OAI
 
 This identity can be associated with a cloud front distribution.
 
@@ -5613,6 +5613,14 @@ The edge locations gain this identity.
 We then remove the explicit allows and only allow the OAI to use it.
 
 Best practice is to create one per distribution to manage permissions.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-20-54-49.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-20-56-41.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-20-59-15.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-21-02-20.png?raw=true "Optional Title")
 
 ### 1.15.4.  AWS Global Accelerator
 
