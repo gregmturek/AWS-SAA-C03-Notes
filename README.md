@@ -5604,7 +5604,7 @@ Cloudfront must have a trusted and signed certificate. It can't be self signed.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-18-22-42-28.png?raw=true "Optional Title")
 
-### 1.15.3. Securing CF and S3 using OAI
+### 1.15.4. Securing CF and S3 using OAI
 
 This identity can be associated with a cloud front distribution.
 
@@ -5622,7 +5622,18 @@ Best practice is to create one per distribution to manage permissions.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-19-21-02-20.png?raw=true "Optional Title")
 
-### 1.15.4.  AWS Global Accelerator
+### 1.15.5. Private Distribution & Behaviours
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-22-22-17.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-22-24-47.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-22-35-31.png?raw=true "Optional Title")
+
+### 1.15.6. Lambda@Edge
+
+
+### 1.15.7. AWS Global Accelerator
 
 Starts with 2 **anycast** IP address
 1.2.3.4 & 4.3.2.1
@@ -5633,7 +5644,7 @@ Routing moves traffic to closest location.
 Traffic initially uses public internet and enters a global
 accelerator edge location.
 
-#### 1.15.4.1.  Key concepts
+#### 1.15.7.1.  Key concepts
 
 Move the AWS network closer to customers.
 
