@@ -5632,6 +5632,13 @@ Best practice is to create one per distribution to manage permissions.
 
 ### 1.15.6. Lambda@Edge
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-17-10.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-19-40.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-23-28.png?raw=true "Optional Title")
+
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirecting-examples
 
 ### 1.15.7. AWS Global Accelerator
 
