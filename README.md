@@ -5749,6 +5749,10 @@ a gateway endpoint. For anything else, the implicit deny will apply.
 
 They are only accessible from inside that specific VPC.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-13-59-31.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-14-06-15.png?raw=true "Optional Title")
+
 ### 1.16.4. VPC Endpoints (Interface)
 
 Provide private access to AWS Public Services
