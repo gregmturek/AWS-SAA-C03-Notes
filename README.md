@@ -5782,6 +5782,18 @@ Either of those two points of endpoints can be used
 
 PrivateDNS overrides the default DNS for services.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-20-54-36.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-20-58-47.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-00-35.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-01-32.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-01-57.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-05-05.png?raw=true "Optional Title")
+
 ### 1.16.5. VPC Peering
 
 Direct encrypted network link between two VPCs
