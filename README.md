@@ -5818,3 +5818,7 @@ through interconnected VPCs.
 You are creating a logical gateway object in one VPC.
 
 VPC Peering Connections CANNOT be created with overlapping VPC CIDRs
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-31-41.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-37-03.png?raw=true "Optional Title")
