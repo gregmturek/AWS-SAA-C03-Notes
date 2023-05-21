@@ -5670,7 +5670,6 @@ Caching is mostly CloudFront. TCP and UDP is mostly Global Accelerator
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-49-58.png?raw=true "Optional Title")
 
-
 ## 1.16. VPC Advanced
 
 ### 1.16.1. VPC Flow Logs
@@ -5692,6 +5691,12 @@ Desination can be S3 or CloudWatch logs.
 Childs of interfaces inherit the flow low monitoring from higher groups.
 
 The packet will always have source followed by destination.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-12-21-05.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-12-36-53.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-21-12-43-47.png?raw=true "Optional Title")
 
 ### 1.16.2. Egress-Only Internet Gateway
 
