@@ -5831,7 +5831,9 @@ VPC Peering Connections CANNOT be created with overlapping VPC CIDRs
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-31-26.png?raw=true "Optional Title")
 
-### 1.17.1. AWS Site-to-Site VPN
+### 1.17.2. IPSec VPN Fundamentals
+
+### 1.17.3. AWS Site-to-Site VPN
 
 A logical connection between a VPC and on-premise network encrypted
 using IPSec, running over the public internet.
@@ -5851,7 +5853,7 @@ Customer Gateway (CGW)
 
 VPN connection itself stores the config and connects the VGW and CGW
 
-#### 1.17.1.1. Considerations
+#### 1.17.3.1. Considerations
 
 Speed Cap on VPN 1.25Gbps
 
@@ -5864,7 +5866,7 @@ Setup of hours or less
 
 Great as a backup especially for Direct Connect (DX)
 
-### 1.17.2. AWS Direct Connect (DX)
+### 1.17.4. AWS Direct Connect (DX)
 
 This is a 1 Gpbs or 10 Gbps Network Port into AWS
 
@@ -5902,7 +5904,7 @@ It does not use public internet and provides consistently low latency.
 
 DX provides NO ENCRYPTION and needs to be managed on a per application basis.
 
-### 1.17.3. AWS Transit Gateway (TGW)
+### 1.17.5. AWS Transit Gateway (TGW)
 
 Network transit hub to connect VPCs to on premises networks
 
@@ -5919,7 +5921,7 @@ You can use these for cross-region peering attachment.
 
 Can share between accounts using AWS RAM
 
-### 1.17.4. Storage Gateway
+### 1.17.6. Storage Gateway
 
 Hybrid Storage Virtual Application (On-premise)
 
@@ -5949,7 +5951,7 @@ Migration of extisting infrastructure into AWS slowly.
   - Primarily stored on AWS
   - Great for limited local storage capacity.
 
-### 1.17.5. Snowball / Edge / Snowmobile
+### 1.17.7. Snowball / Edge / Snowmobile
 
 Move large amounts of data IN and OUT of AWS
 
@@ -5957,7 +5959,7 @@ Physical storage the size of a suitcase or truck.
 
 Ordered from AWS, use, then return.
 
-#### 1.17.5.1. Snowball
+#### 1.17.7.1. Snowball
 
 Anything on Snowball uses KMS
 50TB or 80TB Capacity
@@ -5965,7 +5967,7 @@ Anything on Snowball uses KMS
 This makes sense from 10 TB to 10 TB and over many premises.
 This only includes storage
 
-#### 1.17.5.2. Snowball Edge
+#### 1.17.7.2. Snowball Edge
 
 Both storage and compute
 Larger capacity vs snowball
@@ -5977,7 +5979,7 @@ Compute with GPU as above with GPU
 
 These are great for remote sites when ingestion is needed
 
-#### 1.17.5.3. Snowmobile
+#### 1.17.7.3. Snowmobile
 
 Portable data center within a shipping container on a truck.
 
@@ -5988,7 +5990,7 @@ Up to 100 PB per snowmobile.
 
 This is not economical for multi-site for sub 10 PB
 
-### 1.17.6. AWS Directory Service
+### 1.17.8. AWS Directory Service
 
 This is a managed service with lots of use cases.
 
@@ -6002,7 +6004,7 @@ Commonly used in Windows Environments.
 Sign in to multiple devices with the same username/password provides
 central management for assets.
 
-#### 1.17.6.1. AWS managed implementation
+#### 1.17.8.1. AWS managed implementation
 
 Runs within a VPC as a private service.
 
@@ -6016,7 +6018,7 @@ Can be isolated or integrated with existing on-prem system.
 
 Could act as a proxy back to on-premises.
 
-#### 1.17.6.2. Picking the Modes
+#### 1.17.8.2. Picking the Modes
 
 Simple AD should be default
 
@@ -6026,7 +6028,7 @@ with on-prem. This is not an emulation.
 AD Connector - Use AWS services without storing any directory info in the
 cloud, it proxies to your on-prem directory.
 
-### 1.17.7. AWS DataSync
+### 1.17.9. AWS DataSync
 
 Data transfer service TO and FROM AWS.
 
@@ -6055,7 +6057,7 @@ Pay as you use product.
 
 The data is encrypted in transit and all of the data transfer in parts.
 
-#### 1.17.7.1. Components
+#### 1.17.9.1. Components
 
 Task is a job within datasync and defines what is going from where to where
 
@@ -6063,7 +6065,7 @@ Agent is software to read and write to on prem such as NFS or SMB
 
 Location is the FROM and TO
 
-### 1.17.8. FSx for Windows File Server
+### 1.17.10. FSx for Windows File Server
 
 Fully managed native windows file servers/shares
 Designed for integration with windows environments
@@ -6077,7 +6079,7 @@ Can perform on-demand and scheduled backups.
 File systems can be access using VPC, Peering, VPN, Direct Connect. Native
 windows filesystem or Directory Services.
 
-#### 1.17.8.1. Words to look for
+#### 1.17.10.1. Words to look for
 
 VSS - User Driven Restores
 Native file system accesible over SMB
