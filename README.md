@@ -5833,6 +5833,22 @@ VPC Peering Connections CANNOT be created with overlapping VPC CIDRs
 
 ### 1.17.2. IPSec VPN Fundamentals
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-47-28.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-48-48.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-50-20.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-52-30.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-59-15.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-23-22-01-32.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-23-22-14-34.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-23-22-16-21.png?raw=true "Optional Title")
+
 ### 1.17.3. AWS Site-to-Site VPN
 
 A logical connection between a VPC and on-premise network encrypted
