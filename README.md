@@ -5931,6 +5931,10 @@ It does not use public internet and provides consistently low latency.
 
 DX provides NO ENCRYPTION and needs to be managed on a per application basis.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-59-07.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-12-05-00.png?raw=true "Optional Title")
+
 ### 1.17.5. AWS Transit Gateway (TGW)
 
 Network transit hub to connect VPCs to on premises networks
