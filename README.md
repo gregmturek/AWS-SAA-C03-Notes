@@ -5967,6 +5967,14 @@ You can use these for cross-region peering attachment.
 
 Can share between accounts using AWS RAM
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-44-09.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-47-06.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-50-41.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-59-51.png?raw=true "Optional Title")
+
 ### 1.17.6. Storage Gateway
 
 Hybrid Storage Virtual Application (On-premise)
