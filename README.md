@@ -5935,6 +5935,15 @@ DX provides NO ENCRYPTION and needs to be managed on a per application basis.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-25-12-05-00.png?raw=true "Optional Title")
 
+### 1.17.4.1. Direct Connect (DX) Resilience
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-04-56.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-11-42.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-14-38.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-19-59.png?raw=true "Optional Title")
 ### 1.17.5. AWS Transit Gateway (TGW)
 
 Network transit hub to connect VPCs to on premises networks
