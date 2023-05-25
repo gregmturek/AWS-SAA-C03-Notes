@@ -5869,6 +5869,17 @@ Customer Gateway (CGW)
 
 VPN connection itself stores the config and connects the VGW and CGW
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-10-54-17.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-00-34.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-09-05.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-13-38.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-34-09.png?raw=true "Optional Title")
+
+
 #### 1.17.3.1. Considerations
 
 Speed Cap on VPN 1.25Gbps
