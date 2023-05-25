@@ -5944,6 +5944,12 @@ DX provides NO ENCRYPTION and needs to be managed on a per application basis.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-14-38.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-19-59.png?raw=true "Optional Title")
+
+### 1.17.4.2. Direct Connect (DX) - Public VIF + VPN (Encryption)
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-21-22.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-24-41.png?raw=true "Optional Title")
 ### 1.17.5. AWS Transit Gateway (TGW)
 
 Network transit hub to connect VPCs to on premises networks
