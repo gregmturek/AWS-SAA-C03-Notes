@@ -6019,6 +6019,18 @@ Migration of extisting infrastructure into AWS slowly.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-26-10-57-14.png?raw=true "Optional Title")
 
+### 1.17.6.2. Storage Gateway - File
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-09-45.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-15-08.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-18-03.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-24-58.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-30-26.png?raw=true "Optional Title")
+
 ### 1.17.7. Snowball / Edge / Snowmobile
 
 Move large amounts of data IN and OUT of AWS
