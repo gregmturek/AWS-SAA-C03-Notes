@@ -6005,11 +6005,19 @@ Migration of extisting infrastructure into AWS slowly.
   - Primarily stored on AWS
   - Great for limited local storage capacity.
 
-  ![Stacks](../main/attachments/Screenshot-from-2023-05-25-22-23-06.png?raw=true "Optional Title")
+![Stacks](../main/attachments/Screenshot-from-2023-05-25-22-23-06.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-25-22-29-04.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-25-22-57-37.png?raw=true "Optional Title")
+
+### 1.17.6.1. Storage Gateway - Tape (VTL)
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-10-48-10.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-10-50-32.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-10-57-14.png?raw=true "Optional Title")
 
 ### 1.17.7. Snowball / Edge / Snowmobile
 
