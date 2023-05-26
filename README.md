@@ -6070,6 +6070,14 @@ Up to 100 PB per snowmobile.
 
 This is not economical for multi-site for sub 10 PB
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-12-11-19.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-12-27-40.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-12-30-55.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-12-32-46.png?raw=true "Optional Title")
+
 ### 1.17.8. AWS Directory Service
 
 This is a managed service with lots of use cases.
