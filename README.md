@@ -6212,5 +6212,14 @@ Integrates with DS and your own directory.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-20-47.png?raw=true "Optional Title")
 
-
 ### 1.17.11. FSx For Lustre
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-35-04.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-37-49.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-39-53.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-42-01.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-44-30.png?raw=true "Optional Title")
