@@ -6092,6 +6092,12 @@ Commonly used in Windows Environments.
 Sign in to multiple devices with the same username/password provides
 central management for assets.
 
+it functions in three modes
+
+Simple AD - An implementation of Samba 4 (compatibility with basics AD functions)
+AWS Managed Microsoft AD - An actual Microsoft AD DS Implementation
+AD Connector which proxies requests back to an on-premises directory.
+
 #### 1.17.8.1. AWS managed implementation
 
 Runs within a VPC as a private service.
@@ -6115,6 +6121,18 @@ with on-prem. This is not an emulation.
 
 AD Connector - Use AWS services without storing any directory info in the
 cloud, it proxies to your on-prem directory.
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-20-29.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-26-11.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-32-14.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-34-30.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-37-28.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-39-30.png?raw=true "Optional Title")
 
 ### 1.17.9. AWS DataSync
 
