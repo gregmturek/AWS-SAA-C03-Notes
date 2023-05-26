@@ -6171,6 +6171,14 @@ Agent is software to read and write to on prem such as NFS or SMB
 
 Location is the FROM and TO
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-17-03-44.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-17-09-31.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-17-15-22.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-26-17-16-48.png?raw=true "Optional Title")
+
 ### 1.17.10. FSx for Windows File Server
 
 Fully managed native windows file servers/shares
