@@ -6333,6 +6333,14 @@ Shield advanced - $3000 per month
 - Provides access to DDoS advanced response team and financial insurance
 against increased costs.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-00-27.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-01-52.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-04-39.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-07-57.png?raw=true "Optional Title")
+
 ### 1.18.3. CloudHSM
 
 An applicance which creates and managed cryptographic material such as keys.
@@ -6384,3 +6392,5 @@ This can be used to protect the private keys for an issuing
 certificate authority.
 
 Anything that needs to interact with non AWS products.
+
+### 1.18.4. CloudHSM
