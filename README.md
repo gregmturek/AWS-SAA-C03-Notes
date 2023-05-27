@@ -6252,6 +6252,10 @@ change in RDS.
 
 This is great for rotating secrets and especially with RDS.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-12-06-08.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-12-10-05.png?raw=true "Optional Title")
+
 #### 1.18.1.1. Example
 
 The Secrets Manager SDK can be used to retrieve credentials. It can use IAM
@@ -6266,23 +6270,7 @@ The authenticaion in RDS is also rotated automatically.
 
 Secrets are secured via KMS which ensures role seperation.
 
-### 1.18.2. AWS Shield and WAF (Web Application Firewall)
-
-Provides against DDoS attacks with AWS resources. This is a denial of
-service attack. Normally not possible to block them by using individual
-IP addresses. Without detailed anaylsis, the traffic looks like normal
-requests to your website.
-
-Shield Standard - Free with Route53 and CloudFront as default
-Provides layer 3 and layer 4 protection against DDoS attacks.
-
-Shield advanced - $3000 per month
-
-- Includes EC2, ELB, CloudFront, Global Acceleration and R53
-- Provides access to DDoS advanced response team and financial insurance
-against increased costs.
-
-#### 1.18.2.1. WAF (web application firewall)
+### 1.18.2. WAF (web application firewall)
 
 Layer 7 firewall (HTTP/s) firewall
 
@@ -6295,7 +6283,7 @@ API gateways, and cloudfront.
 
 The rules are added to WEBACL and evaluated when traffic arrives.
 
-#### 1.18.2.2. Example of Architecture
+#### 1.18.2.1. Example of Architecture
 
 Shield standard automatically looks at the data before any data reaches
 past Route53.
@@ -6312,6 +6300,22 @@ Once the data reaches the VPC, it has been filtered at Layer 3, 4, and 7
 already.
 
 Layer 7 filtering is only provided by WAF.
+
+### 1.18.3. AWS Shield
+
+Provides against DDoS attacks with AWS resources. This is a denial of
+service attack. Normally not possible to block them by using individual
+IP addresses. Without detailed anaylsis, the traffic looks like normal
+requests to your website.
+
+Shield Standard - Free with Route53 and CloudFront as default
+Provides layer 3 and layer 4 protection against DDoS attacks.
+
+Shield advanced - $3000 per month
+
+- Includes EC2, ELB, CloudFront, Global Acceleration and R53
+- Provides access to DDoS advanced response team and financial insurance
+against increased costs.
 
 ### 1.18.3. CloudHSM
 
