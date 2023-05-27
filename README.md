@@ -6270,6 +6270,12 @@ The authenticaion in RDS is also rotated automatically.
 
 Secrets are secured via KMS which ensures role seperation.
 
+#### 1.18.1.2. Application Layer (L7) Firewall
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-19-41-54.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-19-46-21.png?raw=true "Optional Title")
+
 ### 1.18.2. WAF (web application firewall)
 
 Layer 7 firewall (HTTP/s) firewall
