@@ -6289,6 +6289,16 @@ API gateways, and cloudfront.
 
 The rules are added to WEBACL and evaluated when traffic arrives.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-07-28.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-10-16.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-13-43.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-29-19.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-32-01.png?raw=true "Optional Title")
+
 #### 1.18.2.1. Example of Architecture
 
 Shield standard automatically looks at the data before any data reaches
