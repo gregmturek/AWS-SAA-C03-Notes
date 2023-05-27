@@ -6378,6 +6378,12 @@ to the cluster.
 
 AWS has no access to the HSM appliances which store the keys.
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-29-41.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-35-57.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-54-07.png?raw=true "Optional Title")
+
 #### 1.18.3.1. Cloud HSM Use Cases
 
 No native AWS integration with AWS products. You can't use S3 SSE with
