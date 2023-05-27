@@ -6223,3 +6223,13 @@ Integrates with DS and your own directory.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-42-01.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-44-30.png?raw=true "Optional Title")
+
+### 1.17.12. AWS Transfer Family
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-11-08-29.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-11-10-11.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-11-17-38.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-27-11-19-04.png?raw=true "Optional Title")
