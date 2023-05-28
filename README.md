@@ -6422,3 +6422,9 @@ Anything that needs to interact with non AWS products.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-28-21-43-12.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-28-21-45-03.png?raw=true "Optional Title")
+
+### 1.18.6. Amazon Guardduty
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-28-21-57-34.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-28-21-59-21.png?raw=true "Optional Title")
