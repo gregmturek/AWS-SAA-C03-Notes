@@ -6404,3 +6404,13 @@ Anything that needs to interact with non AWS products.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-12-23.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-16-44.png?raw=true "Optional Title")
+
+### 1.18.5. Amazon Macie
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-53-26.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-55-17.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-58-47.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-28-13-02-58.png?raw=true "Optional Title")
