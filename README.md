@@ -6399,4 +6399,8 @@ certificate authority.
 
 Anything that needs to interact with non AWS products.
 
-### 1.18.4. CloudHSM
+### 1.18.4. AWS Config
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-12-23.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-16-44.png?raw=true "Optional Title")
