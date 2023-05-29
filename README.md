@@ -6449,8 +6449,14 @@ Anything that needs to interact with non AWS products.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-27-02.png?raw=true "Optional Title")
 
-### 1.21.3. Amazon Lex
+### 1.21.4. Amazon Polly
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-43-03.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-43-52.png?raw=true "Optional Title")
+
+### 1.21.5. Amazon Rekognition
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-56-03.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-59-36.png?raw=true "Optional Title")
