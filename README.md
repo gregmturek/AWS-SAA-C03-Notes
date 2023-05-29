@@ -6448,3 +6448,9 @@ Anything that needs to interact with non AWS products.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-25-25.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-27-02.png?raw=true "Optional Title")
+
+### 1.21.3. Amazon Lex
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-43-03.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-43-52.png?raw=true "Optional Title")
