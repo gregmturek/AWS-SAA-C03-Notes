@@ -6428,3 +6428,17 @@ Anything that needs to interact with non AWS products.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-03-19.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-03-31.png?raw=true "Optional Title")
+
+## 1.21. Machine Learning 101
+
+### 1.21.1. Amazon Comprehend
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-44-36.png?raw=true "Optional Title")
+
+### 1.21.2. Amazon Kendra
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-04-29.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-44-36.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-15-05.png?raw=true "Optional Title")
