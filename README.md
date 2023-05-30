@@ -6473,14 +6473,16 @@ Anything that needs to interact with non AWS products.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-30-21-44-10.png?raw=true "Optional Title")
 
-### 1.21.7. Amazon Translate
+### 1.21.8. Amazon Translate
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-30-21-55-59.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-30-21-56-36.png?raw=true "Optional Title")
 
-### 1.21.7. Amazon Forecast 101
+### 1.21.9. Amazon Forecast 101
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-30-22-07-48.png?raw=true "Optional Title")
 
+### 1.21.10. Amazon Fraud Detector
 
+![Stacks](../main/attachments/Screenshot-from-2023-05-30-22-19-42.png?raw=true "Optional Title")
