@@ -6486,3 +6486,7 @@ Anything that needs to interact with non AWS products.
 ### 1.21.10. Amazon Fraud Detector
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-30-22-19-42.png?raw=true "Optional Title")
+
+### 1.21.11. Amazon SageMaker
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-30-22-26-23.png?raw=true "Optional Title")
