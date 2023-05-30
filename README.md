@@ -6460,3 +6460,9 @@ Anything that needs to interact with non AWS products.
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-56-03.png?raw=true "Optional Title")
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-59-36.png?raw=true "Optional Title")
+
+### 1.21.5. Amazon Textract
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-30-16-32-53.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-05-30-16-33-59.png?raw=true "Optional Title")
