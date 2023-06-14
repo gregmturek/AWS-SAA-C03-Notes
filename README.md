@@ -6429,6 +6429,30 @@ Anything that needs to interact with non AWS products.
 
 ![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-03-31.png?raw=true "Optional Title")
 
+## 1.19. Machine Learning 101
+
+### 1.19.1. CloudFormation Physical & Logical Resources
+
+![Stacks](../main/attachments/Screenshot-from-2023-06-14-15-52-55.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-06-14-16-52-09.png?raw=true "Optional Title")
+
+![Stacks](../main/attachments/Screenshot-from-2023-06-14-16-53-20.png?raw=true "Optional Title")
+
+### 1.19.2. CloudFormation Template and Pseudo Parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 1.21. Machine Learning 101
 
 ### 1.21.1. Amazon Comprehend
