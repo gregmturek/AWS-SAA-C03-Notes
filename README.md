@@ -6441,8 +6441,11 @@ Anything that needs to interact with non AWS products.
 
 ### 1.19.2. CloudFormation Template and Pseudo Parameters
 
+![Stacks](../main/attachments/Screenshot-from-2023-06-14-17-07-11.png?raw=true "Optional Title")
 
+![Stacks](../main/attachments/Screenshot-from-2023-06-14-17-09-39.png?raw=true "Optional Title")
 
+![Stacks](../main/attachments/Screenshot-from-2023-06-14-17-11-23.png?raw=true "Optional Title")
 
 
 
