@@ -473,7 +473,7 @@
 
 ## 1.2. Tech Fundamentals
 ### 1.2.1. YAML101 - YAML AINT MARKUP LANGUAGE
-![Stacks](../main/attachments/Clipboard_2022-08-20-22-49-10.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-20-22-49-10.png?raw=true "Optional Title")
 * YAML = Human readable data serialization language
 * Uses key value pair (key: value)
 * Suports numbers (1 or 2...), floating point (1.234), boolean (true or false), and null value
@@ -491,12 +491,12 @@ adrianscats:
 ```
 * Same indentation = same list. You can nest lists in lists using indentation.
 
-![Stacks](../main/attachments/Clipboard_2022-08-20-22-55-20.png?raw=true "Optional Title")
-![Stacks](../main/attachments/Clipboard_2022-08-20-22-59-14.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-20-22-55-20.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-20-22-59-14.png?raw=true "Optional Title")
 * YAML is commonly used for configuration and in CloudFormation within AWS
 
 ### 1.2.2. JSON101 - JavaScript Object Notation
-![Stacks](../main/attachments/Clipboard_2022-08-20-23-03-30.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-20-23-03-30.png?raw=true "Optional Title")
 * Also uses attribute value pairs and array data types
 * Indentation is not necessary
 
@@ -522,7 +522,7 @@ adrianscats:
 }
 ```
 ### 1.2.3. Encryption 101
-![Stacks](../main/attachments/Clipboard_2022-08-20-23-17-35.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-20-23-17-35.png?raw=true "Optional Title")
 * Encryption At Rest
   * Data on your laptap uses a password to encrypt your data
 * Encryption in Transit
@@ -535,12 +535,12 @@ adrianscats:
 4. Ciphertext
 
 #### **Symmetric Encryption**
-![Stacks](../main/attachments/Clipboard_2022-08-20-23-30-18.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-20-23-30-18.png?raw=true "Optional Title")
 * Great for local encryption on laptop 
 * Bad since it can't deliver encryption key safely to the other party (remote party)
 
 #### **Asymmetric Encryption**
-![Stacks](../main/attachments/Clipboard_2022-08-20-23-35-59.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-20-23-35-59.png?raw=true "Optional Title")
 * Plubic and Private key pairs are created at the same time
 * Public key is use to encrypt data
 * Private key is use to decrypt data 
@@ -552,7 +552,7 @@ adrianscats:
 * Use private key to sign the Ciphertext 
 * Public key are use to verify the private sign is legit
 
-![Stacks](../main/attachments/Clipboard_2022-08-21-09-30-22.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-09-30-22.png?raw=true "Optional Title")
 #### **Steganography**
 * People know that you are the one who encrypted the data
 * The method of hiding something within something else
@@ -560,7 +560,7 @@ adrianscats:
 
 ### 1.2.4. Network Starter Pack 
 #### 0 - INTRO
-![Stacks](../main/attachments/Clipboard_2022-08-21-09-46-16.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-09-46-16.png?raw=true "Optional Title")
 OSI 7-Layer Model
 * Media Layers: 
     * How data is move between point A and point B.
@@ -569,14 +569,14 @@ OSI 7-Layer Model
     * How data is formatted so both side of a network can understand.
 #### 1 - PHYSICAL
 1-1 Device communication
-![Stacks](../main/attachments/Clipboard_2022-08-21-09-51-56.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-09-51-56.png?raw=true "Optional Title")
 * Transfer data via voltage changing (1s and 0s) on **physical shared medium** (ex:copper[electricity], fibre[light], wifi[radio])
 * Has standards for transmitting onto the medium
 * Has standards for receiving from the medium
 * The 1s and 0s has predefined things **(standard specification)** such as Voltage levels, timing, rates, distances,modulation and connectors
 
 Layer 1 device HUB multiple device communication
-![Stacks](../main/attachments/Clipboard_2022-08-21-09-57-01.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-09-57-01.png?raw=true "Optional Title")
 * Anything received on any port, transmitted on every other port
     * Cause collision
     * No device to device communications
@@ -584,18 +584,18 @@ Layer 1 device HUB multiple device communication
 * No uniquely identified devices
 
 #### 2 - DATA LINK
-![Stacks](../main/attachments/Clipboard_2022-08-21-10-16-55.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-10-16-55.png?raw=true "Optional Title")
 * Preamble: Know when a frame starts
 * ET: Which layer 3 prototal is being use (ex: IP address protocal)
 * Payload: Contains the data
 * FCS: Allow destination to check if corruption has occured
 
-![Stacks](../main/attachments/Clipboard_2022-08-21-10-52-28.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-10-52-28.png?raw=true "Optional Title")
 * Carrier sense multiple access (CSMA): Allows Layer 2 to check carrier signal on the Layer 1 allowing <span style="color:red">***Media access control***</span>
 * Collision detection: if detection does occur and detected (both transmitted at once) then both backoff for a random time 
 
 Layer 2 device **"Switch"** for multiple device communication
-![Stacks](../main/attachments/Clipboard_2022-08-21-11-02-10.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-11-02-10.png?raw=true "Optional Title")
 * A switch has a mac address table which stores Mac address to the corresponding port
 * Table starts out empty but learns which port is connected through which device
 * Switches **STORE** and **FORWARD** so only valid frame are forwarded and collisions are isolated on the port they occurred
@@ -621,20 +621,20 @@ Converting 133 to binary
 3. If **EQUAL** or **LARGER** - Subtract the binary position value with the decimal number and write 1
 4. Move to next position with the new decimal value after subtracting and repeat from step 2
 
-![Stacks](../main/attachments/Clipboard_2022-08-21-11-28-22.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-11-28-22.png?raw=true "Optional Title")
 Binary => Deciaml 
 * Start from left to right
 * Compare the Binary value with Binary position value. If **Birary value** = 1 then add that Binary position value
 
 #### 3 - Network
 ##### L2 => L3 - Building a Common L33 Network
-![Stacks](../main/attachments/Clipboard_2022-08-21-11-35-38.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-11-35-38.png?raw=true "Optional Title")
 * Not everything uses the same layer 2 protocal. Need to use the same protocal to communicate.
 * L2 Ethernet protocal generally  use for local network. Long distance use different protocal (ex: PPP/MPLS/ATM)
 * L3 has Internet protocal (IP) which adds cross network IP address and routing to move data between **Local Area Networks** without point to point links
 * Routers (L3) devices, remove frame encapsulation and add new ones at each hop
 
-![Stacks](../main/attachments/Clipboard_2022-08-21-11-46-56.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-11-46-56.png?raw=true "Optional Title")
 * <Span style= "color:pink"> Protocal</span>: Stores L4 protocol data
     * TCP: value = 6
     * ICMP or ping: value = 1
@@ -642,27 +642,27 @@ Binary => Deciaml
 * <Span style= "color:orange"> Time To Live</span>: Tells how many hop it could take 
 
 ##### IP Addressing (v4) - IPv4
-![Stacks](../main/attachments/Clipboard_2022-08-21-12-01-33.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-12-01-33.png?raw=true "Optional Title")
 * Has 2 part
     * Network part: helps know if you are on the same local network or remote
     * Host part
 ##### Subnet Mask
-![Stacks](../main/attachments/Clipboard_2022-08-21-12-06-22.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-12-06-22.png?raw=true "Optional Title")
 * Allow devices to know if they need to communicate on local network or remote
 * Works by over-laying the host IP Address and the subnet mask (255.255.0.0)
 ##### L3 - Route Tables & Routes
-![Stacks](../main/attachments/Clipboard_2022-08-21-12-14-13.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-12-14-13.png?raw=true "Optional Title")
 * Routers stores Desination and Next Hop. 
     * Route table are populated  Statically or 
     * Route table are populated thanks to Boreder Gateway Protocal which allows routers to communicate with each other
 * Routers uses the Destination IP within a Packet to compare with destination in route table. The higher the prefix the better
 
 ##### Address Resolution Protocal (ARP)
-![Stacks](../main/attachments/Clipboard_2022-08-21-12-25-01.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-12-25-01.png?raw=true "Optional Title")
 * Dont know the initial destination mac address. ARP solve this
 * ARP give the IP Address for the given Mac Address
 ##### Layer 3 - IP Routing
-![Stacks](../main/attachments/Clipboard_2022-08-21-12-37-53.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-12-37-53.png?raw=true "Optional Title")
 
 **LAYER 3 - NETWORK SUMMARY**
 * IP Addresses (IPv4/v6) - cross network addressing
@@ -675,7 +675,7 @@ Binary => Deciaml
 * Can be delivered out of order... (Solve in layer 4)
 
 #### 4 - TRANSPORT
-![Stacks](../main/attachments/Clipboard_2022-08-21-17-10-39.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-17-10-39.png?raw=true "Optional Title")
 ##### Layer 3 - problems
 1. Each Packet is routed independently => <span style="color:red">***out of order arrival***</span> (L3 provide no ordering mechanism)
 2. <span style="color:red">***Packet can go missing***</span>  due to lost of connection or time to live exceed
@@ -683,13 +683,13 @@ Binary => Deciaml
 4.  Email/App/Watch video. <span style="color:red">***No communication channels.***</span> Can't differentiate packet between different channels
 5. <span style="color:red">***No flow control***</span>. If source transmit is faster than destination can receive then cause packet loss 
 ##### TCP and UDP
-![Stacks](../main/attachments/Clipboard_2022-08-21-17-18-41.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-17-18-41.png?raw=true "Optional Title")
 TCP: 
 * Slower/Reliable
 UDP:
 * Fast/Less Reliable
 ##### TCP Segments
-![Stacks](../main/attachments/Clipboard_2022-08-21-17-34-16.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-17-34-16.png?raw=true "Optional Title")
 1. Source Port **(Solve no communication channel)**
 2. Destination Port **(Solve no communication channel)**
     * SRC Port + DES Port + SRC IP + DES IP combine to create a unquie value to identify a single conversation (a single communication channel) => Why SSH and HTTPS can exist on the same EC2 instance
@@ -701,12 +701,12 @@ UDP:
 7. Checksum: Error checker and arrage retransmission of data 
 8. Urgent pointer: help control traffic part to always takes priority within the communication 
 ##### Transmission Control Protocol (TCP)
-![Stacks](../main/attachments/Clipboard_2022-08-21-17-39-55.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-17-39-55.png?raw=true "Optional Title")
 * EPHEMERAL PORT (some high number TCP/23060)
 * WELL KNOWN PORT (TCP/443)
 
 Flag 'N' Things field
-![Stacks](../main/attachments/Clipboard_2022-08-21-17-55-46.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-17-55-46.png?raw=true "Optional Title")
 * URG: Urgent pointer is valid
 * ACK: Acknowledgement is valid
 * PSH: Request for push
@@ -715,22 +715,22 @@ Flag 'N' Things field
 * FIN: Terminate the connection
 
 1. Connection establishment phase 
-![Stacks](../main/attachments/Clipboard_2022-08-21-17-56-41.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-17-56-41.png?raw=true "Optional Title")
     * HOST send a packet with SYN FLAG and Sequence number
     * Client ACK the SYN and send back a packet with its own Squence number as well as the ACK number and the Window number
     * HOST ACK the packet sent by sending another packet back with the ACK number of the client incremented by 1 as well as the new sequence number and its Window number
 2. Data transfer phase
-![Stacks](../main/attachments/Clipboard_2022-08-21-17-58-10.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-17-58-10.png?raw=true "Optional Title")
 * Host start sending data to client with PSH FLAG and ACK FLAG 
 * Client received the packet and send back a packet of ACK, the updated window size (Not yet computed by client), the new seq num and the new ack num
 * Host send back an ACK saying that it has receive packet succesfully and also proceed the data so the window size is still the same.
 3. Connection termination phase (full close)
-![Stacks](../main/attachments/Clipboard_2022-08-21-17-59-05.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-17-59-05.png?raw=true "Optional Title")
 4. Connection termination phase (half close)
-![Stacks](../main/attachments/Clipboard_2022-08-21-18-00-15.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-18-00-15.png?raw=true "Optional Title")
 
 ##### Sessions & State
-![Stacks](../main/attachments/Clipboard_2022-08-21-18-25-00.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-21-18-25-00.png?raw=true "Optional Title")
 Stateless firewall: Does not understand the state of a connection (Network ACL)
 * Would need 2 rule for it to work.
     * Outbound rule (host transfering data to client)
@@ -747,14 +747,14 @@ NAT Device is use to do the following:
 * Translate IPv4 address to Public
 * Type of NAT:
     * Static NAT - 1 private to 1 (fixed) public address (IGW)
-    ![Stacks](../main/attachments/Clipboard_2022-08-21-18-36-01.png?raw=true "Optional Title")
+    ![Stacks](attachments/Clipboard_2022-08-21-18-36-01.png?raw=true "Optional Title")
     * Dynamic NAT - 1 private to 1st available public adress
-    ![Stacks](../main/attachments/Clipboard_2022-08-23-22-47-38.png?raw=true "Optional Title")
+    ![Stacks](attachments/Clipboard_2022-08-23-22-47-38.png?raw=true "Optional Title")
     * Port Address Translation (PAT) - many private to 1 public (NATGW)
-    ![Stacks](../main/attachments/Clipboard_2022-08-23-22-49-50.png?raw=true "Optional Title")
+    ![Stacks](attachments/Clipboard_2022-08-23-22-49-50.png?raw=true "Optional Title")
 * IPv4 only since IPv6 has no shortage
 #### EXTRA - Subnetting
-![Stacks](../main/attachments/Clipboard_2022-08-23-22-58-45.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-23-22-58-45.png?raw=true "Optional Title")
 * Dividing IP into smaller chucks
 * Total 4,294,967,296 IPv4 Address
 * Class A IP: Start 0.0.0.0 - End 127.255.255.255
@@ -772,12 +772,12 @@ NAT Device is use to do the following:
 ##### IP Subnetting
 * The larger the prefix the samller the network
 
-![Stacks](../main/attachments/Clipboard_2022-08-23-23-10-46.png?raw=true "Optional Title")
-![Stacks](../main/attachments/Clipboard_2022-08-23-23-11-24.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-23-23-10-46.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-23-23-11-24.png?raw=true "Optional Title")
 
 ##### SSL and TLS
 
-![Stacks](../main/attachments/Clipboard_2022-08-23-23-22-34.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-23-23-22-34.png?raw=true "Optional Title")
 
 ##### Hash Functions & Hashing
 * Data + Hash function = hash
@@ -788,7 +788,7 @@ NAT Device is use to do the following:
 * Check by downloading the data and if the hash match then data is unaltered
 
 ##### Digital Signatures
-![Stacks](../main/attachments/Clipboard_2022-08-23-23-43-03.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-23-23-43-03.png?raw=true "Optional Title")
 * Verifies <span style="color:purple">INTEGRITY(WHAT)</span> & <span style="color:orange">AUTHENTICITY(WHO)</span> 
 * <span style="color:purple">HASH</span> of the data is taken, original data remains unaltered <span style="color:purple">(INTEGRITY)</span>
 * <span style="color:orange">Digital sign</span> the <span style="color:purple">HASH</span> (using private key). <span style="color:orange">Authenticates</span> the hash.
@@ -822,7 +822,7 @@ that make up the total service. There are parts that **you** manage as well
 as portions the **vendor** manages. The portions the vendor manages and you
 are charged for is the **unit of consumption**
 
-![Stacks](../main/attachments/Clipboard_2022-08-20-22-35-47.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-20-22-35-47.png?raw=true "Optional Title")
 
 1. On-Premises: 
     * The individual manages all components from data to facilities.
@@ -1398,7 +1398,7 @@ Identity Policies are attached to AWS Identities which are:
 * IAM groups
 * IAM roles 
  
-![Stacks](../main/attachments/Clipboard_2022-08-25-22-46-55.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-25-22-46-55.png?raw=true "Optional Title")
 These are **a set of security statements** that ALLOW or DENY access to AWS resources.
 
 When an identity attempts to access AWS resources, that identity needs to prove who it is to AWS, using a process known as **Authentication**.
@@ -1418,13 +1418,13 @@ Once authenticated, that identity is known as an **authenticated identity**
 - Resource: similar to action except for format `arn:aws:s3:::catgifs`
 
 #### 1.4.1.2. Priority Level
-![Stacks](../main/attachments/Clipboard_2022-08-25-22-58-25.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-25-22-58-25.png?raw=true "Optional Title")
 - Explicit Deny: Denies access to a particular resource cannot be overruled.
 - Explicit Allow: Allows access so long there is not an explicit deny.
 - Default Deny (Implicit): IAM identities start off with no resource access.
 
 #### 1.4.1.3. Inline Policies and Managed Policies
-![Stacks](../main/attachments/Clipboard_2022-08-25-23-05-13.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-25-23-05-13.png?raw=true "Optional Title")
 - Take in all statement and evaluates all at the same time
 - Inline Policy: grants access and assigned on each accounts individually. (Use for exceptions)
 - Managed Policy (best practice): one policy is applied to all users at once.
@@ -1441,7 +1441,7 @@ Identity used for anything requiring **long-term** AWS access
 
 If you can name a thing to use the AWS account, this is an IAM user.
 
-![Stacks](../main/attachments/Clipboard_2022-08-25-23-19-43.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-25-23-19-43.png?raw=true "Optional Title")
 
 When a **principal** wants to **request** to perform an action, it will **authenticate** against an identity within IAM. An IAM user is an
 identity which can be used in this way.
@@ -1483,7 +1483,7 @@ An example that leads to confusion:
 - arn:aws:s3:::catgifs/*
   - This refers to objects in that bucket, but not the bucket itself.
 
-![Stacks](../main/attachments/Screenshot_from_2023-03-23_10-35-51.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot_from_2023-03-23_10-35-51.png?raw=true "Optional Title")
 
 These two ARNs do not overlap
 
@@ -1498,7 +1498,7 @@ These two ARNs do not overlap
 * They have no credentials of their own. 
 * Used solely for management of IAM users.
 
-![Stacks](../main/attachments/Clipboard_2022-08-28-18-29-03.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-28-18-29-03.png?raw=true "Optional Title")
 Groups bring two benefits
 
 1. Effective administrative style management of users based on the team
@@ -1540,7 +1540,7 @@ IAM Users can have inline or managed policies which control which permissions th
 
 Permission policy: Policies which grant, allow or deny, permissions based on their associations.
 
-![Stacks](../main/attachments/Clipboard_2022-08-28-19-23-13.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-28-19-23-13.png?raw=true "Optional Title")
 IAM Roles have two types of policies can be attached.
 
 - Trust Policy: Specifies which identities are allowed to assume the role.
@@ -1556,7 +1556,7 @@ Secure Token Service (sts:AssumeRole) this is what generates the temporary secur
 
 ### 1.4.5. When to use IAM Roles
 
-![Stacks](../main/attachments/Clipboard_2022-08-28-19-36-53.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-28-19-36-53.png?raw=true "Optional Title")
 Lambda Execution Role.
 For a given lambda function, you cannot determine the number of principals which suggested a Role might be the ideal identity to use.
 
@@ -1568,7 +1568,7 @@ When this is run, it uses the sts:AssumeRole to generate keys to CloudWatch and 
 It is better when possible to use an IAM Role versus attaching a policy.
 
 #### 1.4.5.1. Emergency or out of the usual situations
-![Stacks](../main/attachments/Clipboard_2022-08-28-19-40-36.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-28-19-40-36.png?raw=true "Optional Title")
 Break Glass Situation - There is a key for something the team does not normally have access to. When you break the glass, you must have a reason
 to do.
 A role can have an Emergency Role which will allow further access if its really needed.
@@ -1584,7 +1584,7 @@ by one of the active directories.
 **ID Federation** allowing an external service the ability to assume a role.
 
 #### 1.4.5.3. Making an app with 1,000,000 users
-![Stacks](../main/attachments/Clipboard_2022-08-28-19-46-51.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-28-19-46-51.png?raw=true "Optional Title")
 **Web Identity Federation** uses IAM roles to allow broader access.
 These allow you to use an existing web identity such as google, facebook, or twitter to grant access to the app.
 We can trust these web identities and allow those identities to assume an IAM role to access web resources such as DynamoDB.
@@ -1592,7 +1592,7 @@ No AWS Credentials are stored on the application.
 Can scale quickly and beyond.
 
 #### 1.4.5.4. Cross Account Access
-![Stacks](../main/attachments/Clipboard_2022-08-28-19-50-25.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-28-19-50-25.png?raw=true "Optional Title")
 You can use a role in the partner account and use that to upload objects to AWS resources.
 
 ### 1.4.6. Service-linked Roles & PassRole
@@ -1611,7 +1611,7 @@ Role separation is where you might give one group of people the ability to creat
 
 PassRole is a method inside AWS which gives you the ability to implement role separation, and it's something which you can also use with service-linked roles.
 
-![Stacks](../main/attachments/Service-linked-Roles-&-PassRole_learn.cantrill.io-et-3-pages-de-plus-Personnel–Microsoft​-Edge-25_03_2023-10_42_48.png?raw=true "Optional Title")
+![Stacks](attachments/Service-linked-Roles-&-PassRole_learn.cantrill.io-et-3-pages-de-plus-Personnel–Microsoft​-Edge-25_03_2023-10_42_48.png?raw=true "Optional Title")
 
 ### 1.4.7. AWS Organizations
 
@@ -1626,18 +1626,18 @@ When standard AWS accounts become part of the org, they become **member accounts
 Organizations can only have one **master accounts** and zero or more **member accounts**
 
 #### 1.4.7.1. Organization Root
-![Stacks](../main/attachments/Clipboard_2022-08-29-23-47-42.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-29-23-47-42.png?raw=true "Optional Title")
 This is a container that can hold AWS member accounts or the master account.
 It could also contain **organizational units** which can contain other units or member accounts.
 
 #### 1.4.7.2. Consolidated billing
-![Stacks](../main/attachments/Clipboard_2022-08-29-23-51-30.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-29-23-51-30.png?raw=true "Optional Title")
 The individual billing for the member accounts is removed and they pass their billing to the master account.
 Inside an AWS organization, you get a single monthly bill for the master account which covers all the billing for each users.
 Can offer a discount with consolidation of reservations and volume discounts
 
 #### 1.4.7.3. Create new accounts in an org
-![Stacks](../main/attachments/Clipboard_2022-08-29-23-57-25.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-29-23-57-25.png?raw=true "Optional Title")
 Adding accounts in an organization is easy with only an email needed.
 
 No need for IAM Users within every single AWS account.
@@ -1655,7 +1655,7 @@ Allows you to switch between accounts from the command line
 Can be used to restrict what member accounts in an org can do.
 
 JSON policy document that can be attached:
-![Stacks](../main/attachments/Clipboard_2022-08-30-23-41-24.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-08-30-23-41-24.png?raw=true "Optional Title")
 - To the org as a whole by attaching to the root container.
 - A specific Organizational Unit
 - A specific member only.
@@ -1735,7 +1735,7 @@ Security is provided with IAM roles or Service roles.
 Can generate metrics based on logs **metric filter**
 
 #### 1.4.9.1. Architecture of CloudWatch Logs
-![Stacks](../main/attachments/Clipboard_2022-09-01-12-15-58.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-01-12-15-58.png?raw=true "Optional Title")
 * It is a regional service `us-east-1`
 * Need logging sources such as external APIs or databases. 
 * This sends information as **log events**. 
@@ -1815,7 +1815,7 @@ CloudTrail products can create an organizational trail. This allows a single man
 * Dashboard - single page oversight of the entire environment
 
 #### 1.4.11.1. Control Tower Structure
-![Stacks](../main/attachments/Clipboard_2022-09-02-17-30-31.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-02-17-30-31.png?raw=true "Optional Title")
 * Management account contain:
   * Control Tower
   * SSO (IAM Identity Center)
@@ -1870,7 +1870,7 @@ CloudTrail products can create an organizational trail. This allows a single man
 
 #### 1.5.1.1. S3 Bucket Policy
 
-![Stacks](../main/attachments/Clipboard_2022-09-09-16-23-28.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-09-16-23-28.png?raw=true "Optional Title")
 This is a **resource policy**
 - controls who has access to that resource
 - can allow or deny access from different accounts
@@ -1944,7 +1944,7 @@ Instead of using EC2 to host an entire website, the compute service can generate
 This may be an error page to display maintenance if the server goes offline.
 We could then change our DNS and move customers to a backup website on S3.
 
-![Stacks](../main/attachments/Screenshot-from-2023-03-27-15-08-56.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-03-27-15-08-56.png?raw=true "Optional Title")
 
 #### 1.5.2.3. S3 Pricing
 
@@ -1957,7 +1957,7 @@ We could then change our DNS and move customers to a backup website on S3.
   - Can add up for static website hosting with many requests.
 
 ### 1.5.3. Object Versioning and MFA Delete
-![Stacks](../main/attachments/Clipboard_2022-09-10-16-32-16.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-10-16-32-16.png?raw=true "Optional Title")
 Without Versioning:
 
 - Each object is identified solely by the object key, it's name.
@@ -2007,7 +2007,7 @@ Multipart Upload
 - Improves transfer rate to be the speed of all parts.
 
 S3 Accelerated Transfer
-![Stacks](../main/attachments/Clipboard_2022-09-11-16-10-03.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-11-16-10-03.png?raw=true "Optional Title")
 
 - The S3 bucket needs to be enabled for transfer acceleration.
 - S3 AT is switched off by default.
@@ -2033,7 +2033,7 @@ S3 Accelerated Transfer
   - All features are compliant with Level 2.
 
 #### 1.5.5.1. KMS Keys
-![Stacks](../main/attachments/Clipboard_2022-09-11-16-41-32.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-11-16-41-32.png?raw=true "Optional Title")
 - Used to be called Customer Master Keys but now called KMS Keys
 - Managed by KMS and used within cryptographic operations.
 - AWS services, applications, and the user can all use them.
@@ -2065,7 +2065,7 @@ When the DEK is generated, KMS provides two version.
   you have the permissions.
 
 Architecture
-![Stacks](../main/attachments/Clipboard_2022-09-11-16-47-12.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-11-16-47-12.png?raw=true "Optional Title")
 1. DEK is generated right before something is encrypted.
 2. The data is encrypted with the plaintext version of the DEK.
 3. Discard the plaintext data version of the DEK.
@@ -2099,7 +2099,7 @@ You can create a `MyApp1` alias in all regions but they would be separate aliase
 Neither aliases or keys are global by default.
 
 #### 1.5.5.4. Key Policy and Security(resource policy)
-![Stacks](../main/attachments/Clipboard_2022-09-11-17-05-48.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-11-17-05-48.png?raw=true "Optional Title")
 - Every Key has one (Key policies).
 - Customer managed CMKs can adjust the policy.
 - Unlike other policies, KMS has to be explicitly told that keys trust the AWS account that they're in.
@@ -2141,7 +2141,7 @@ Multiple objects in a bucket can use a different encryption methods.
 
 S3 is capable of supporting two main methods of encryption.
 Both types are encryption at rest. Data sent from a user to S3 is automatically encrypted in transit outside of these methods.
-![Stacks](../main/attachments/Clipboard_2022-09-12-22-26-51.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-12-22-26-51.png?raw=true "Optional Title")
 Client-Side encryption
 
 - Objects being encrypted by the client before they leave.
@@ -2158,7 +2158,7 @@ Server-Side encryption
 - AWS will handle some or all of these processes.
 
 #### 1.5.7.1. SSE-C (Server-side encryption with customer provided keys)
-![Stacks](../main/attachments/Clipboard_2022-09-12-22-32-07.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-12-22-32-07.png?raw=true "Optional Title")
 - Customer is responsible for the keys themselves.
 - S3 services manages the actual encryption and decryption
   - Offloads CPU requirements for encryption.
@@ -2177,7 +2177,7 @@ The hash can identify if the specific key was used to encrypt the object.
 To decrypt the object, you must tell S3 which object to decrypt and provide it with the key used to encrypt it. If the key that you supply is correct, compare by the proper hash, S3 will decrypt the object, discard the key, and return the plaintext version of the object.
 
 #### 1.5.7.2. SSE-S3 AES256 (Server-side encryption w/ Amazon S3 managed keys)
-![Stacks](../main/attachments/Clipboard_2022-09-12-23-00-48.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-12-23-00-48.png?raw=true "Optional Title")
 AWS handles both the encryption and decryption process as well as the key generation and management. This provides very little control over how the keys are used, but has little admin overhead.
 
 SSE-S3 Encryption Steps
@@ -2197,7 +2197,7 @@ Three Problems with this method:
 
 #### 1.5.8.3. SSE-KMS
 (Server-side encryption w/ customer master keys stored in AWS KMS)
-![Stacks](../main/attachments/Clipboard_2022-09-12-23-04-21.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-12-23-04-21.png?raw=true "Optional Title")
 Much like SSE-S3, where AWS handles both the keys and encryption process.
 KMS handles the master key and not S3. The first time an object is uploaded, S3 works with KMS to create an AWS managed KMS key. This is the default key which gets used in the future.
 
@@ -2224,7 +2224,7 @@ With SSE-S3, this uses AES256. I mention this because it's often the way exam qu
 
 SSE-KMS uses KMS and KMS keys. You can control key rotation. You can control key permissions. It's otherwise similar to SSE-S3 but it allows role separation. So use this if your business has fairly rigid groups of people and compartmentalized sets of security. You can have S3 for administrators who don't have any access to decrypt and access data.
 
-![Stacks](../main/attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_01_15.png?raw=true "Optional Title")
+![Stacks](attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_01_15.png?raw=true "Optional Title")
 
 #### 1.5.8.5. Default bucket encryption
 
@@ -2236,15 +2236,15 @@ So let's say that we set the Default to be AES256 then SSE-S3 would be used when
 
 This is the key thing. The bucket Default is just that, a default. It applies only when you don't specify anything explicitly on an object. If you do, that takes priority.
 
-![Stacks](../main/attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_10_54.png?raw=true "Optional Title")
+![Stacks](attachments/Object-Encryption-PART1_learn.cantrill.io-29_03_2023-21_10_54.png?raw=true "Optional Title")
 
 #### 1.5.8.6. S3 Bucket Keys
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-29-22-28-40.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-29-22-28-40.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-29-22-29-40.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-29-22-29-40.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-29-22-31-50.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-29-22-31-50.png?raw=true "Optional Title")
 
 ### 1.5.8. S3 Object Storage Classes
 
@@ -2254,7 +2254,7 @@ The default is S3 standard. Once an object is uploaded to a specific class, it c
 Objects in S3 are stored in a specific region.
 
 #### 1.5.8.1. S3 Standard
-![Stacks](../main/attachments/Clipboard_2022-09-13-22-18-47.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-13-22-18-47.png?raw=true "Optional Title")
 - Default AWS storage class that's used in S3, should be user default as well.
 - S3 Standard is region resilient, and can tolerate the failure of an AZ.
 - Objects are replicated to at least 3+ AZs when they are uploaded.
@@ -2268,7 +2268,7 @@ Objects in S3 are stored in a specific region.
 All of the other storage classes trade some of these compromises for another.
 
 #### 1.5.8.2. S3 Standard-IA (infrequent access)
-![Stacks](../main/attachments/Clipboard_2022-09-13-22-30-11.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-13-22-30-11.png?raw=true "Optional Title")
 - Designed for less frequent rapid access when it is needed.
 - Cheaper rate to store data you will rarely need, but if you do need it, you need it quickly.
 - ~50% cheaper than S3 standard.
@@ -2281,7 +2281,7 @@ All of the other storage classes trade some of these compromises for another.
 Designed for data that isn't accessed often (once a month), long term storage, backups, disaster recovery files. The requirement for data to be safe is most important.
 
 #### 1.5.8.3. One Zone-IA
-![Stacks](../main/attachments/Clipboard_2022-09-13-22-33-37.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-13-22-33-37.png?raw=true "Optional Title")
 - Designed for data that is accessed less frequently but needed quickly.
 - 80% of the base cost of Standard-IA.
 - Same minimum size and duration fee as Standard-IA
@@ -2293,7 +2293,7 @@ Great choice for secondary copies of primary data or backup copies.
 If data is easily creatable from a primary data set, this would be a great place to store the output from another data set.
 
 #### 1.5.8.4. S3 Glacier Instant
-![Stacks](../main/attachments/Clipboard_2022-09-13-22-41-36.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-13-22-41-36.png?raw=true "Optional Title")
 - Similar to S3 IA
 - Cheaper storage higher retrieval fee
 - Still instant retrieval
@@ -2303,7 +2303,7 @@ If data is easily creatable from a primary data set, this would be a great place
 Use for long live data with infrequent access (once a quarter)
 
 #### 1.5.8.5. S3 Glacier Flexible
-![Stacks](../main/attachments/Clipboard_2022-09-13-22-51-29.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-13-22-51-29.png?raw=true "Optional Title")
 - 1/6 of the base cost of S3 standard
 - No immediate access to objects, retrieval in minutes or hours.
 - Not publicly accessible, need retrieval process for data access.
@@ -2325,7 +2325,7 @@ Retrieval methods:
 Use for Archival data where frequent/realtime access isn't needed (yearly access)
 
 #### 1.5.8.6. S3 Glacier Deep Archive
-![Stacks](../main/attachments/Clipboard_2022-09-13-22-55-53.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-13-22-55-53.png?raw=true "Optional Title")
 - Designed for long term backups and.
 - 4.3% of the base cost of S3 standard
 - 180 days minimum storage duration charge.
@@ -2333,7 +2333,7 @@ Use for Archival data where frequent/realtime access isn't needed (yearly access
 - Cannot use to make data public or download normally.
 
 #### 1.5.8.7. S3 Intelligent-Tiering
-![Stacks](../main/attachments/Clipboard_2022-09-13-23-04-41.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-13-23-04-41.png?raw=true "Optional Title")
 - Combination of all of S3 type
 - Uses automation to remove overhead of moving objects.
 - Additional fee of $0.0025 per 1,000 objects automation cost.
@@ -2351,7 +2351,7 @@ This is good for long lived data with charging or unknown access pattern.
 A lifecycle configuration is a set of **rules** that consists of **actions** on a **Bucket** or **groups of obejects**.
 
 #### 1.5.9.1. Transition Actions
-![Stacks](../main/attachments/Clipboard_2022-09-13-23-37-14.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-13-23-37-14.png?raw=true "Optional Title")
 Change the storage class over time such as:
 
 - Move an object from S3 Standard to IA after min 30 days (1 single rule)
@@ -2376,7 +2376,7 @@ There are two types of S3 replication available.
 
 Architecture for both is similar, only difference is if both buckets are in the same account or different accounts.
 
-![Stacks](../main/attachments/Clipboard_2022-09-15-22-36-24.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-15-22-36-24.png?raw=true "Optional Title")
 1. Same account
 - The replication configuration is applied to the source bucket and configures S3 to replicate from this source bucket to a destination bucket. 
 - It also configures the IAM role to use for the replication process. The role is configured to allow the S3 service to assume it based on its trust policy. 
@@ -2424,7 +2424,7 @@ CRR - Global resilience improvements
 CRR - Latency reduction
 
 ### 1.5.11. S3 Presigned URL
-![Stacks](../main/attachments/Clipboard_2022-09-18-20-49-42.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-18-20-49-42.png?raw=true "Optional Title")
 A way to give another person or application access to a object inside an S3 bucket using your credentials in a safe way.
 
 IAM admin can make a request to S3 to generate a presigned URL by providing:
@@ -2447,7 +2447,7 @@ The object will not allow access because your user does not have access.
   - The role will likely expire before the URL does.
 
 ### 1.5.12. S3 Select and Glacier Select
-![Stacks](../main/attachments/Clipboard_2022-09-18-21-34-27.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-18-21-34-27.png?raw=true "Optional Title")
 This provides a ways to retrieve parts of objects and not the entire object.
 
 If you retrieve a 5TB object, it takes time and consumes 5TB of data.
@@ -2458,7 +2458,7 @@ S3 and Glacier select lets you use SQL-like statements to select part of the obj
 The filtering happens at the S3 service itself saving time and data.
 
 ### 1.5.13. S3 Event Notifications
-![Stacks](../main/attachments/Clipboard_2022-09-18-21-43-15.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-18-21-43-15.png?raw=true "Optional Title")
 - Notification generated when events occur in a bucket.
 - Can be delivered to SNS, SQS and Lambda Functions.
 - Object Created
@@ -2470,7 +2470,7 @@ S3 Event is old and can only interact with alimited number of AWS services.
 EventBridge is a **better alternative**.
 
 ### 1.5.14. S3 Access Logs
-![Stacks](../main/attachments/Clipboard_2022-09-18-21-50-42.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-18-21-50-42.png?raw=true "Optional Title")
 - Use to know which type of access are occurring to the source bucket.
 - Target bucket is where the log will go.
 - Use Console UI or CLI/API.
@@ -2481,7 +2481,7 @@ EventBridge is a **better alternative**.
 - Need to manage life cycle (delete,movement...)
 
 ### 1.5.15. S3 Object Lock
-![Stacks](../main/attachments/Clipboard_2022-09-18-22-10-21.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-18-22-10-21.png?raw=true "Optional Title")
 - Enable for **new** bucket(Sup Req for Exist Bucket)
 - Enable versioning as well. - Individual versions are locked.
 - Can't suppend object lock or version if enabled.
@@ -2512,7 +2512,7 @@ EventBridge is a **better alternative**.
 - Each access point has it own endpoint address for access an object within a bucket or the whole bucket but with certain restrictions.
 - Create an access point via console or cli using **aws s3control create-access-point --name secretcats --accountid 1234567890 --bucket catpics**
 
-![Stacks](../main/attachments/S3-Access-Points_learn.cantrill.io-01_04_2023-20_25_28.png?raw=true "Optional Title")
+![Stacks](attachments/S3-Access-Points_learn.cantrill.io-01_04_2023-20_25_28.png?raw=true "Optional Title")
 
 ---
 
@@ -2629,10 +2629,10 @@ VPC Consideration
 - VPC structure with tiers (App/web/database) and resilience (availability) zones 
 
 Example: Global Architecture 
-![Stacks](../main/attachments/Clipboard_2022-09-21-23-21-14.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-21-23-21-14.png?raw=true "Optional Title")
 - Avoid existing ip range
 - Ask the business for know which ip range to avoid
-![Stacks](../main/attachments/Clipboard_2022-09-21-23-24-41.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-21-23-24-41.png?raw=true "Optional Title")
 
 More Considerations
 - VPC min /28 network (16 IP)
@@ -2652,7 +2652,7 @@ An example using 4 AWS accounts.
 - Total of 40 ranges, 10 ranges for each account.
 
 #### 1.6.2.1. How to size VPC
-![Stacks](../main/attachments/Clipboard_2022-09-21-23-42-28.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-21-23-42-28.png?raw=true "Optional Title")
 A subnet is located in one availability zone.
 Try to split each subnet into tiers (web, application, db, spare).
 Since each Region has at least 3 AZ's, it is a good practice to start splitting the network into 4 different AZs.
@@ -2660,7 +2660,7 @@ This allows for at least one subnet in each AZ, and one spare.
 Taking a /16 subnet and splitting it 16 ways will make each a /20.
 
 ### 1.6.3. Custom VPC
-![Stacks](../main/attachments/Clipboard_2022-09-23-19-40-45.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-23-19-40-45.png?raw=true "Optional Title")
 - Regional Isolated and Resilient Service.
   - Operates from all AZs in that region
 - Allows isolated networks inside AWS.
@@ -2765,7 +2765,7 @@ This is how computing devices receive IP addresses automatically. There is one o
 - A subnet can only have one route table associated at a time, but a route table can be associated by many subnets.
 
 #### 1.6.5.1. Route Tables
-![Stacks](../main/attachments/Clipboard_2022-09-27-18-53-52.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-27-18-53-52.png?raw=true "Optional Title")
 When traffic leaves the subnet that this route table is associated with, the VPC router reviews the IP packets looking for the destination address.
 The traffic will try to match the route against the route table. 
 If there are more than one routes found as a match, the prefix is used as a priority.
@@ -2786,7 +2786,7 @@ A managed service that allows gateway traffic between the VPC and the internet o
 - Runs from within the AWS public zone.
 
 #### 1.6.5.3. Using IGW
-![Stacks](../main/attachments/Clipboard_2022-09-27-19-08-08.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-27-19-08-08.png?raw=true "Optional Title")
 In this example, an EC2 instance has:
 
 - Private IP address of 10.16.16.20
@@ -2802,7 +2802,7 @@ The packet arrives at the internet gateway.
 
 The IGW sees this is from the EC2 instance and analyzes the source IP address.
 It changes the packet source IP address from the linux EC2 server and puts on the public IP address that is routed from that instance. The IGW then pushes that packet on the public internet.
-![Stacks](../main/attachments/Clipboard_2022-09-27-19-09-13.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-27-19-09-13.png?raw=true "Optional Title")
 On the return, the inverse happens. As far as it is concerned, it does not know about the private address and instead uses the instance's public IP address.
 
 If the instance uses an IPv6 address, that public address is good to go. The IGW does not translate the packet and only pushes it to a gateway.
@@ -2818,13 +2818,13 @@ This is an inbound management point. Can be configured to only allow specific IP
 
 ### 1.6.6. Network Access Control List (NACL)
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-04-15-28-03.png?raw=true "Optional Title")
-![Stacks](../main/attachments/Screenshot-from-2023-04-04-15-27-25.png?raw=true "Optional Title")
-![Stacks](../main/attachments/Clipboard_2022-09-27-20-42-32.png?raw=true "Optional Title")
-![Stacks](../main/attachments/Clipboard_2022-09-27-20-43-07.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-04-15-28-03.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-04-15-27-25.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-27-20-42-32.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-27-20-43-07.png?raw=true "Optional Title")
 Network Access Control Lists (NACLs) are a type of security filter
 (like firewalls) which can filter traffic as it enters or leaves a subnet.
-![Stacks](../main/attachments/Clipboard_2022-09-29-21-30-30.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-29-21-30-30.png?raw=true "Optional Title")
 All VPCs have a default NACL, this is associated with all subnets of that VPC by default.
 NACLs are used when traffic enters or leaves a subnet.
 Since they are attached to a subnet and not a resource, they only filter data as it crosses in or out.
@@ -2859,7 +2859,7 @@ This cannot be edited and is defaulted on each rule list.
 If no other rules match the traffic being evaluated, it will be denied.
 
 #### 1.6.6.1. NACLs example below
-![Stacks](../main/attachments/Clipboard_2022-09-29-21-39-22.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-29-21-39-22.png?raw=true "Optional Title")
 - Bob wants to view a blog using https(tcp/443)
 - We need a NACL rule to allow TCP on port 443.
 - All IP communication has two parts
@@ -2910,11 +2910,11 @@ NACLs are processed in order starting at the lowest rule number until it gets to
 - SGs have a hidden implicit **Deny**.
   - Anything that is not allowed in the rule set for the SG is implicitly denied.
 #### 1.6.7.1. SG Logical References
-![Stacks](../main/attachments/Clipboard_2022-09-29-22-05-54.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-29-22-05-54.png?raw=true "Optional Title")
 - Source can reference SG.
 - SG references applies to anything which has the SG attached.
 #### 1.6.7.2. SG Self References
-![Stacks](../main/attachments/Clipboard_2022-09-29-22-09-03.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-09-29-22-09-03.png?raw=true "Optional Title")
 - IP changes are automatically handled
 - Within a SG a "SG source" is the same as "anything with the SG attached". 
 - Using a "self reference" means "anything with this SG attached"
@@ -2926,7 +2926,7 @@ NACLs are processed in order starting at the lowest rule number until it gets to
 - NACLs are associated with a subnet and only filter traffic that crosses that boundary. If the resource is in the same subnet, it will not do anything.
 
 ### 1.6.8. Network Address Translation (NAT) Gateway
-![Stacks](../main/attachments/Clipboard_2022-10-05-21-51-36.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-10-05-21-51-36.png?raw=true "Optional Title")
 Set of different processes that can address IP packets by changing their source or destination addresses.
 
 **IP masquerading**, hides CIDR block behind one IP. This allows many IPv4 addresses to use one public IP for **outgoing** internet access.
@@ -2946,7 +2946,7 @@ with a Route Table in each AZ with NATGW as target.
 - Managed service, scales up to 45 Gbps. Can deploy multiple NATGW to increase
 bandwidth.
 - AWS charges on usage per hour and data volume processed.
-![Stacks](../main/attachments/Clipboard_2022-10-05-22-02-02.png?raw=true "Optional Title")
+![Stacks](attachments/Clipboard_2022-10-05-22-02-02.png?raw=true "Optional Title")
 - NAT instance is limited by capabilities of the instance it is running on and that instance is also general purpose, so won't offer the same level of custom design performance as NAT Gateway.
 - You can connect to NAT instance just like any other instance, you can use them as Bastion host or can use them for port forwarding.
 - NAT instance is single instance running in single AZ it'll fail if EC2 hardware fails, network fails, storage fails or AZ itself fails.
@@ -3031,7 +3031,7 @@ handles their own process internally. In EC2 this feature is called
 
 ### 1.7.2. EC2 Architecture and Resilience
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-10-32-14.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-10-32-14.png?raw=true "Optional Title")
 
 - EC2 instances are virtual machines (OS+Resources)
 - Run on EC2 hosts
@@ -3119,7 +3119,7 @@ of IO per second. Elastic search and analytic workloads.
 
 #### 1.7.2.1. Naming Scheme
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-11-47-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-11-47-44.png?raw=true "Optional Title")
 
 R5dn.8xlarge - whole thing is the instance type. When in doubt give the
 full instance type
@@ -3134,7 +3134,7 @@ full instance type
   - n: network optimized
   - e: extra capacity for ram or storage
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-12-03-58.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-12-03-58.png?raw=true "Optional Title")
 
 ### 1.7.3. Storage Refresher
 
@@ -3149,7 +3149,7 @@ of the instance. EBS is persistent storage.
 
 #### 1.7.3.1. Three types of storage
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-13-57-05.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-13-57-05.png?raw=true "Optional Title")
 
 Block Storage - volume presented to the OS as a collection of blocks. No
 structure beyond that. These are mountable and bootable. The OS will
@@ -3169,7 +3169,7 @@ bootable. It scales very well and can have simultaneous access.
 
 #### 1.7.3.2. Storage Performance
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-14-03-52.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-14-03-52.png?raw=true "Optional Title")
 
 IO Block Size - size of the wheels. This determines how to split up the data.
 IOPS - speed of an engine rev (RPM). How many reads or writes a storage
@@ -3201,7 +3201,7 @@ a major fault to go down.
   - If you provision a 1TB for an entire month, you're billed as such.
   - If you have half of the data, you are billed for half of the month.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-14-56-10.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-14-56-10.png?raw=true "Optional Title")
 
 Each volume has a dominant performance attribute
 
@@ -3227,11 +3227,11 @@ This should be the default for boot volumes and some data volumes.
 
 Can only be attached to one volume at a time.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-15-25-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-15-25-36.png?raw=true "Optional Title")
 
 #### 1.7.4.2. General Purpose SSD (gp3)
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-15-28-51.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-15-28-51.png?raw=true "Optional Title")
 
 GP3 is also SSD based, but it removes the credit bucket architecture of GP2 for something much simpler.
 Every GP3 volume regardless of size starts with the standard 3,000 IOPS.
@@ -3255,7 +3255,7 @@ Beyond the 125 MB per second standard, it's an additional extra, but still even 
 
 #### 1.7.4.3. Provisioned IOPS SSD (io1)
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-20-45-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-20-45-45.png?raw=true "Optional Title")
 
 When dealing with these types of volumes, it is important to keep in mind the per-instance performance, which is the maximum performance that can be achieved between the EBS service and a single EC2 instance. These maximums are influenced by the type of volumes, type of instance, and size of the instance. The most modern and largest instances support the highest levels of performance, and multiple volumes are needed to saturate the per-instance performance level.
 
@@ -3264,7 +3264,7 @@ When dealing with these types of volumes, it is important to keep in mind the pe
 st1 - Throughput Optimized HDD
 sc1 - Cold HDD
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-06-23-53-38.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-06-23-53-38.png?raw=true "Optional Title")
 
 ##### 1.7.4.5. st1
 
@@ -3322,7 +3322,7 @@ And if you have a requirement for anything IOPS based, then avoid both of these 
 
 ### 1.7.5. EC2 Instance Store
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-07-10-29-56.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-07-10-29-56.png?raw=true "Optional Title")
 
 Local physical storage that instances can utilize attached to an instance.
 
@@ -3359,7 +3359,7 @@ at all.
 This is much higher than EBS can provide. These volumes
 perform at much higher volumes than EBS.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-07-10-29-43.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-07-10-29-43.png?raw=true "Optional Title")
 
 #### 1.7.5.2. Exam Powerup
 
@@ -3372,9 +3372,9 @@ perform at much higher volumes than EBS.
 
 ### 1.7.6. EBS vs Instance Store
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-07-11-07-54.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-07-11-07-54.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-07-11-12-35.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-07-11-12-35.png?raw=true "Optional Title")
 
 If the read/write can be handled by EBS, that should be default.
 
@@ -3401,7 +3401,7 @@ When to use Instance Store
 
 ### 1.7.7. Snapshots, restore, and fast snapshot restore
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-08-11-24-32.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-08-11-24-32.png?raw=true "Optional Title")
 
 EBS Snapshots
 
@@ -3452,7 +3452,7 @@ another tool in the OS.
 
 #### 1.7.7.2. Snapshot Consumption and Billing
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-08-11-32-16.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-08-11-32-16.png?raw=true "Optional Title")
 
 They are billed using a GB/month metric.
 
@@ -3467,9 +3467,9 @@ will not necessarily increase the charge as opposed to doing one every hour.
 
 #### 1.7.7.3. EBS Encryption
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-08-14-46-13.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-08-14-46-13.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-08-14-46-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-08-14-46-24.png?raw=true "Optional Title")
 
 Provides at rest encryption for block volumes and snapshots.
 
@@ -3524,7 +3524,7 @@ volume.
 
 ### 1.7.8. EC2 Network Interfaces, Instance IPs and DNS
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-08-20-18-16.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-08-20-18-16.png?raw=true "Optional Title")
 
 An EC2 instance starts with at least one ENI - elastic network interface.
 
@@ -3536,7 +3536,7 @@ network interface and not the instance.
 
 #### 1.7.8.1. Elastic Network Interface
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-08-20-42-39.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-08-20-42-39.png?raw=true "Optional Title")
 
 Has these properties
 
@@ -3631,7 +3631,7 @@ AMI's can be used to launch EC2 instance.
 
 #### 1.7.9.1. AMI Lifecycle
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-08-22-38-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-08-22-38-42.png?raw=true "Optional Title")
 
 Launch
 
@@ -3673,7 +3673,7 @@ Billing is for the storage capacity for the EBS snapshots the AMI references
 
 #### 1.7.10.1. On-Demand Instances
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-07-39.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-13-07-39.png?raw=true "Optional Title")
 
 - Hourly rate based on OS, size, options, etc
 - Billed in seconds (60s min) or hourly
@@ -3686,7 +3686,7 @@ any disruption.
 
 #### 1.7.10.2. Spot Instances
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-14-09.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-13-14-09.png?raw=true "Optional Title")
 
 Up to 90% off on-demand
 Depends on the spare capacity
@@ -3698,7 +3698,7 @@ Great for data analytics when the process can occur later.
 
 #### 1.7.10.3. Reserved Instance
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-26-13.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-13-26-13.png?raw=true "Optional Title")
 
 Up to 75% off on-demand
 The trade-off is commitment.
@@ -3719,27 +3719,27 @@ Cheapest option with no tolerance for distribution.
 
 #### 1.7.10.4. Dedicated Hosts
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-33-18.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-13-33-18.png?raw=true "Optional Title")
 
 #### 1.7.10.5. Dedicated Instances
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-13-35-51.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-13-35-51.png?raw=true "Optional Title")
 
 #### 1.7.10.6. Scheduled Reserved Instances
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-14-39-09.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-14-39-09.png?raw=true "Optional Title")
 
 #### 1.7.10.7. Capacity Reservations
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-14-52-13.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-14-52-13.png?raw=true "Optional Title")
 
 #### 1.7.10.8. EC2 Savings Plan
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-14-55-25.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-14-55-25.png?raw=true "Optional Title")
 
 ### 1.7.11. Instance Status Checks and Auto-recovery
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-15-51-52.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-15-51-52.png?raw=true "Optional Title")
 
 Every instance has two high level status checks
 
@@ -3936,7 +3936,7 @@ ECS Cluster manages
 
 #### 1.8.3.1. EC2 mode
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-23-31-51.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-23-31-51.png?raw=true "Optional Title")
 
 ECS cluster is created within a VPC. It benefits from the multiple AZs that
 are within that VPC.
@@ -3953,7 +3953,7 @@ This is good because you can use spot pricing or prepaid EC2 servers.
 
 #### 1.8.3.2. Fargate mode
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-09-23-35-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-09-23-35-26.png?raw=true "Optional Title")
 
 Removes more of the management overhead from ECS, no need to manage EC2.
 
@@ -3983,23 +3983,23 @@ Batch or periodic workloads **Fargate**
 
 #### 1.8.3.4. Elastic Container Registry (ECR)
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-08-20.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-10-00-08-20.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-10-01.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-10-00-10-01.png?raw=true "Optional Title")
 
 #### 1.8.3.5. Kubernetes 101
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-13-40.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-10-00-13-40.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-18-23.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-10-00-18-23.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-22-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-10-00-22-04.png?raw=true "Optional Title")
 
 #### 1.8.3.6. Elastic Kubernetes Service 101 (EKS)
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-28-48.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-10-00-28-48.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-10-00-30-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-10-00-30-11.png?raw=true "Optional Title")
 
 
 ## 1.9. Advanced EC2
@@ -4028,7 +4028,7 @@ and the data will be passed. The OS needs to understand the user data.
 
 #### 1.9.1.1. Bootstrapping Architecture
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-11-22-58-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-11-22-58-47.png?raw=true "Optional Title")
 
 An AMI is used to launch an EC2 instance in the usual way to create
 an EBS volume that is attached to the EC2 instance. This is based on the
@@ -4064,7 +4064,7 @@ The contents are only excecuted once at launch.
 
 #### 1.9.1.3. Boot-Time-To-Service-Time
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-11-23-02-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-11-23-02-42.png?raw=true "Optional Title")
 
 How quickly after you launch an instance is it ready for service. This
 includes the time for EC2 to configure the instance and any software
@@ -4094,7 +4094,7 @@ a CFN resource
 
 #### 1.9.2.1. cfn-init explained
 
-![Stacks](../main/attachments/photo_5888707064455347918_w.jpg?raw=true "Optional Title")
+![Stacks](attachments/photo_5888707064455347918_w.jpg?raw=true "Optional Title")
 
 Starts off with a **cloud formation template**
 This has a logical resource within it which is to create an EC2 instance.
@@ -4112,7 +4112,7 @@ This can monitor the userdata and change things as the EC2 data changes.
 
 #### 1.9.2.2. CreationPolicy and Signals
 
-![Stacks](../main/attachments/photo_5888707064455347919_w.jpg?raw=true "Optional Title")
+![Stacks](attachments/photo_5888707064455347919_w.jpg?raw=true "Optional Title")
 
 The template has a specific part designated signals
 
@@ -4122,7 +4122,7 @@ can continue
 
 ### 1.9.3. EC2 Instance Roles
 
-![Stacks](../main/attachments/photo_5888707064455347934_w.jpg?raw=true "Optional Title")
+![Stacks](attachments/photo_5888707064455347934_w.jpg?raw=true "Optional Title")
 
 IAM roles are the best practice ways for services to be granted permissions.
 
@@ -4152,7 +4152,7 @@ Key facts
 
 ### 1.9.4. AWS System Manager Parameter Store
 
-![Stacks](../main/attachments/photo_5888707064455347935_w.jpg?raw=true "Optional Title")
+![Stacks](attachments/photo_5888707064455347935_w.jpg?raw=true "Optional Title")
 
 Passing secrets into an EC2 instance is bad practice because anyone
 who has access to the meta-data has access to the secrets.
@@ -4186,7 +4186,7 @@ Allows for simple or complex sets of parameters.
 
 ### 1.9.5. System and Application Logging on EC2
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-12-23-02-38.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-12-23-02-38.png?raw=true "Optional Title")
 
 Cloudwatch monitors the outside metrics of an instance
 Cloudwatch logs is for logging
@@ -4220,7 +4220,7 @@ We can use parameter store to store the configuration for the CW agent.
 
 #### 1.9.6.1. Cluster Placement Group - Pack instances close together
 
-![Stacks](../main/attachments/photo_5890958864269032594_w.jpg?raw=true "Optional Title")
+![Stacks](attachments/photo_5890958864269032594_w.jpg?raw=true "Optional Title")
 
 Achieves the highest level of performance available with EC2.
 
@@ -4255,7 +4255,7 @@ assume multiple streams.
 
 #### 1.9.6.2. Spread - Keep instances seperated
 
-![Stacks](../main/attachments/photo_5890958864269032595_w.jpg?raw=true "Optional Title")
+![Stacks](attachments/photo_5890958864269032595_w.jpg?raw=true "Optional Title")
 
 This provides the best resillience and availability.
 
@@ -4278,7 +4278,7 @@ from each other. Several mirrors of an application
 
 #### 1.9.6.3. Partition - groups of instances spread apart
 
-![Stacks](../main/attachments/photo_5890958864269032595_w.jpg?raw=true "Optional Title")
+![Stacks](attachments/photo_5890958864269032595_w.jpg?raw=true "Optional Title")
 
 Spread placement groups are handled by default natively by AWS.
 
@@ -4319,9 +4319,9 @@ configure what type of instances you want to run on it. With the older
 system you cannot mix and match. The new nitro system allows for mixing and
 matching host size.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-13-20-46-43.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-13-20-46-43.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-13-20-48-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-13-20-48-33.png?raw=true "Optional Title")
 
 #### 1.9.7.1. Dedicated Hosts Limitations
 
@@ -4363,9 +4363,9 @@ with standard instances.
 
 ### 1.10.1. Public Hosted Zones
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-20-29-52.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-14-20-29-52.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-20-31-39.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-14-20-31-39.png?raw=true "Optional Title")
 
 A DNS database for a specific domain.
 
@@ -4384,21 +4384,21 @@ Host DNS records.
 Hosted Zones are what the DNS system refererences, it becomes Authoritative
 for a domain and visible to the public internet.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-20-34-08.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-14-20-34-08.png?raw=true "Optional Title")
 
 ### 1.10.2. R53 Private Hosted Zones
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-20-46-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-14-20-46-15.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-20-48-48.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-14-20-48-48.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-20-51-51.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-14-20-51-51.png?raw=true "Optional Title")
 
 ### 1.10.3. CNAME vs R53 Alias
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-20-59-05.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-14-20-59-05.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-14-21-01-52.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-14-21-01-52.png?raw=true "Optional Title")
 
 ### 1.10.4. Simple routing
 
@@ -4407,7 +4407,7 @@ which has one record. It will respond with 3 values and these get forwarded
 back to the client. The client then picks one of the three at random.
 This is a single record only. No health checks.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-03-13.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-00-03-13.png?raw=true "Optional Title")
 
 ### 1.10.5. Route 53 Health Checks
 
@@ -4443,7 +4443,7 @@ There are three types of checks.
 - Cloudwatch alarms
 - Checks of checks
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-21-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-00-21-04.png?raw=true "Optional Title")
 
 ### 1.10.6. Failover Routing
 
@@ -4454,7 +4454,7 @@ both instances. As long as the primary is healthy, it will respond with
 this one. If the health check with the primary fails, the backup will be
 returned instead. This is set to impliment active - passive failover.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-00-33-59.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-00-33-59.png?raw=true "Optional Title")
 
 ### 1.10.7. Multi Value Routing
 
@@ -4462,7 +4462,7 @@ returned instead. This is set to impliment active - passive failover.
 These will be health checked and the unhealthy responses will automatically
 be removed.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-20-48-00.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-20-48-00.png?raw=true "Optional Title")
 
 ### 1.10.8. Weighted Routing
 
@@ -4474,7 +4474,7 @@ on the weight. If one of them fails its health check, it will be skipped over
 and over again until a good one gets hit. This can be used for migration
 to seperate servers.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-20-59-13.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-20-59-13.png?raw=true "Optional Title")
 
 ### 1.10.9. Latency Routing
 
@@ -4483,7 +4483,7 @@ the same name and same type. When a client request arrives, it knows which
 region the request comes from. It knows the lowest latency and will respond
 with the lowest latency.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-21-11-00.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-21-11-00.png?raw=true "Optional Title")
 
 ### 1.10.10. Geolocation Routing
 
@@ -4495,26 +4495,26 @@ This can be used for licensing rights. If overlapping regions,
 the priority will always go to the most specific or smallest region. The US
 will be chosen over the North America record.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-22-41-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-22-41-26.png?raw=true "Optional Title")
 
 ### 1.10.11. Geoproximity
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-22-50-35.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-22-50-35.png?raw=true "Optional Title")
 
 ### 1.10.12. R53 Interoperability
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-22-57-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-22-57-29.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-23-00-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-23-00-44.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-23-02-16.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-23-02-16.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-23-46-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-23-46-44.png?raw=true "Optional Title")
 
 
 ### 1.10.13. DNSSEC using Route53
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-15-23-54-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-15-23-54-04.png?raw=true "Optional Title")
 
 
 ## 1.11. RDS
@@ -4544,14 +4544,14 @@ Table relationships use keys
 
 The Table Scehmas and relationships must be defined in advance.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-16-21-01-16.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-16-21-01-16.png?raw=true "Optional Title")
 
 #### 1.11.1.2. Non-Relational (NoSQL)
 
 Not a single thing, and is a catch all for everything else. There is generally
 a weak or no schema.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-16-21-01-16.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-16-21-01-16.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.1. Key-Value databases
 
@@ -4562,7 +4562,7 @@ These are really fast and highly scalable.
 
 This is also used for **in memory caching**
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-38-56.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-17-20-38-56.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.2. Wide Column Store
 
@@ -4578,7 +4578,7 @@ the same between values. The only requirements is the key needs to be unique.
 
 It can be **single key** or **composite key**. Either case, it must be unique.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-42-46.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-17-20-42-46.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.3. Document
 
@@ -4589,7 +4589,7 @@ This is an extension of a key-value store.
 Good for orders or contacts. This is good for whole documents or deep attribute
 interations.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-44-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-17-20-44-45.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.4. Column
 
@@ -4600,7 +4600,7 @@ need to check for each row. Often called Online Transactional Processing (OLTP).
 Column Store (Redshift) - Columns are stored together. Bad for sales style
 but good for reporting or when all values for a specific size are required.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-48-12.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-17-20-48-12.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.5. Graph
 
@@ -4616,15 +4616,15 @@ stored inside the database.
 
 Relationships are fast because interactions can be queried.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-17-20-50-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-17-20-50-42.png?raw=true "Optional Title")
 
 ##### 1.11.1.2.6. Acid vs Base
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-18-13-31-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-18-13-31-45.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-18-14-00-30.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-18-14-00-30.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-18-14-03-59.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-18-14-03-59.png?raw=true "Optional Title")
 
 ### 1.11.2. Databases on EC2
 
@@ -4698,9 +4698,9 @@ magnetic - compatibility
 Billing is per instance and hourly rate for that compute. You are billed
 for storage allocated.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-18-21-21-32.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-18-21-21-32.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-18-21-23-56.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-18-21-23-56.png?raw=true "Optional Title")
 
 ### 1.11.4. RDS Multi AZ (High-Availability)
 
@@ -4732,13 +4732,13 @@ two times the price.
 - AZ outage, primary failure, manual failover, instance type change, and
 software patching
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-20-46-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-20-20-46-15.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-20-56-58.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-20-20-56-58.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-00-48.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-20-21-00-48.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-03-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-20-21-03-36.png?raw=true "Optional Title")
 
 ### 1.11.5. RDS Backup and Restores
 
@@ -4772,11 +4772,11 @@ both the snapshots and the translation logs.
 When you delete the database, they can be retained but they will expire
 based on their retention period.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-17-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-20-21-17-28.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-21-20-56-49.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-21-20-56-49.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-21-20-59-17.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-21-20-59-17.png?raw=true "Optional Title")
 
 #### 1.11.5.1. RDS Exam Powerups
 
@@ -4794,11 +4794,11 @@ Restores aren't fast, think about RTO.
 
 ### 1.11.6. RDS Read-Replicas
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-21-20-54-57.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-21-20-54-57.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-18-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-20-21-18-33.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-20-21-20-06.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-20-21-20-06.png?raw=true "Optional Title")
 
 Kept in sync using **asyncronous replication**
 
@@ -4831,19 +4831,19 @@ to snapshots and backups
 
 ### 1.11.7. RDS Data Security
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-12-24-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-12-24-45.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-12-26-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-12-26-04.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-12-28-01.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-12-28-01.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-12-30-51.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-12-30-51.png?raw=true "Optional Title")
 
 ### 1.11.8. RDS Custom
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-09-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-13-09-28.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-11-34.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-13-11-34.png?raw=true "Optional Title")
 
 ### 1.11.9. Amazon Aurora
 
@@ -4889,11 +4889,11 @@ be re-used.
 
 Replicas can be added and removed without requiring storage provisioning.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-29-56.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-13-29-56.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-36-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-13-36-47.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-39-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-13-39-04.png?raw=true "Optional Title")
 
 #### 1.11.9.1. Endpoints
 
@@ -4904,7 +4904,7 @@ Reader endpoint - will load balance over the available replicas
 As additional replicas are used for reads, this is load balanced over
 replicas.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-40-27.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-13-40-27.png?raw=true "Optional Title")
 
 #### 1.11.9.2. Costs
 
@@ -4914,7 +4914,7 @@ replicas.
 - Storage - GB-Month consumed, IO cost per request
 - 100% DB size in backups are included
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-13-42-09.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-13-42-09.png?raw=true "Optional Title")
 
 #### 1.11.9.3. Aurora Restore, Clone and Backtrack
 
@@ -4932,7 +4932,7 @@ references the original storage and only write the differences between
 those two. It only copies the difference and only store changes
 between the source data and the clone.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-14-02-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-14-02-24.png?raw=true "Optional Title")
 
 
 ### 1.11.10. Aurora Serverless
@@ -4958,9 +4958,9 @@ they are actually communicating with the proxy fleet. The proxy fleet
 brokers an application with the ACU and ensures you can scale in and out
 without worrying about usage.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-21-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-21-21-31.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-25-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-21-25-33.png?raw=true "Optional Title")
 
 #### 1.11.10.1. Aurora Serverless - Use Cases
 
@@ -4979,7 +4979,7 @@ when not needed.
 Great for multi-tenant applications. If your incoming load is directly
 tied to more people, that's fine.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-30-10.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-21-30-10.png?raw=true "Optional Title")
 
 ### 1.11.11. Aurora Global Database
 
@@ -5003,9 +5003,9 @@ All can be promoted to Read or Write with diasters.
 
 There is currently max of 5 secondary regions.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-42-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-21-42-42.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-21-45-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-21-45-31.png?raw=true "Optional Title")
 
 ### 1.11.12.  Aurora Multi-Master Writes
 
@@ -5035,21 +5035,21 @@ This ensures storage is updated on in-memory cache's
 If a writer goes down in a multi-master cluster, the application will shift
 all future load over to the new writter with little to no downtime.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-10-39.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-10-39.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-13-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-13-26.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-16-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-16-45.png?raw=true "Optional Title")
 
 ### 1.11.13. RDS Proxy
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-29-10.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-29-10.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-32-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-32-28.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-34-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-34-29.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-36-35.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-36-35.png?raw=true "Optional Title")
 
 ### 1.11.14. Database Migration Service (DMS)
 
@@ -5060,13 +5060,13 @@ physical source and target databases.
 
 One endpoint MUST be on AWS.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-55-10.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-55-10.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-22-58-54.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-22-58-54.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-23-02-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-23-02-24.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-22-23-04-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-22-23-04-15.png?raw=true "Optional Title")
 
 
 ## 1.12. Network Storage
@@ -5113,21 +5113,21 @@ Lifecycle policies can move data between EFS
 
 ### 1.12.1. AWS Backup
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-29-22-50-43.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-29-22-50-43.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-29-23-16-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-29-23-16-42.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-29-23-34-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-29-23-34-44.png?raw=true "Optional Title")
 
 ## 1.13. HA and Scaling
 
 ### 1.13.1. Regional and Global AWS Architecture
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-11-56-35.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-11-56-35.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-11-59-16.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-11-59-16.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-12-07-30.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-12-07-30.png?raw=true "Optional Title")
 
 ### 1.13.2. Load Balancing Fundamentals
 
@@ -5149,13 +5149,13 @@ shouldn't see errors.
 
 #### 1.13.2.1. ELB Architecture
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-12-19-09.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-12-19-09.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-16-31-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-16-31-33.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-17-11-06.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-17-11-06.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-17-58-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-17-58-44.png?raw=true "Optional Title")
 
 #### 1.13.2.2. LB Exam Powerup
 
@@ -5172,17 +5172,17 @@ Used for high availability, fault tolerance, and scaling
 
 ### 1.13.3.Application Load balancing (ALB) vs Network Load Balancing (NLB)
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-05-40.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-21-05-40.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-09-54.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-21-09-54.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-17-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-21-17-24.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-20-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-21-20-45.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-24-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-21-24-15.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-21-25-38.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-21-25-38.png?raw=true "Optional Title")
 
 #### 1.13.3.1. Cross zone load balancing
 
@@ -5197,7 +5197,7 @@ If all instances are shown as healthy, it can distribute evenly.
 ALB can support a wide array of targets. An individual target can be a
 member of multiple groups.
 
-![Stacks](../main/attachments/Screenshot-from-2023-04-30-17-21-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-04-30-17-21-28.png?raw=true "Optional Title")
 
 #### 1.13.3.2. ALB Exam Powerup
 
@@ -5225,9 +5225,9 @@ Launch templates
 
 If you need to adjust a configuration, you must make a new one and launch it.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-10-25-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-10-25-11.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-10-26-18.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-10-26-18.png?raw=true "Optional Title")
 
 ### 1.13.5. Auto Scaling Groups
 
@@ -5246,11 +5246,11 @@ Scaling Policies automate based on metrics or a schedule
 Auto Scaling Groups will try to keep the AZs equal with the number of EC2
 instances.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-11-42-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-11-42-45.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-11-44-16.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-11-44-16.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-11-45-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-11-45-11.png?raw=true "Optional Title")
 
 #### 1.13.5.1. Scaling Policies
 
@@ -5278,30 +5278,30 @@ You should use ALB with autoscaling groups.
 
 ASG defines when and where, Launch Template defines what.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-11-53-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-11-53-33.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-13-50-49.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-13-50-49.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-13-52-37.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-13-52-37.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-14-10-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-14-10-45.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-14-52-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-14-52-29.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-15-04-56.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-15-04-56.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-15-08-27.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-15-08-27.png?raw=true "Optional Title")
 
 
 #### 1.13.5.2.  ASG Scaling Hooks
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-21-59-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-21-59-31.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-02-22-05-55.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-02-22-05-55.png?raw=true "Optional Title")
 
 ### 1.13.6. ASG HealthCheck Comparison - EC2 vs ELB
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-03-21-23-48.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-03-21-23-48.png?raw=true "Optional Title")
 
 ### 1.13.7. SSL Offload and Session Stickiness
 
@@ -5367,22 +5367,22 @@ new cookie and the process will start again.
 
 This could cause backend unevenness
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-03-22-00-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-03-22-00-11.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-03-22-10-22.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-03-22-10-22.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-03-22-46-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-03-22-46-28.png?raw=true "Optional Title")
 
 
 ### 1.13.8. Gateway Load Balancer
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-06-22-35-54.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-06-22-35-54.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-06-22-55-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-06-22-55-15.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-06-23-15-53.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-06-23-15-53.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-06-23-24-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-06-23-24-36.png?raw=true "Optional Title")
 
 ## 1.14. Serverless and Application services
 
@@ -5402,7 +5402,7 @@ was a monolithic architecture.
 
 This is the least cost effective way to architect systems.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-14-49-40.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-14-49-40.png?raw=true "Optional Title")
 
 #### 1.14.1.2. Tiered
 
@@ -5424,7 +5424,7 @@ customer experience.
 Even if there is no job to be processed, the middle tier will need to be
 running because otherwise it would fail.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-14-55-05.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-14-55-05.png?raw=true "Optional Title")
 
 #### 1.14.1.3. Evolving with Queues
 
@@ -5448,7 +5448,7 @@ of the information.
 
 The autoscaling group will only bring up servers as their needed.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-16-15-02.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-16-15-02.png?raw=true "Optional Title")
 
 #### 1.14.1.4. Event Driven Architecture
 
@@ -5464,9 +5464,9 @@ In either case, there are no resources waiting around to be used.
 Event router is needed for event driven architecture that also manages
 an event bus.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-16-29-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-16-29-47.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-16-32-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-16-32-04.png?raw=true "Optional Title")
 
 #### 1.14.1.5. Highlights
 
@@ -5481,7 +5481,7 @@ events.
 
 #### 1.14.1.6. Microservices
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-16-17-14.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-16-17-14.png?raw=true "Optional Title")
 
 ### 1.14.2. AWS Lambda
 
@@ -5493,33 +5493,33 @@ events.
 - You are billed only for the duration a function runs. There is no charge
 for having lambda functions waiting and ready to go.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-21-11-12.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-21-11-12.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-22-57-51.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-22-57-51.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-21-20-21.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-21-20-21.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-22-04-46.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-22-04-46.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-22-09-35.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-22-09-35.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-22-10-55.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-22-10-55.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-22-14-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-22-14-24.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-07-22-16-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-07-22-16-11.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-08-21-35-55.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-08-21-35-55.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-08-22-29-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-08-22-29-36.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-08-22-36-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-08-22-36-33.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-08-22-48-22.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-08-22-48-22.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-08-22-53-55.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-08-22-53-55.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-08-23-00-19.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-08-23-00-19.png?raw=true "Optional Title")
 
 #### 1.14.2.1. Lambda Architecture
 
@@ -5578,9 +5578,9 @@ Architecturally at the heart of event bridge is the default event bus.
 
 The default event bus is moving packets of JSON data.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-08-23-44-32.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-08-23-44-32.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-08-23-46-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-08-23-46-47.png?raw=true "Optional Title")
 
 ### 1.14.4. Serverless
 
@@ -5595,7 +5595,7 @@ be little to no cost due to compute not being used.
 
 Should use managed services when possible.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-09-21-25-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-09-21-25-42.png?raw=true "Optional Title")
 
 #### 1.14.4.1. Example of Serverless
 
@@ -5623,7 +5623,7 @@ DynamoDB.
 The user can then interact with another Lambda which will allow her to
 pull the media from the transcode bucket using the dynamoDB entry.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-09-21-37-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-09-21-37-24.png?raw=true "Optional Title")
 
 ### 1.14.5. Simple Notification Service (SNS)
 
@@ -5654,11 +5654,11 @@ Offers:
 - SSE (server side encryption)
 - Topics can be used cross-account via Topic Policy
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-09-22-28-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-09-22-28-15.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-09-22-30-34.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-09-22-30-34.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-09-22-32-54.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-09-22-32-54.png?raw=true "Optional Title")
 
 ### 1.14.6. AWS Step Functions
 
@@ -5685,9 +5685,9 @@ Amazon States Languate (ASL) - JSON template
 
 These use IAM Roles for permissions.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-10-22-38-48.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-10-22-38-48.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-10-22-42-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-10-22-42-44.png?raw=true "Optional Title")
 
 #### 1.14.6.1. States
 
@@ -5698,9 +5698,9 @@ These use IAM Roles for permissions.
 - Map : accepts a list of things
 - Task : Single unit of work (lambda, batch, dynamoDB)
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-10-22-51-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-10-22-51-15.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-10-22-57-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-10-22-57-24.png?raw=true "Optional Title")
 
 ### 1.14.7. API Gateway
 
@@ -5717,25 +5717,25 @@ in that region for that resource.
 APIs also perform authentication using passwords or keys. API authorizes
 each service and needs your permissions verified each time.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-10-23-42-30.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-10-23-42-30.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-10-23-45-02.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-10-23-45-02.png?raw=true "Optional Title")
 
 #### 1.14.7.1. Authentication
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-10-23-52-14.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-10-23-52-14.png?raw=true "Optional Title")
 
 #### 1.14.7.2. Endpoint types
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-10-23-54-37.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-10-23-54-37.png?raw=true "Optional Title")
 
 #### 1.14.7.3. Errors
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-11-00-12-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-11-00-12-31.png?raw=true "Optional Title")
 
 #### 1.14.7.3. Caching
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-11-00-19-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-11-00-19-29.png?raw=true "Optional Title")
 
 ### 1.14.8. Simple Queue Service (SQS)
 
@@ -5764,11 +5764,11 @@ the corruption.
 
 ASG can scale and lambdas can be invoked based on queue length.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-11-21-58-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-11-21-58-29.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-11-21-58-50.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-11-21-58-50.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-11-22-09-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-11-22-09-33.png?raw=true "Optional Title")
 
 #### 1.14.8.1. Highlights
 
@@ -5803,15 +5803,15 @@ Access is based on identity policies or a queue policy.
 
 #### 1.14.8.2. SQS Standard vs FIFO Queues
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-13-21-07-10.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-13-21-07-10.png?raw=true "Optional Title")
 
 #### 1.14.8.3. SQS Delay Queues
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-13-22-38-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-13-22-38-47.png?raw=true "Optional Title")
 
 #### 1.14.8.4. SQS Dead-Letter Queues
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-10-53-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-10-53-45.png?raw=true "Optional Title")
 
 ### 1.14.9. Kinesis Data Streams
 
@@ -5844,7 +5844,7 @@ of data for a stream.
 **Kinesis Firehose** connects to a Kinesis stream. It can move the data
 from a stream onto S3 or another service.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-11-10-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-11-10-24.png?raw=true "Optional Title")
 
 ### 1.14.10. SQS vs Kinesis
 
@@ -5863,59 +5863,59 @@ window for multiple consumers.
 
 Designed for data ingestion, analytics, monitoring, app clicks.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-11-13-21.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-11-13-21.png?raw=true "Optional Title")
 
 ### 1.14.11. Kinesis Data Firehose
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-11-28-50.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-11-28-50.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-19-03-18.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-19-03-18.png?raw=true "Optional Title")
 
 ### 1.14.12. Kinesis Data Analytics
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-19-19-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-19-19-42.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-19-41-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-19-41-11.png?raw=true "Optional Title")
 
 ### 1.14.13. Kinesis Video Streams
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-12-17.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-21-12-17.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-15-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-21-15-33.png?raw=true "Optional Title")
 
 ### 1.14.14. Amazon Cognito - User and Identity Pools
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-30-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-21-30-29.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-34-00.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-21-34-00.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-37-23.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-21-37-23.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-41-24.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-21-41-24.png?raw=true "Optional Title")
 
 ### 1.14.15. AWS Glue 101
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-36-49.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-22-36-49.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-38-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-22-38-26.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-48-34.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-22-48-34.png?raw=true "Optional Title")
 
 ### 1.14.16. Amazon MQ 101
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-52-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-22-52-44.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-21-34-00.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-21-34-00.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-57-49.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-22-57-49.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-22-59-34.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-22-59-34.png?raw=true "Optional Title")
 
 ### 1.14.17. Amazon AppFlow
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-23-04-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-23-04-26.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-14-23-05-56.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-14-23-05-56.png?raw=true "Optional Title")
 
 ## 1.15. CloudFront
 
@@ -5940,22 +5940,22 @@ third party server system.
 Regional Edge Cache - larger version of an edge location. Provides
 another layer of caching.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-15-21-24-58.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-15-21-24-58.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-15-21-31-39.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-15-21-31-39.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-15-21-35-17.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-15-21-35-17.png?raw=true "Optional Title")
 
 
 #### 1.15.1.1. CF TTL and Invalidations
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-17-21-44-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-17-21-44-26.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-17-21-44-33.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-17-21-44-33.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-17-22-02-38.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-17-22-02-38.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-17-22-08-46.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-17-22-08-46.png?raw=true "Optional Title")
 
 #### 1.15.1.2. Caching Optimisation
 
@@ -5983,21 +5983,21 @@ If it's not a managed service, ACM doesn't support it.
 
 Cloudfront must have a trusted and signed certificate. It can't be self signed.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-16-35.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-18-21-16-35.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-20-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-18-21-20-31.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-22-32.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-18-21-22-32.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-26-02.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-18-21-26-02.png?raw=true "Optional Title")
 
 ### 1.15.3. Cloudfront and SSL/TLS
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-18-21-36-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-18-21-36-44.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-18-22-30-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-18-22-30-47.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-18-22-42-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-18-22-42-28.png?raw=true "Optional Title")
 
 ### 1.15.4. Securing CF and S3 using OAI
 
@@ -6009,29 +6009,29 @@ We then remove the explicit allows and only allow the OAI to use it.
 
 Best practice is to create one per distribution to manage permissions.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-20-54-49.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-20-54-49.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-20-56-41.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-20-56-41.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-20-59-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-20-59-15.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-21-02-20.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-21-02-20.png?raw=true "Optional Title")
 
 ### 1.15.5. Private Distribution & Behaviours
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-22-22-17.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-22-22-17.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-22-24-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-22-24-47.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-22-35-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-22-35-31.png?raw=true "Optional Title")
 
 ### 1.15.6. Lambda@Edge
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-17-10.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-23-17-10.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-19-40.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-23-19-40.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-23-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-23-23-28.png?raw=true "Optional Title")
 
 https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirecting-examples
 
@@ -6059,11 +6059,11 @@ Global Accelerator is a network product. Can use TCP, UDP.
 
 Caching is mostly CloudFront. TCP and UDP is mostly Global Accelerator
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-37-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-23-37-11.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-36-53.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-23-36-53.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-19-23-49-58.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-19-23-49-58.png?raw=true "Optional Title")
 
 ## 1.16. VPC Advanced
 
@@ -6087,11 +6087,11 @@ Childs of interfaces inherit the flow low monitoring from higher groups.
 
 The packet will always have source followed by destination.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-12-21-05.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-12-21-05.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-12-36-53.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-12-36-53.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-12-43-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-12-43-47.png?raw=true "Optional Title")
 
 ### 1.16.2. Egress-Only Internet Gateway
 
@@ -6110,9 +6110,9 @@ NAT, only outbound only.
 To configure the Egress-only gateway, you must add default IPv6 route ::/0
 added to RT with eigw-id as target.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-13-08-09.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-13-08-09.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-13-21-13.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-13-21-13.png?raw=true "Optional Title")
 
 ### 1.16.3. VPC Endpoints (Gateway)
 
@@ -6144,9 +6144,9 @@ a gateway endpoint. For anything else, the implicit deny will apply.
 
 They are only accessible from inside that specific VPC.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-13-59-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-13-59-31.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-14-06-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-14-06-15.png?raw=true "Optional Title")
 
 ### 1.16.4. VPC Endpoints (Interface)
 
@@ -6177,17 +6177,17 @@ Either of those two points of endpoints can be used
 
 PrivateDNS overrides the default DNS for services.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-20-54-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-20-54-36.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-20-58-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-20-58-47.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-00-35.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-21-00-35.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-01-32.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-21-01-32.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-01-57.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-21-01-57.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-05-05.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-21-05-05.png?raw=true "Optional Title")
 
 ### 1.16.5. VPC Peering
 
@@ -6214,35 +6214,35 @@ You are creating a logical gateway object in one VPC.
 
 VPC Peering Connections CANNOT be created with overlapping VPC CIDRs
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-31-41.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-21-31-41.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-21-21-37-03.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-21-21-37-03.png?raw=true "Optional Title")
 
 ## 1.17. Hybrid Enviroment and Migration
 
 ### 1.17.1. Border Gateway Protocol 101
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-16-18.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-21-16-18.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-31-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-21-31-26.png?raw=true "Optional Title")
 
 ### 1.17.2. IPSec VPN Fundamentals
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-47-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-21-47-28.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-48-48.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-21-48-48.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-50-20.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-21-50-20.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-52-30.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-21-52-30.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-21-59-15.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-21-59-15.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-22-01-32.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-22-01-32.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-22-14-34.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-22-14-34.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-23-22-16-21.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-23-22-16-21.png?raw=true "Optional Title")
 
 ### 1.17.3. AWS Site-to-Site VPN
 
@@ -6264,15 +6264,15 @@ Customer Gateway (CGW)
 
 VPN connection itself stores the config and connects the VGW and CGW
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-10-54-17.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-10-54-17.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-00-34.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-11-00-34.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-09-05.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-11-09-05.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-13-38.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-11-13-38.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-34-09.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-11-34-09.png?raw=true "Optional Title")
 
 
 #### 1.17.3.1. Considerations
@@ -6326,25 +6326,25 @@ It does not use public internet and provides consistently low latency.
 
 DX provides NO ENCRYPTION and needs to be managed on a per application basis.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-11-59-07.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-11-59-07.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-12-05-00.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-12-05-00.png?raw=true "Optional Title")
 
 ### 1.17.4.1. Direct Connect (DX) Resilience
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-04-56.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-14-04-56.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-11-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-14-11-42.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-14-38.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-14-14-38.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-14-19-59.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-14-19-59.png?raw=true "Optional Title")
 
 ### 1.17.4.2. Direct Connect (DX) - Public VIF + VPN (Encryption)
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-21-22.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-21-21-22.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-24-41.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-21-24-41.png?raw=true "Optional Title")
 ### 1.17.5. AWS Transit Gateway (TGW)
 
 Network transit hub to connect VPCs to on premises networks
@@ -6362,13 +6362,13 @@ You can use these for cross-region peering attachment.
 
 Can share between accounts using AWS RAM
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-44-09.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-21-44-09.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-47-06.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-21-47-06.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-50-41.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-21-50-41.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-21-59-51.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-21-59-51.png?raw=true "Optional Title")
 
 ### 1.17.6. Storage Gateway
 
@@ -6400,31 +6400,31 @@ Migration of extisting infrastructure into AWS slowly.
   - Primarily stored on AWS
   - Great for limited local storage capacity.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-22-23-06.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-22-23-06.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-22-29-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-22-29-04.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-25-22-57-37.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-25-22-57-37.png?raw=true "Optional Title")
 
 ### 1.17.6.1. Storage Gateway - Tape (VTL)
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-10-48-10.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-10-48-10.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-10-50-32.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-10-50-32.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-10-57-14.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-10-57-14.png?raw=true "Optional Title")
 
 ### 1.17.6.2. Storage Gateway - File
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-09-45.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-11-09-45.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-15-08.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-11-15-08.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-18-03.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-11-18-03.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-24-58.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-11-24-58.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-11-30-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-11-30-26.png?raw=true "Optional Title")
 
 ### 1.17.7. Snowball / Edge / Snowmobile
 
@@ -6465,13 +6465,13 @@ Up to 100 PB per snowmobile.
 
 This is not economical for multi-site for sub 10 PB
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-12-11-19.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-12-11-19.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-12-27-40.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-12-27-40.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-12-30-55.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-12-30-55.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-12-32-46.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-12-32-46.png?raw=true "Optional Title")
 
 ### 1.17.8. AWS Directory Service
 
@@ -6517,17 +6517,17 @@ with on-prem. This is not an emulation.
 AD Connector - Use AWS services without storing any directory info in the
 cloud, it proxies to your on-prem directory.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-20-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-14-20-29.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-26-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-14-26-11.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-32-14.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-14-32-14.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-34-30.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-14-34-30.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-37-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-14-37-28.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-14-39-30.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-14-39-30.png?raw=true "Optional Title")
 
 ### 1.17.9. AWS DataSync
 
@@ -6566,13 +6566,13 @@ Agent is software to read and write to on prem such as NFS or SMB
 
 Location is the FROM and TO
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-17-03-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-17-03-44.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-17-09-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-17-09-31.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-17-15-22.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-17-15-22.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-17-16-48.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-17-16-48.png?raw=true "Optional Title")
 
 ### 1.17.10. FSx for Windows File Server
 
@@ -6601,33 +6601,33 @@ Managed - no file server admin
 
 Integrates with DS and your own directory.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-21-58-14.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-21-58-14.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-17-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-22-17-04.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-20-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-22-20-47.png?raw=true "Optional Title")
 
 ### 1.17.11. FSx For Lustre
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-35-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-22-35-04.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-37-49.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-22-37-49.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-39-53.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-22-39-53.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-42-01.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-22-42-01.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-26-22-44-30.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-26-22-44-30.png?raw=true "Optional Title")
 
 ### 1.17.12. AWS Transfer Family
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-11-08-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-11-08-29.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-11-10-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-11-10-11.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-11-17-38.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-11-17-38.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-11-19-04.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-11-19-04.png?raw=true "Optional Title")
 
 ## 1.18. Security, Deployment, Operations
 
@@ -6647,9 +6647,9 @@ change in RDS.
 
 This is great for rotating secrets and especially with RDS.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-12-06-08.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-12-06-08.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-12-10-05.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-12-10-05.png?raw=true "Optional Title")
 
 #### 1.18.1.1. Example
 
@@ -6667,9 +6667,9 @@ Secrets are secured via KMS which ensures role seperation.
 
 #### 1.18.1.2. Application Layer (L7) Firewall
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-19-41-54.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-19-41-54.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-19-46-21.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-19-46-21.png?raw=true "Optional Title")
 
 ### 1.18.2. WAF (web application firewall)
 
@@ -6684,15 +6684,15 @@ API gateways, and cloudfront.
 
 The rules are added to WEBACL and evaluated when traffic arrives.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-07-28.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-21-07-28.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-10-16.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-21-10-16.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-13-43.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-21-13-43.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-29-19.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-21-29-19.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-21-32-01.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-21-32-01.png?raw=true "Optional Title")
 
 #### 1.18.2.1. Example of Architecture
 
@@ -6728,13 +6728,13 @@ Shield advanced - $3000 per month
 - Provides access to DDoS advanced response team and financial insurance
 against increased costs.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-00-27.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-22-00-27.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-01-52.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-22-01-52.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-04-39.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-22-04-39.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-07-57.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-22-07-57.png?raw=true "Optional Title")
 
 ### 1.18.3. CloudHSM
 
@@ -6773,11 +6773,11 @@ to the cluster.
 
 AWS has no access to the HSM appliances which store the keys.
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-29-41.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-22-29-41.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-35-57.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-22-35-57.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-27-22-54-07.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-27-22-54-07.png?raw=true "Optional Title")
 
 #### 1.18.3.1. Cloud HSM Use Cases
 
@@ -6796,51 +6796,51 @@ Anything that needs to interact with non AWS products.
 
 ### 1.18.4. AWS Config
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-12-23.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-28-12-12-23.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-16-44.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-28-12-16-44.png?raw=true "Optional Title")
 
 ### 1.18.5. Amazon Macie
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-53-26.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-28-12-53-26.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-55-17.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-28-12-55-17.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-28-12-58-47.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-28-12-58-47.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-28-13-02-58.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-28-13-02-58.png?raw=true "Optional Title")
 
 ### 1.18.6. Amazon Inspector
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-15-59-07.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-15-59-07.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-15-59-27.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-15-59-27.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-00-23.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-16-00-23.png?raw=true "Optional Title")
 
 ### 1.18.6. Amazon Guardduty
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-03-19.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-16-03-19.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-03-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-16-03-31.png?raw=true "Optional Title")
 
 ## 1.19. Machine Learning 101
 
 ### 1.19.1. CloudFormation Physical & Logical Resources
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-14-15-52-55.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-14-15-52-55.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-14-16-52-09.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-14-16-52-09.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-14-16-53-20.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-14-16-53-20.png?raw=true "Optional Title")
 
 ### 1.19.2. CloudFormation Template and Pseudo Parameters
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-14-17-07-11.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-14-17-07-11.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-14-17-09-39.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-14-17-09-39.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-14-17-11-23.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-14-17-11-23.png?raw=true "Optional Title")
 
 
 
@@ -6855,70 +6855,70 @@ Anything that needs to interact with non AWS products.
 
 ### 1.21.1. Amazon Comprehend
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-44-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-16-44-36.png?raw=true "Optional Title")
 
 ### 1.21.2. Amazon Kendra
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-04-29.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-17-04-29.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-16-44-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-16-44-36.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-15-05.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-17-15-05.png?raw=true "Optional Title")
 
 ### 1.21.3. Amazon Lex
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-25-25.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-17-25-25.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-27-02.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-17-27-02.png?raw=true "Optional Title")
 
 ### 1.21.4. Amazon Polly
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-43-03.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-17-43-03.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-43-52.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-17-43-52.png?raw=true "Optional Title")
 
 ### 1.21.5. Amazon Rekognition
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-56-03.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-17-56-03.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-29-17-59-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-29-17-59-36.png?raw=true "Optional Title")
 
 ### 1.21.6. Amazon Textract
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-16-32-53.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-16-32-53.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-16-33-59.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-16-33-59.png?raw=true "Optional Title")
 
 ### 1.21.7. Amazon Transcribe
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-21-42-27.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-21-42-27.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-21-44-10.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-21-44-10.png?raw=true "Optional Title")
 
 ### 1.21.8. Amazon Translate
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-21-55-59.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-21-55-59.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-21-56-36.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-21-56-36.png?raw=true "Optional Title")
 
 ### 1.21.9. Amazon Forecast 101
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-22-07-48.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-22-07-48.png?raw=true "Optional Title")
 
 ### 1.21.10. Amazon Fraud Detector
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-22-19-42.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-22-19-42.png?raw=true "Optional Title")
 
 ### 1.21.11. Amazon SageMaker
 
-![Stacks](../main/attachments/Screenshot-from-2023-05-30-22-26-23.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-05-30-22-26-23.png?raw=true "Optional Title")
 
 ## 1.22. Other Services & Features
 
 ## 1.22.1. AWS Local Zones
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-07-22-11-31.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-07-22-11-31.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-07-22-14-57.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-07-22-14-57.png?raw=true "Optional Title")
 
-![Stacks](../main/attachments/Screenshot-from-2023-06-07-22-17-08.png?raw=true "Optional Title")
+![Stacks](attachments/Screenshot-from-2023-06-07-22-17-08.png?raw=true "Optional Title")
