@@ -6,7 +6,8 @@
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [1.2. Tech Fundamentals](#12-tech-fundamentals)
+- [1.1. Course Fundamentals and AWS Accounts](#11-course-fundamentals-and-aws-accounts)
+- [1.2. Cloud, Networking and Technical Fundamentals](#12-cloud-networking-and-technical-fundamentals)
    * [1.2.1. YAML101 - YAML AINT MARKUP LANGUAGE](#121-yaml101---yaml-aint-markup-language)
    * [1.2.2. JSON101 - JavaScript Object Notation](#122-json101---javascript-object-notation)
    * [1.2.3. Encryption 101](#123-encryption-101)
@@ -471,7 +472,9 @@
 
 ---
 
-## 1.2. Tech Fundamentals
+## 1.1. Course Fundamentals and AWS Accounts
+
+## 1.2. Cloud, Networking and Technical Fundamentals
 ### 1.2.1. YAML101 - YAML AINT MARKUP LANGUAGE
 ![Stacks](attachments/Clipboard_2022-08-20-22-49-10.png?raw=true "Optional Title")
 * YAML = Human readable data serialization language
