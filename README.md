@@ -6,10 +6,6 @@
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [1.1. Cloud Computing Fundamentals](#11-cloud-computing-fundamentals)
-   * [1.1.1. Cloud Computing - what is it really?](#111-cloud-computing---what-is-it-really)
-   * [1.1.2. Public vs Private vs Multi vs Hybrid Cloud](#112-public-vs-private-vs-multi-vs-hybrid-cloud)
-   * [1.1.3. Cloud Service Models](#113-cloud-service-models)
 - [1.2. Tech Fundamentals](#12-tech-fundamentals)
    * [1.2.1. YAML101 - YAML AINT MARKUP LANGUAGE](#121-yaml101---yaml-aint-markup-language)
    * [1.2.2. JSON101 - JavaScript Object Notation](#122-json101---javascript-object-notation)
@@ -43,6 +39,10 @@
          - [SSL and TLS](#ssl-and-tls)
          - [Hash Functions & Hashing](#hash-functions--hashing)
          - [Digital Signatures](#digital-signatures)
+    * [1.2.5. Cloud Computing 101](#125-cloud-computing-101)
+      * [1.2.5.1. Cloud Computing - what is it really?](#1251-cloud-computing---what-is-it-really)
+      * [1.2.5.2. Public vs Private vs Multi vs Hybrid Cloud](#1252-public-vs-private-vs-multi-vs-hybrid-cloud)
+      * [1.2.5.3. Cloud Service Models](#1253-cloud-service-models)
 - [1.3. AWS-Fundamentals](#13-aws-fundamentals)
    * [AWS Support Plans](#aws-support-plans)
    * [1.3.1. Public vs Private Services](#131-public-vs-private-services)
@@ -469,55 +469,6 @@
 
 <!-- TOC end -->
 
-## 1.1. Cloud Computing Fundamentals
-### 1.1.1. Cloud Computing - what is it really?
-
-Cloud computing provides
-1. On-Demand Self-Service: Provision and terminate using a UI/CLI without
-human interaction.
-2. Broad Network Access: Access services over any networks on any devices using
-standard protocols and methods.
-3. Resource Pooling: Economies of scale, cheaper service.
-4. Rapid Elasticity: Scale up and down automatically in response to system load.
-5. Measured Service: Usage is measured. Pay only for what you consume.
-
-### 1.1.2. Public vs Private vs Multi vs Hybrid Cloud
-
-- Public Cloud: using 1 public cloud such as AWS, Azure, Google Cloud.
-- Private Cloud: using on-premises real cloud. Must meet 5 requirements.
-- Multi-Cloud: using more than 1 public cloud in one deployment.
-- Hybrid Cloud: using public and private clouds in one environment
-  - This is **NOT** using Public Cloud and Legacy on-premises hardware.
-
-### 1.1.3. Cloud Service Models
-
-The *Infrastructure Stack* or *Application Stack* contains multiple components
-that make up the total service. There are parts that **you** manage as well
-as portions the **vendor** manages. The portions the vendor manages and you
-are charged for is the **unit of consumption**
-
-![Stacks](../main/attachments/Clipboard_2022-08-20-22-35-47.png?raw=true "Optional Title")
-
-1. On-Premises: 
-    * The individual manages all components from data to facilities.
-    * Provides the most flexibility, but also most IT intensive.
-2. Data Center Hosting: 
-    * Place equipment in a building managed by a vendor.
-    * You pay for the facilities only.
-3. Infrastructure as a Service (IaaS): 
-    * Vendor manages facilities and everything else related to servers up to the OS. 
-    * You pay per second or minute for the OS used to the vendor. 
-    * Lose some flexibility, but big risk reductions.
-4. Platform as a Service (PaaS):  
-    * Good for running an application only. 
-    *  The unit of consumption is the runtime environment. 
-    * You manage the application and the data, but the vendor manges all else.
-5. Software as a Service (SaaS): 
-    * You consume the software as a service. (This can be Outlook or Netflix)
-    * There are almost no risks or additional costs, but very little control.
-
-There are additional services such as *Function as a Service*, *Container as a Service*, and *DataBase as a Service* which be explained later.
-
 ---
 
 ## 1.2. Tech Fundamentals
@@ -843,6 +794,55 @@ NAT Device is use to do the following:
 * <span style="color:orange">Digital sign</span> the <span style="color:purple">HASH</span> (using private key). <span style="color:orange">Authenticates</span> the hash.
 * Public key can be widely distributed and trusted
 * Hash can not be changed as nobody else has the private key
+
+### 1.2.5. Cloud Computing 101
+#### 1.2.5.1. Cloud Computing - what is it really?
+
+Cloud computing provides
+1. On-Demand Self-Service: Provision and terminate using a UI/CLI without
+human interaction.
+2. Broad Network Access: Access services over any networks on any devices using
+standard protocols and methods.
+3. Resource Pooling: Economies of scale, cheaper service.
+4. Rapid Elasticity: Scale up and down automatically in response to system load.
+5. Measured Service: Usage is measured. Pay only for what you consume.
+
+#### 1.2.5.2. Public vs Private vs Multi vs Hybrid Cloud
+
+- Public Cloud: using 1 public cloud such as AWS, Azure, Google Cloud.
+- Private Cloud: using on-premises real cloud. Must meet 5 requirements.
+- Multi-Cloud: using more than 1 public cloud in one deployment.
+- Hybrid Cloud: using public and private clouds in one environment
+  - This is **NOT** using Public Cloud and Legacy on-premises hardware.
+
+#### 1.2.5.3. Cloud Service Models
+
+The *Infrastructure Stack* or *Application Stack* contains multiple components
+that make up the total service. There are parts that **you** manage as well
+as portions the **vendor** manages. The portions the vendor manages and you
+are charged for is the **unit of consumption**
+
+![Stacks](../main/attachments/Clipboard_2022-08-20-22-35-47.png?raw=true "Optional Title")
+
+1. On-Premises: 
+    * The individual manages all components from data to facilities.
+    * Provides the most flexibility, but also most IT intensive.
+2. Data Center Hosting: 
+    * Place equipment in a building managed by a vendor.
+    * You pay for the facilities only.
+3. Infrastructure as a Service (IaaS): 
+    * Vendor manages facilities and everything else related to servers up to the OS. 
+    * You pay per second or minute for the OS used to the vendor. 
+    * Lose some flexibility, but big risk reductions.
+4. Platform as a Service (PaaS):  
+    * Good for running an application only. 
+    *  The unit of consumption is the runtime environment. 
+    * You manage the application and the data, but the vendor manges all else.
+5. Software as a Service (SaaS): 
+    * You consume the software as a service. (This can be Outlook or Netflix)
+    * There are almost no risks or additional costs, but very little control.
+
+There are additional services such as *Function as a Service*, *Container as a Service*, and *DataBase as a Service* which be explained later.
 
 ---
 
