@@ -1424,12 +1424,12 @@ Once authenticated, that identity is known as an **authenticated identity**
 ![Stacks](attachments/Clipboard_2022-08-25-22-58-25.png?raw=true "Optional Title")
 - Explicit Deny: Denies access to a particular resource cannot be overruled.
 - Explicit Allow: Allows access so long there is not an explicit deny.
-- Default Deny (Implicit): IAM identities start off with no resource access.
+- Default Deny (Implicit): IAM identities (except the Account Root User) start off with no resource access.
 
 #### 1.4.1.3. Inline Policies and Managed Policies
 ![Stacks](attachments/Clipboard_2022-08-25-23-05-13.png?raw=true "Optional Title")
-- Take in all statement and evaluates all at the same time
-- Inline Policy: grants access and assigned on each accounts individually. (Use for exceptions)
+- Collects all statements from all policies and evaluates all at the same time.
+- Inline Policy: grants access and assigned on each account individually. (Use for exceptions.)
 - Managed Policy (best practice): one policy is applied to all users at once.
   - Reusable (large # of users, groups, and roles)
   - Low Management Overhead 
@@ -1454,14 +1454,14 @@ There are two ways to authenticate:
 - Username and Password
 - Access Keys (CLI)
 
-Once the **Principal** has authenticated, it becomes an **authenticated identity**
+Once the **Principal** has authenticated, it becomes an **authenticated identity**. Then IAM checks the statements that apply to the identity to allow or deny access (authorization).
 
 #### 1.4.2.1. Amazon Resource Name (ARN)
 
 Uniquely identify resources within any AWS accounts.
 
 - This allows you to refer to a single or group of resources. 
-- AS well as prevents individual resources from the same account or in different regions with similar characteristic from being confusing.
+- It also prevents individual resources from the same account or in different regions with similar characteristic from being confusing.
 
 ARN generally follows the same format:
 
@@ -1500,14 +1500,15 @@ These two ARNs do not overlap
 * Containers for users. **You cannot login to IAM groups** 
 * They have no credentials of their own. 
 * Used solely for management of IAM users.
+* An IAM user can be a member of multiple IAM groups.
 
 ![Stacks](attachments/Clipboard_2022-08-28-18-29-03.png?raw=true "Optional Title")
 Groups bring two benefits
 
-1. Effective administrative style management of users based on the team
+1. Effective, administrative-style management of users (for teams, projects, etc.).
 2. Groups can have Inline and Managed policies attached.
 
-AWS merges all of the policies from all groups the user is in together.
+AWS merges all individual and group policies of a user.
 
 - The 5000 IAM user limit applies to groups.
 - There is **no all users** IAM group.
@@ -1535,19 +1536,17 @@ A single thing that uses an identity is an IAM User.
 IAM Roles are also identities that are used by large groups of individuals. Internally and externally.
 If have more than 5000 principals, it could be a candidate for an IAM Role.
 
-IAM Roles are **assumed** you become that role.
+IAM Roles are **assumed**. You become that role.
 
 This can be used short term by other identities.
 
 IAM Users can have inline or managed policies which control which permissions the identity gets within AWS
 
-Permission policy: Policies which grant, allow or deny, permissions based on their associations.
-
 ![Stacks](attachments/Clipboard_2022-08-28-19-23-13.png?raw=true "Optional Title")
 IAM Roles have two types of policies can be attached.
 
 - Trust Policy: Specifies which identities are allowed to assume the role.
-- Permissions Policy: Specifies what the role is allowed to do.
+- Permissions Policy: Specifies what the role is allowed to do and grants the corresponding permissions (allow/deny) to the identities that assume the role.
 
 If an identity is allowed on the **Trust Policy**, it is given a set of **Temporary Security Credentials**. Similar to access keys except they are time limited to expire. The identity will need to renew them by reassuming the role.
 
@@ -1555,36 +1554,38 @@ Every time the **Temporary Security Credentials** are used, the access is checke
 
 Roles are real identities and can be referenced within resource policies.
 
-Secure Token Service (sts:AssumeRole) this is what generates the temporary security credentials (TSC).
+Secure Token Service (sts:AssumeRole): what generates the temporary security credentials (TSC).
 
 ### 1.4.5. When to use IAM Roles
 
+One of the most common uses for roles within the same AWS account are for AWS services themselves.
+
 ![Stacks](attachments/Clipboard_2022-08-28-19-36-53.png?raw=true "Optional Title")
 Lambda Execution Role.
-For a given lambda function, you cannot determine the number of principals which suggested a Role might be the ideal identity to use.
+For a given lambda function, you cannot determine the number of principals, which means a Role might be the ideal identity to use.
 
 - Trust Policy: to trust the Lambda Service
 - Permission Policy: to grant access to AWS services.
 
-When this is run, it uses the sts:AssumeRole to generate keys to CloudWatch and S3.
+Rather than having access keys hardcoded into the fuction, when the function runs, it uses the sts:AssumeRole to generate keys to CloudWatch and S3.
 
 It is better when possible to use an IAM Role versus attaching a policy.
 
 #### 1.4.5.1. Emergency or out of the usual situations
 ![Stacks](attachments/Clipboard_2022-08-28-19-40-36.png?raw=true "Optional Title")
-Break Glass Situation - There is a key for something the team does not normally have access to. When you break the glass, you must have a reason
-to do.
-A role can have an Emergency Role which will allow further access if its really needed.
+Break Glass Style Situation - There is a key for something the team does not normally have access to. When you break the glass, you must have a reason.
+A role can have an Emergency Role which will allow further access if it's really needed.
 
-#### 1.4.5.2. Adding AWS into existing corp environment
+#### 1.4.5.2. Adding AWS into existing corporate environment
 
-You may have an existing identity provider you are trying to allow access to.
-This may offer SSO (Single Sign On) or over 5000 identities.
+You may have an existing identity provider you want to use, such as Active Directory.
+It may offer SSO (Single Sign On) or have over 5000 identities.
 This is useful to reuse your existing identities for AWS.
 External accounts can't be used to access AWS directly.
 To solve this, you allow an IAM role in the AWS account to be assumed
 by one of the active directories.
-**ID Federation** allowing an external service the ability to assume a role.
+
+**ID Federation**: allowing an external service the ability to assume a role.
 
 #### 1.4.5.3. Making an app with 1,000,000 users
 ![Stacks](attachments/Clipboard_2022-08-28-19-46-51.png?raw=true "Optional Title")
@@ -1600,14 +1601,12 @@ You can use a role in the partner account and use that to upload objects to AWS 
 
 ### 1.4.6. Service-linked Roles & PassRole
 
-A service-linked role is a unique type of IAM role that is linked directly to an AWS service. Service-linked roles are predefined by the service and include all the permissions that the service requires to call other AWS services on your behalf. The linked service also defines how you create, modify, and delete a service-linked role. A service might automatically create or delete the role. It might allow you to create, modify, or delete the role as part of a wizard or process in the service. Or it might require that you use IAM to create or delete the role.
-
 Service-linked roles:
 * IAM role linked to a specific AWS service
-* Predefined by a service
-* Prodviding permissions that a service needs to interact with other AWS services on your behalf
+* Predefined by a service...
+* ...providing permissions that a service needs to interact with other AWS services on your behalf
 * Service might create/delete the role...
-* or allow you to during the setup or within IAM
+* ...or allow you to during the setup or within IAM
 * Can't delete the role until it's no longer required
 
 Role separation is where you might give one group of people the ability to create roles, and another group of people the ability to use them.
@@ -1618,40 +1617,40 @@ PassRole is a method inside AWS which gives you the ability to implement role se
 
 ### 1.4.7. AWS Organizations
 
-Without an organization, each AWS account needs it's own set of IAM users as well as individual payment methods.
+Without an organization, each AWS account needs its own set of IAM users as well as individual payment methods.
 If you have more than 5 to 10 accounts, you would want to use an org.
 
 Take a single AWS account **standard AWS account** and create an org.
-The standard AWS account then becomes the **master account**.
-The master account can invite other existing standard AWS accounts. They will need to approve their joining to the org.
+The standard AWS account then becomes the **management account** (previously ****master account**).
+
+The management account can invite other existing standard AWS accounts. They will need to approve their joining to the org.
 
 When standard AWS accounts become part of the org, they become **member accounts**.
-Organizations can only have one **master accounts** and zero or more **member accounts**
+Organizations can only have one **management accounts** and zero or more **member accounts**
 
 #### 1.4.7.1. Organization Root
 ![Stacks](attachments/Clipboard_2022-08-29-23-47-42.png?raw=true "Optional Title")
-This is a container that can hold AWS member accounts or the master account.
+This is a container that can hold AWS member accounts or the management account.
 It could also contain **organizational units** which can contain other units or member accounts.
 
 #### 1.4.7.2. Consolidated billing
 ![Stacks](attachments/Clipboard_2022-08-29-23-51-30.png?raw=true "Optional Title")
-The individual billing for the member accounts is removed and they pass their billing to the master account.
-Inside an AWS organization, you get a single monthly bill for the master account which covers all the billing for each users.
-Can offer a discount with consolidation of reservations and volume discounts
+The individual billing for the member accounts is removed, and they pass their billing to the management account.
+
+Inside an AWS organization, you get a single monthly bill for the management account which covers all the billing for the management account and all the member accounts of the organization.
+
+For services that get cheaper with increased usage or allow you to pay in advance for cheaper rates, these benefits can be pooled across member accunts to save more money.
 
 #### 1.4.7.3. Create new accounts in an org
 ![Stacks](attachments/Clipboard_2022-08-29-23-57-25.png?raw=true "Optional Title")
 Adding accounts in an organization is easy with only an email needed.
 
-No need for IAM Users within every single AWS account.
-Login to other account can be done with IAM Roles using ID Federation (external) or Role switch.
-
-It is **BEST** to have a single AWS account only used for login.
-Some enterprises may use a separated AWS account, 1 master and 1 login, while smaller ones may use the master account.
+It is **BEST** to have a single AWS account that is used to log into.
+Some enterprises may use a separate dedicated AWS account for logins, while smaller ones may use the management account.
 
 #### 1.4.7.4. Role Switching
 
-Allows you to switch between accounts from the command line
+There is no need for IAM Users within every single AWS account. IAM users can either log in directly to the login account or indirectly with Identity Federation and then role switch from the login account into another account in the organization (by assuming a role).
 
 ### 1.4.8. Service Control Policies
 
@@ -1661,18 +1660,19 @@ JSON policy document that can be attached:
 ![Stacks](attachments/Clipboard_2022-08-30-23-41-24.png?raw=true "Optional Title")
 - To the org as a whole by attaching to the root container.
 - A specific Organizational Unit
-- A specific member only.
+- A specific AWS account.
 
-The master account cannot be restricted by SCPs which means this should not be used because it is a security risk.
+The management account cannot be restricted by SCPs, which means it should not be used (security risk).
 
-SCPs are **account permissions boundaries** and they limit what the account, **including root** can do inside that account.
+SCPs are **account permissions boundaries** and limit what the account, and any identies within the account (including the Account Root User indirectly), can do inside the account.
+
 They don't grant permissions themselves, just act as a barrier.
 
 #### 1.4.8.1. Allow List vs Deny List
 
 Deny list is the default.
 
-When you enable SCP on your org, AWS applies `FullAWSAccess`. This means SCPs have no effect because nothing is restricted. It has zero influence by themselves.
+When you enable SCP on your org, AWS applies `FullAWSAccess`. This means SCPs have no effect because nothing is restricted. It has zero influence by itself.
 
 ```json
 {
@@ -1704,7 +1704,7 @@ You must then add any services you want to Deny such as `DenyS3`
 
 **Allow List** allows you to be conscience of your costs.
 
-- To begin, you must remove the `FullAWSAccess` list
+- To begin, you must remove the `FullAWSAccess` list.
 - Then, specify which services need to be allowed access.
 - Example `AllowS3EC2` is below
 
@@ -1726,26 +1726,35 @@ You must then add any services you want to Deny such as `DenyS3`
 
 ### 1.4.9. CloudWatch Logs
 
-This is a public service, this can be used from AWS VPC or on premise environment.
+It's a public service usable from AWS or on-premise.
 
-This allows to **store**, **monitor** and **access** logging data.
+It allows you to **store**, **monitor**, and **access** logging data.
 
-- This is a piece of information data and a timestamp
-- Can be more fields, but at least these two
+- It's a piece of information data and a timestamp.
+- Can be more fields, but at least these two.
 
-Comes with some AWS Integrations.
+There are AWS Integrations that can log into CloudWatch directly: 
+- EC2
+- VPC Flow Logs
+- Lambda
+- Cloud Trail
+- R53
+- more...
+
+For anything outside AWS or custom logging (e.g., inside EC2), you can use the unified CloudWatch agent. (You can also use the development kits for AWS to implement logging to CloudWatch directly in your applications.)
+
 Security is provided with IAM roles or Service roles.
-Can generate metrics based on logs **metric filter**
+
+Can generate metrics based on logs usinga a **metric filter**
 
 #### 1.4.9.1. Architecture of CloudWatch Logs
 ![Stacks](attachments/Clipboard_2022-09-01-12-15-58.png?raw=true "Optional Title")
-* It is a regional service `us-east-1`
+* It is a regional service, such as `us-east-1`
 * Need logging sources such as external APIs or databases. 
 * This sends information as **log events**. 
 * These are stored in **log streams**. This is a sequence of log events from the same source.
 
-* **Log Groups** are containers for multiple logs streams of the same type of logging. This also stores configuration settings such as
-retention settings and permissions.
+* **Log Groups** are containers for multiple logs streams of the same type of logging. This also stores configuration settings, such as retention settings and permissions.
 
 * Once the settings are defined on a log group, they apply to all log streams in that log group. 
 * Metric filters are also applied on the log groups.
@@ -1759,14 +1768,15 @@ Logs API calls or activities as **CloudTrail Event**
 Stores the last 90 days of events in the **Event History**. This is enabled by default at no additional cost.
 
 To customize the service you need to create a new **trail**.
-Two types of events. Default logs is Management Events
+There are 3 types of events. The default is Management Events.
 
 - Management Events:
-Provide information about management operations performed on resources
-in the AWS account. Create an EC2 instance or terminating one.
+Management operations performed on resources in the AWS account (**control plane events**), such as creating an EC2 instance or terminating one.
 
 - Data Events:
-Objects being uploaded to S3 or a Lambda function being invoked. This is not enabled by default and must be enabled for that trail.
+Resource operations performed on or in a resource, such as objects being uploaded to S3 or a Lambda function being invoked. This is not enabled by default and must be enabled for a given trail.
+
+- Insight Events: (covered later)
 
 #### 1.4.10.1. CloudTrail Trail
 
@@ -1779,10 +1789,10 @@ Once created, it can operate in two ways
   - Collection of trails in all regions
   - When new regions are added, they will be added to this trail automatically
 
-Most services log events in the region they occur. The trail then must be a one region trail in that region or an all region trail to log that event.
+Most services log events in the region they occur. To pick up an event, a trail must be a one region trail in that region or an all region trail.
 
 A small number of services log events globally to one region. 
-Global services such as IAM or STS or CloudFront always log their events to `us-east-1` this is called a global service events.
+Global services such as IAM or STS or CloudFront always log their events to `us-east-1`. They types of events are called a global service events.
 A trail must have this enabled to have this logged.
 
 AWS services are largely split into regional services or global services.
@@ -1795,12 +1805,13 @@ CloudTrail products can create an organizational trail. This allows a single man
 
 #### 1.4.10.2. CloudTrail Exam PowerUp
 
-- It is enabled by default for 90 days without S3
+- It is enabled by default ... but 90 days ... no S3
 - Trails are how you configure S3 and CWLogs
-- Management events are only saved by default
-- IAM, STS, CloudFront are Global Service events and log to `us-east-1`
-  - Trail must be enabled to do this
-- NOT REALTIME - There is a delay. Approximately 15 minute delay
+- Management events only by default
+- IAM, STS, CloudFront => Global Service events 
+  - So log to `us-east-1`
+  - A trail must be enabled to capture that data!
+- NOT REALTIME - There is a delay (approximately 15 minute delay)
 
 #### 1.4.10.3. CloudTrail Pricing
 
@@ -1810,11 +1821,12 @@ CloudTrail products can create an organizational trail. This allows a single man
 
 * Quick & Easy setup of multi-account environment
 * Orchestrates other AWS services to provide this functionality
-  * Oranizations, IAM Identity Center (SSO), CloudFormation, Congfig and more....
-* Landing Zone - multi-account environment
-  * SSO/ID Federation, Centralised Logging & Auditing
-* Guard Rails - Detect/Mandate rules/standards across all acounts
-* Account Factory - Automates & Standardises new account creation
+  * AWS Organizations, AWS Service Catalog, and AWS IAM Identity Center (successor to AWS Single Sign-On), CloudFormation, Config, and more....
+* Builds a Landing Zone (multi-account environment) in under an hour
+  * SSO/ID Federation, Centralized Logging and Auditing
+* Guardrails - Helps keep your organizations and accounts from **drift**, which is divergence from best practices, by applying preventive and detective controls
+  * Detect/Mandate rules/standards accross all accounts
+* Account Factory - Automates and standardizes new account creation
 * Dashboard - single page oversight of the entire environment
 
 #### 1.4.11.1. Control Tower Structure
@@ -1830,9 +1842,9 @@ CloudTrail products can create an organizational trail. This allows a single man
 * Foundational OU:
   * Audit Account: Location for 3rd party tools to audit account -> SNS Cloud Watch
   * Log Archive Account: Users who need all log info -> AWS Config or Cloud Trail
-* Account Factory can auto create, mod, delete AWS account as needed.
-* Use CloudFormation to do this
-* Use AWS Congif + Custom OU (Service control policy) to implement account guardrails => Prevent mishave
+* Account Factory can automatically create, modify, and delete AWS accounts as needed.
+* Uses CloudFormation to do this
+* Uses AWS Congig + Custom OU (Service Control Policis) to implement account guardrails => Detecting or preventing drifts
 
 #### 1.4.11.2. Landing Zone
 * Well Architected multi-account env - Home Region
@@ -1844,17 +1856,17 @@ CloudTrail products can create an organizational trail. This allows a single man
 * Monitoring and Notifications - CloudWatch and SNS
 * End User account provisioning via Service Catalog
 
-#### 1.4.11.3. Guard Rails
+#### 1.4.11.3. Guardrails
 * Guardrails are rules - multi-account governance
 * Mandatory, Strongly Recommended or Elective
 * Preventive - Stop you doing things (AWS ORG SCP)
-  * enforced or  not enabled
+  * enforced or not enabled
   * allow or deny regions or disallow bucket policy changes
 * Detective - compliance checks (AWS CONFIG Rules)
   * clear, in violation or not enabled
   * detect Cloud Trail enabled or EC2 Public IPv4 
 
-#### 1.4.11.4. Guard Rails
+#### 1.4.11.4. Guardrails
 * Automated Account Provisioning
 * cloud admins or end users (with appropriate permissions)
 * Guardrails - automatically added
