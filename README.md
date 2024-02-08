@@ -4022,17 +4022,16 @@ Batch or periodic workloads **Fargate**
 ### 1.9.1. Bootstrapping EC2 using User Data
 
 Bootstrapping is a process where scripts or other config steps can be run when
-an instance is first launched. This allows an instance to be brough to service
-in a particular configured state.
+an instance is first launched. This allows an instance to be brought into
+service in a particular configured state.
 
-In systems automation, bootstrapping allows the system to self configure
-or perform some self configuration steps. In AWS this is
+In systems automation, bootstrapping allows the system to self-configure
+or perform some self-configuration steps. In AWS this is
 **EC2 Build Automation**.
 
-This could perform some software installs and post install configs.
+This could perform some software installs and post-install configs.
 
-Bootstrapping is done using user data - accessed via the meta-deta IP
-
+Bootstrapping is done using User Data - accessed via the same IP as meta-deta:
 <http://169.254.169.254/latest/user-data>
 
 Anything you pass in is executed by the instance OS. It is excecuted
@@ -4087,9 +4086,12 @@ downloads that are needed for the user.
 
 When looking at an AMI, this can be measured in minutes.
 
-AMI baking will front load the time needed.
+Bootstrapping reduces post-launch time.
 
-The optimal way is to use AMI baking
+AMI baking will front load the time needed, removing post-launch time, but is
+less flexible. 
+
+The optimal way is to combine bootstrapping and AMI baking.
 
 ### 1.9.2. AWS::CloudFormation::Init
 
@@ -4111,29 +4113,32 @@ a CFN resource
 
 ![Stacks](attachments/photo_5888707064455347918_w.jpg?raw=true "Optional Title")
 
-Starts off with a **cloud formation template**
-This has a logical resource within it which is to create an EC2 instance.
+cfn-init is a helper script - installed on EC2 OS. It's a simple configuration
+management system. 
 
-This has a specific section called `Metadata:`
+It can be procedural like User Data but also can be desired state. It allows
+you to set a state for things like packages, users, groups, sources and files
+within resources inside a template - and it will make that change happen on the
+instance, performing whatever actions are required.
 
-This then passes in the information passed in as `UserData`
+Starts off with a **cloud formation template** with an `EC2Instance` logical
+resource.
 
-cfn-init gets variables passed into the userdata by cloud formation
+It has a `Metadata:` section for configuration.
 
-It knows the desired state desired by the user and can work towards a
-final stated configuration
-
-This can monitor the userdata and change things as the EC2 data changes.
+cfn-init is ran by putting it under `UserData`, and the variables are replaced
+by actual values passed in by Cloud Formation.
 
 #### 1.9.2.2. CreationPolicy and Signals
 
 ![Stacks](attachments/photo_5888707064455347919_w.jpg?raw=true "Optional Title")
 
-The template has a specific part designated signals
+It has a `CreationPolicy`, which does not allow the resource to move to
+CREATE_COMPLETE unless signaled as such by cfn-signal. After the timeout of 15
+minutes or an error is signaled, it enters an error state.
 
-A creation policy is added to a logical resource. It is provided a
-timeout value. The resource itself will trigger a signal that cloud formation
-can continue
+cfn-signal, which sends the signal for the creation policy, is ran by putting
+it under `UserData`.
 
 ### 1.9.3. EC2 Instance Roles
 
@@ -4188,7 +4193,7 @@ encrypt passwords.
 Allows for public parameters such as the latest AMI parameter to be stored
 and referenced for EC2 creating.
 
-This is a public service so any services needs access to the public sphere or
+This is a public service so any services need access to the public sphere or
 to be an AWS service.
 
 Applications, EC2 instances, lambda functions can all request access to
@@ -4203,8 +4208,9 @@ Allows for simple or complex sets of parameters.
 
 ![Stacks](attachments/Screenshot-from-2023-04-12-23-02-38.png?raw=true "Optional Title")
 
-Cloudwatch monitors the outside metrics of an instance
-Cloudwatch logs is for logging
+Cloudwatch monitors the outside metrics of an instance. 
+
+Cloudwatch logs is for logging.
 
 Neither natively capture data inside an instance.
 
@@ -4245,28 +4251,27 @@ same time.
 If you launch with 9 instances and AWS places you in a place with capacity
 for 12, you are now limited in how many you can add.
 
-Cluser placements need to be part of the same AZ. The idea with cluster
-placement groups are generally the same rack, but they can even be the same
-EC2 host.
+Cluster placements need to be part of the same AZ. The idea is that all
+instances generally use the same rack, often even the same EC2 host.
 
 All members have direct connections to each other. They can achieve
-10 Gbps single stream vs 5 Gbps normally. They also have the lowest
-latency and max PPS possible in AWS.
+10 Gbps single stream vs. 5 Gbps normally, but you need to be using instances
+with high performance networking and have enhanced networking enabled. They
+also have the lowest latency and max PPS possible in AWS.
 
 If the hardware fails, the entire cluster will fail.
 
-##### 1.9.6.1.1. Cluster Exams
+##### 1.9.6.1.1. Cluster Exam
 
 Clusters can't span AZs. The first AZ used will lock down the cluster.
 
-They can span VPC peers.
+They can span VPC peers, but this impacts performance.
 
 Requires a supported instance type.
 
-Best practice to use the same type of instance and launch all at once.
+Best practice is to use the same type of instance and launch all at once.
 
-This is the only way to achieve **10Gbps SINGLE stream**, other data metrics
-assume multiple streams.
+**10Gbps SINGLE stream performance**
 
 #### 1.9.6.2. Spread - Keep instances seperated
 
@@ -4279,23 +4284,26 @@ racks with their own network or power supply. There is a limit of 7 instances
 per AZ. The more AZs in a region, the more instances inside a spread placement
 group.
 
-##### 1.9.6.2.1. Spread Exams
+##### 1.9.6.2.1. Spread Exam
 
-Provides the highest level of availability and resillience. Each instance
-by default runs from a different rack.
+Provides infrastructure isolation.
+
+Each instance runs from a different rack with it's own network and power
+source.
 
 7 instances per AZ is a hard limit.
 
 Not supported for dedicated instances or hosts.
 
 Use case: small number of critical instances that need to be kept seperated
-from each other. Several mirrors of an application
+from each other, such as several mirrors of an application.
 
 #### 1.9.6.3. Partition - groups of instances spread apart
 
 ![Stacks](attachments/photo_5890958864269032595_w.jpg?raw=true "Optional Title")
 
-Spread placement groups are handled by default natively by AWS.
+Partition placement groups are like spread but without any limit on the number
+of instances per fault domain.
 
 If a problem occurs with one rack's networking or power, it will
 at most take out one instance.
@@ -4303,10 +4311,10 @@ at most take out one instance.
 The main difference is you can launch as many instances in each partition
 as you desire.
 
-When you launch a partition group, you can allow AWS decide or you can
+When you launch a partition group, you can allow AWS to decide or you can
 specifically decide.
 
-##### 1.9.6.3.1. Parition Exams
+##### 1.9.6.3.1. Parition Exam
 
 7 paritions maximum for each AZ
 
@@ -4352,7 +4360,7 @@ This is mostly used for licensing problems related to ports.
 
 ### 1.9.8. Enchanced Networking
 
-Enchanced networking uses SR-IOV - The physical network interface is aware
+Enchanced networking uses SR-IOV - The host NICs are aware
 of the virtualization. Each instance is given exclusive access to one part
 of a physical network interface card.
 
@@ -4360,19 +4368,20 @@ There is no charge for this and is available on most EC2 types.
 
 It allows for higher IO and lower host CPU usage
 
-This provides more bandwidth and higher packet per seconds.
-
-In general this provides lower latency.
+This provides more bandwidth, higher packets per second, and consistent lower
+latency.
 
 #### 1.9.8.1. EBS Optimized
 
-Historically network was shared, data and EBS.
+Historically network was shared, for both data and EBS.
 
-EBS optimized there has been dedicated capacity for EBS. Most instances support
-andh ave this enabled by default.
+EBS optimized means dedicated capacity for EBS. Most instances support and have
+it enabled by default.
 
-Some support, but enabling costs extra. This is generally enabled and comes
-with standard instances.
+Some (older instance types) support it, but enabling it costs extra. 
+
+It's required for instance types that offer higher performance, especially when
+using the GP2 and IO1 volume types.
 
 ## 1.10. Route 53
 
