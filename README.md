@@ -4549,22 +4549,23 @@ Systems to store and manage data.
 
 #### 1.11.1.1. Relational (SQL)
 
-Structured Query Language (SQL) is a feature of most relational database servers
+Structured Query Language (SQL) is a feature of most relational database servers.
+
 Structure in and between tables of data. There is a rigid **schema**. This is
 defined in advance.
 
 There is a fixed relationship between tables. This is defined before data
 is entered into the database.
 
-Every row in a table must have a value for the **primary key**
+Every table needs a **primary key**, and each row in a table must have a unique
+value for the primary key.
 
-There will be multiple tables, but each one needs a primary key. For every
-table, there must be a value stored for every attribute in the table.
+For every table, there must be a value stored for every attribute in the table.
 
 There is a join table with a **composite key**. The key must be unique in its
 entirety.
 
-Table relationships use keys
+Table relationships use keys.
 
 The Table Scehmas and relationships must be defined in advance.
 
@@ -4572,8 +4573,11 @@ The Table Scehmas and relationships must be defined in advance.
 
 #### 1.11.1.2. Non-Relational (NoSQL)
 
-Not a single thing, and is a catch all for everything else. There is generally
-a weak or no schema.
+Not a single thing and is a catch all for everything else. 
+
+Generally a much more relaxed concept of schema.
+
+Relationships (between tables) are handled differently.
 
 ![Stacks](attachments/Screenshot-from-2023-04-16-21-01-16.png?raw=true "Optional Title")
 
@@ -4590,17 +4594,17 @@ This is also used for **in memory caching**
 
 ##### 1.11.1.2.2. Wide Column Store
 
-DynamoDB is one type of database.
+DynamoDB is an example of this type of database.
 
-Parition key - The search key  
-Other Key - sort or range key
+Parition key (required) - The search key  
+Other Key (optional) - sort or range key
 
 Each needs to have one key or more keys.
 
 Every item in a table can also have attributes, but they don't have to be
-the same between values. The only requirements is the key needs to be unique.
+the same between items. The only requirements is the key needs to be unique.
 
-It can be **single key** or **composite key**. Either case, it must be unique.
+It can be **single key** or **composite key**. In either case, it must be unique.
 
 ![Stacks](attachments/Screenshot-from-2023-04-17-20-42-46.png?raw=true "Optional Title")
 
@@ -4608,10 +4612,10 @@ It can be **single key** or **composite key**. Either case, it must be unique.
 
 Documents are generally formated using JSON or XML.
 
-This is an extension of a key-value store.
+This is an extension of a key-value store, using unique IDs for each document.
 
 Good for orders or contacts. This is good for whole documents or deep attribute
-interations.
+interactions.
 
 ![Stacks](attachments/Screenshot-from-2023-04-17-20-44-45.png?raw=true "Optional Title")
 
@@ -4628,14 +4632,15 @@ but good for reporting or when all values for a specific size are required.
 
 ##### 1.11.1.2.5. Graph
 
-Relationships between things are formally defined and stored along in the
+Relationships between things are formally defined and stored in the
 database itself with the data. These are great for relationship driven data.
 
-Nodes are objects inside a graph database. They can have properties.
+Nodes are objects inside a graph database. They can have properties (key-value
+pairs).
 
-Edges are relationships between the nodes. They have a direction.
+Edges are relationships between the nodes. They have a name and direction.
 
-Relationships can also have values associated with them and they are also
+Relationships can also have data associated with them, and they are also
 stored inside the database.
 
 Relationships are fast because interactions can be queried.
@@ -4650,6 +4655,10 @@ Relationships are fast because interactions can be queried.
 
 ![Stacks](attachments/Screenshot-from-2023-04-18-14-03-59.png?raw=true "Optional Title")
 
+ACID = Consistency (Example: RDS)
+BASE = Availability (Example: DynamoDB*)
+\*DynamoDB normally is BASE but also offers some ACID functionality.
+
 ### 1.11.2. Databases on EC2
 
 It is always a bad idea to do this. Splitting an instance over different
@@ -4660,17 +4669,18 @@ AZs adds a small cost to moving the data between AZs if it happens.
 You might need access to the OS of the Database. You should question
 if a client requests this, it rarely is needed.
 
-Advanced DB Option tuning (DBROOT) AWS provides options against this.
+Advanced DB Option Tuning (DBROOT), but AWS allows you to set some that
+traditionally would require root access.
 
-This is typically a vendor that demands this.
+This is typically an application vendor that demands this.
 
 DB or DB version that AWS doesn't provide.
 
-You might need a specific version of an OS and DB that AWS doesn't provide.
+Decision makers who who "just want it"
 
 #### 1.11.2.2. Reasons why you really shouldn't run a database on EC2
 
-**Admin overhead** is intense to manage EC2 and DBHost compatible
+**Admin overhead** - managing EC2 and DBHost requires a lot of effort. 
 
 Backup and Disaster Management adds complexity.
 
@@ -4680,7 +4690,7 @@ Will miss out on features from AWS DB products.
 
 EC2 is ON or OFF, there is no way to scale easily.
 
-**Replication** the skills and setup time to monitor this
+**Replication** - the skills and setup time to monitor this
 
 Performance will be slower than AWS options.
 
